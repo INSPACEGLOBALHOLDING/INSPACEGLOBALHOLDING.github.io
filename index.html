@@ -175,25 +175,25 @@
 <section id="operations" class="relative py-28 overflow-hidden" style="background:radial-gradient(120% 80% at 20% 30%, #15301f 0%, #0d1f16 60%);">
   <div class="aura" style="width:420px;height:420px;background:rgba(201,168,106,.10);top:8%;right:-130px;"></div>
   <div class="max-w-6xl mx-auto px-6 relative z-10">
-    <div class="reveal max-w-3xl">
-      <div class="kick text-[11px] gold font-mono uppercase mb-5" data-i18n="ops.kicker">02 — Current Operations</div>
-      <h2 class="font-serif font-light text-4xl sm:text-5xl leading-tight" data-i18n="ops.heading">An active <em class="it serif-gold">portfolio</em> across Indonesia.</h2>
-      <p class="mt-6 text-stone text-lg font-light leading-relaxed" data-i18n="ops.body">The Group is concurrently developing a flagship metallurgical complex, a hybrid energy facility, and additional projects in earlier stages of structuring &mdash; each a distinct asset with its own EPC engagement timeline and capital plan.</p>
-    </div>
+    <!-- Heading text + Map side-by-side on lg+, stacked on mobile -->
+    <div class="flex flex-col lg:flex-row gap-10 lg:gap-12 lg:items-start">
+      <div class="reveal lg:flex-1 lg:pt-2">
+        <div class="kick text-[11px] gold font-mono uppercase mb-5" data-i18n="ops.kicker">02 — Current Operations</div>
+        <h2 class="font-serif font-light text-4xl sm:text-5xl leading-tight" data-i18n="ops.heading">An active <em class="it serif-gold">portfolio</em> across Indonesia.</h2>
+        <p class="mt-6 text-stone text-lg font-light leading-relaxed" data-i18n="ops.body">The Group is concurrently developing a flagship metallurgical complex, a hybrid energy facility, and additional projects in earlier stages of structuring &mdash; each a distinct asset with its own EPC engagement timeline and capital plan.</p>
+      </div>
 
-    <!-- ===== Project Location Map ===== -->
-    <figure class="mt-12 panel rounded-md p-6 sm:p-8 overflow-hidden max-w-md mx-auto">
-      <div class="flex items-center justify-between flex-wrap gap-4 mb-5">
-        <div>
+      <!-- ===== Project Location Map ===== -->
+      <figure class="panel rounded-md p-5 sm:p-6 overflow-hidden w-full max-w-sm mx-auto lg:mx-0 lg:flex-shrink-0">
+        <div class="mb-4">
           <div class="kick text-[10px] gold font-mono uppercase mb-1" data-i18n="map.kicker">Project Location Map</div>
-          <p class="text-[13px] text-stone" data-i18n="map.caption">PT Atjeh Quantum Industrial Group operations · Aceh, Indonesia</p>
+          <p class="text-[12px] text-stone" data-i18n="map.caption">PT Atjeh Quantum Industrial Group · Aceh, Indonesia</p>
         </div>
-        <p class="text-[11px] font-mono text-stone/60" data-i18n="map.region">Sumatra · Indian Ocean facing</p>
-      </div>
-      <div class="map-frame rounded-md overflow-hidden" style="background:rgba(13,31,22,.5);border:1px solid rgba(201,168,106,.18);">
-        <img src="/project-map.jpg" alt="Hand-illustrated map of IGH project locations in Aceh, Sumatra, Indonesia" style="width:100%;height:auto;display:block;"/>
-      </div>
-    </figure>
+        <div class="map-frame rounded-md overflow-hidden" style="background:rgba(13,31,22,.5);border:1px solid rgba(201,168,106,.18);">
+          <img src="/project-map.jpg" alt="Hand-illustrated map of IGH project locations in Aceh, Sumatra, Indonesia" style="width:100%;height:auto;display:block;"/>
+        </div>
+      </figure>
+    </div>
 
     <!-- ===== FLAGSHIP : AGSC ===== -->
     <a href="/projects/agsc/" class="agsc-card panel panel-link panel-gold rounded-md p-8 sm:p-10 block mt-14 relative" style="border-top:2px solid var(--champ);">
