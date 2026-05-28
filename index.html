@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Inspace Global Holding Pte. Ltd. — Industrial &amp; Energy Infrastructure</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<title>Inspace Global Holding Pte. Ltd.</title>
 <meta name="description" content="Singapore-based industrial and energy infrastructure development group, executing integrated EPC projects across Indonesia and Southeast Asia." />
 
 <script src="https://cdn.tailwindcss.com"></script>
@@ -67,6 +68,11 @@
   .nav-link:hover{color:#E3CFA0;}
   .btn-gold{background:var(--champ);color:#13291E;transition:all .3s ease;}
   .btn-gold:hover{background:#E3CFA0;transform:translateY(-1px);box-shadow:0 18px 40px -18px rgba(201,168,106,.7);}
+  .card-corner{position:absolute;top:20px;right:24px;width:40px;height:40px;display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--champ);border:1px solid rgba(201,168,106,.35);border-radius:50%;background:rgba(13,31,22,.4);transition:all .3s ease;}
+  .agsc-card:hover .card-corner{background:var(--champ);color:#13291E;border-color:var(--champ);transform:translate(3px,-3px);}
+  .cta-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,106,.12);border:1px solid rgba(201,168,106,.45);color:var(--champ);font-family:'Spline Sans Mono',monospace;font-size:12px;letter-spacing:.06em;padding:9px 18px;border-radius:2px;transition:all .3s ease;}
+  .agsc-card:hover .cta-pill{background:var(--champ);color:#13291E;border-color:var(--champ);}
+  .agsc-card{cursor:pointer;}
   em.it{font-style:italic;}
   .label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-family:'Spline Sans Mono',monospace;color:rgba(154,167,157,.85);}
 </style>
@@ -79,10 +85,10 @@
 <header class="fixed top-0 inset-x-0 z-50" style="background:rgba(13,31,22,.72);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06);">
   <nav class="max-w-6xl mx-auto px-6 h-[68px] flex items-center justify-between">
     <a href="#" class="flex items-center gap-3">
-      <div class="w-8 h-8 rounded-sm flex items-center justify-center" style="background:var(--moss);border:1px solid rgba(201,168,106,.4);">
-        <span class="font-serif text-champ text-lg leading-none">I</span>
+      <div class="h-9 px-2.5 rounded-sm flex items-center justify-center" style="background:var(--moss);border:1px solid rgba(201,168,106,.4);">
+        <span class="font-serif text-champ text-base leading-none tracking-[.12em] font-medium">IGH</span>
       </div>
-      <span class="font-serif text-[15px] tracking-wide">Inspace Global Holding<span class="text-stone font-body text-[13px] hidden sm:inline"> · Pte. Ltd.</span></span>
+      <span class="font-serif text-[15px] tracking-wide hidden sm:inline">Inspace Global Holding<span class="text-stone font-body text-[13px]"> · Pte. Ltd.</span></span>
     </a>
     <div class="hidden md:flex items-center gap-9 text-[13px] text-stone">
       <a href="#about"      class="nav-link transition">About</a>
@@ -166,14 +172,16 @@
   <div class="max-w-6xl mx-auto px-6 relative z-10">
     <div class="reveal max-w-3xl">
       <div class="kick text-[11px] gold font-mono uppercase mb-5">02 — Current Operations</div>
-      <h2 class="font-serif font-light text-4xl sm:text-5xl leading-tight">Flagship development in <em class="it serif-gold">Aceh, Indonesia</em>.</h2>
-      <p class="mt-6 text-stone text-lg font-light leading-relaxed">The Group's current operational focus is the Aceh Integrated Green Steel Complex (AGSC) — a multi-asset metallurgical and clean-energy site within the KEK Southwest Aceh Special Economic Zone.</p>
+      <h2 class="font-serif font-light text-4xl sm:text-5xl leading-tight">An active <em class="it serif-gold">portfolio</em> across Indonesia.</h2>
+      <p class="mt-6 text-stone text-lg font-light leading-relaxed">The Group is concurrently developing a flagship metallurgical complex, a hybrid energy facility, and additional projects in earlier stages of structuring — each a distinct asset with its own EPC engagement timeline and capital plan.</p>
     </div>
 
-    <a href="/projects/agsc/" class="panel panel-link panel-gold rounded-md p-8 sm:p-10 block mt-14" style="border-top:2px solid var(--champ);">
-      <div class="flex items-start justify-between mb-7 flex-wrap gap-4">
+    <!-- ===== FLAGSHIP : AGSC ===== -->
+    <a href="/projects/agsc/" class="agsc-card panel panel-link panel-gold rounded-md p-8 sm:p-10 block mt-14 relative" style="border-top:2px solid var(--champ);">
+      <span class="card-corner" aria-hidden="true">&#x2197;</span>
+      <div class="flex items-start justify-between mb-7 flex-wrap gap-4 pr-12">
         <div>
-          <div class="kick text-[10px] gold font-mono uppercase">Project · Flagship</div>
+          <div class="kick text-[10px] gold font-mono uppercase">Project One · Flagship</div>
           <h3 class="font-serif text-2xl sm:text-3xl mt-2">Aceh Integrated Green Steel Complex</h3>
           <p class="text-[13px] text-stone mt-2">KEK Southwest Aceh · Sumatra · Indonesia</p>
         </div>
@@ -204,10 +212,60 @@
 
       <div class="rule-soft my-7"></div>
 
-      <div class="text-[12px] font-mono text-champ flex items-center gap-2">
-        View full project profile <span class="text-base">&rarr;</span>
+      <div class="flex items-center justify-between flex-wrap gap-4">
+        <p class="text-[12px] font-mono text-stone/75">Click anywhere on this card to open the full project profile.</p>
+        <span class="cta-pill">View Full Project Profile <span aria-hidden="true">&rarr;</span></span>
       </div>
     </a>
+
+    <!-- ===== PIPELINE GRID : Jambi-1 + Additional Pipeline ===== -->
+    <div class="grid lg:grid-cols-2 gap-6 mt-6">
+
+      <!-- Jambi-1 (placeholder card) -->
+      <div class="panel rounded-md p-8 sage-line opacity-95">
+        <div class="flex items-start justify-between mb-6 flex-wrap gap-3">
+          <div>
+            <div class="kick text-[10px] font-mono uppercase" style="color:var(--sage)">Project Two · Pipeline</div>
+            <h3 class="font-serif text-xl mt-2">Jambi-1 Hybrid Energy Facility</h3>
+            <p class="text-[13px] text-stone mt-2">Jambi Province · Sumatra · Indonesia</p>
+          </div>
+          <span class="chip whitespace-nowrap" style="color:var(--sage);border-color:rgba(45,125,70,.4)">Engineering</span>
+        </div>
+        <div class="rule-soft my-5"></div>
+        <p class="text-stone text-[14px] leading-relaxed">A 600 MW hybrid renewable-energy facility combining 100 MW solar with a 500 MW biomass-coupled thermal system — designed to deliver utility-backed base-load supply to industrial clusters across the Jambi corridor.</p>
+        <div class="rule-soft my-5"></div>
+        <div class="grid grid-cols-3 gap-3 text-center">
+          <div><div class="num text-base" style="color:var(--sage)">600 MW</div><div class="text-[10px] text-stone mt-1.5">Capacity</div></div>
+          <div><div class="num text-base" style="color:var(--sage)">100 MW</div><div class="text-[10px] text-stone mt-1.5">Solar</div></div>
+          <div><div class="num text-base" style="color:var(--sage)">500 MW</div><div class="text-[10px] text-stone mt-1.5">Hybrid Thermal</div></div>
+        </div>
+        <div class="rule-soft my-5"></div>
+        <p class="text-[11px] font-mono text-stone/60">Detailed project page in preparation</p>
+      </div>
+
+      <!-- Additional Pipeline placeholder -->
+      <div class="panel rounded-md p-8" style="border-top:2px solid rgba(154,167,157,.4);">
+        <div class="flex items-start justify-between mb-6 flex-wrap gap-3">
+          <div>
+            <div class="kick text-[10px] font-mono uppercase text-stone">Additional Pipeline</div>
+            <h3 class="font-serif text-xl mt-2">Further Development Assets</h3>
+            <p class="text-[13px] text-stone mt-2">Multiple jurisdictions · Indonesia &amp; SEA</p>
+          </div>
+          <span class="chip whitespace-nowrap" style="color:#9aa79d;border-color:rgba(154,167,157,.4)">Structuring</span>
+        </div>
+        <div class="rule-soft my-5"></div>
+        <p class="text-stone text-[14px] leading-relaxed">Additional industrial, logistics, and clean-energy development opportunities are at various stages of partnership structuring, permitting, and capital framework. Details available to qualified counterparties under appropriate engagement.</p>
+        <div class="rule-soft my-5"></div>
+        <div class="grid grid-cols-3 gap-3 text-center text-stone/70">
+          <div><div class="num text-base">EPC</div><div class="text-[10px] mt-1.5">Partnering</div></div>
+          <div><div class="num text-base">JV</div><div class="text-[10px] mt-1.5">Structuring</div></div>
+          <div><div class="num text-base">PE</div><div class="text-[10px] mt-1.5">Co-Investment</div></div>
+        </div>
+        <div class="rule-soft my-5"></div>
+        <p class="text-[11px] font-mono text-stone/60">Contact for portfolio briefing</p>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -311,7 +369,7 @@
   <div class="max-w-6xl mx-auto px-6">
     <div class="flex flex-col md:flex-row md:items-center justify-between gap-5">
       <div class="flex items-center gap-3">
-        <div class="w-7 h-7 rounded-sm flex items-center justify-center" style="background:var(--moss);border:1px solid rgba(201,168,106,.4);"><span class="font-serif text-champ leading-none">I</span></div>
+        <div class="h-8 px-2.5 rounded-sm flex items-center justify-center" style="background:var(--moss);border:1px solid rgba(201,168,106,.4);"><span class="font-serif text-champ leading-none tracking-[.12em] text-sm font-medium">IGH</span></div>
         <span class="font-serif text-sm">Inspace Global Holding Pte. Ltd.</span>
       </div>
       <div class="text-[11px] text-stone font-mono">Singapore · Industrial &amp; Energy Infrastructure</div>
