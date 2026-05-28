@@ -74,6 +74,10 @@
   .agsc-card:hover .cta-pill{background:var(--champ);color:#13291E;border-color:var(--champ);}
   .agsc-card{cursor:pointer;}
   em.it{font-style:italic;}
+  .lang-toggle{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:30px;padding:0 10px;border:1px solid rgba(201,168,106,.4);background:transparent;color:var(--champ);font-family:'Spline Sans',sans-serif;font-size:13px;font-weight:500;border-radius:2px;cursor:pointer;transition:all .25s ease;line-height:1;}
+  .lang-toggle:hover{background:var(--champ);color:#13291E;}
+  body[data-lang="zh"] em.it{font-style:normal;}
+
   .label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-family:'Spline Sans Mono',monospace;color:rgba(154,167,157,.85);}
 </style>
 </head>
@@ -91,13 +95,16 @@
       <span class="font-serif text-[15px] tracking-wide hidden sm:inline">Inspace Global Holding<span class="text-stone font-body text-[13px]"> · Pte. Ltd.</span></span>
     </a>
     <div class="hidden md:flex items-center gap-9 text-[13px] text-stone">
-      <a href="#about"      class="nav-link transition">About</a>
-      <a href="#operations" class="nav-link transition">Operations</a>
-      <a href="#structure"  class="nav-link transition">Group Structure</a>
-      <a href="#governance" class="nav-link transition">Governance</a>
-      <a href="#contact"    class="nav-link transition">Contact</a>
+      <a href="#about"      class="nav-link transition" data-i18n="nav.about">About</a>
+      <a href="#operations" class="nav-link transition" data-i18n="nav.operations">Operations</a>
+      <a href="#structure"  class="nav-link transition" data-i18n="nav.structure">Group Structure</a>
+      <a href="#governance" class="nav-link transition" data-i18n="nav.governance">Governance</a>
+      <a href="#contact"    class="nav-link transition" data-i18n="nav.contact">Contact</a>
     </div>
-    <a href="#contact" class="text-[12px] font-medium btn-gold px-4 py-2 rounded-sm">Contact</a>
+    <div class="flex items-center gap-2">
+      <button id="lang-toggle" type="button" class="lang-toggle" aria-label="Toggle language">中</button>
+      <a href="#contact" class="text-[12px] font-medium btn-gold px-4 py-2 rounded-sm" data-i18n="nav.contactBtn">Contact</a>
+    </div>
   </nav>
 </header>
 
@@ -109,28 +116,28 @@
   <div class="relative z-10 max-w-6xl mx-auto px-6 w-full">
     <div class="rise flex items-center gap-3 mb-9" style="animation-delay:.05s;">
       <span class="dot"></span>
-      <span class="eyebrow text-[11px] gold font-mono uppercase">Singapore · Industrial Holding Group</span>
+      <span class="eyebrow text-[11px] gold font-mono uppercase" data-i18n="hero.eyebrow">Singapore · Industrial Holding Group</span>
     </div>
 
-    <h1 class="font-serif font-light leading-[1.04] tracking-tight text-[2.5rem] sm:text-5xl lg:text-[4.5rem] max-w-5xl">
+    <h1 class="font-serif font-light leading-[1.04] tracking-tight text-[2.5rem] sm:text-5xl lg:text-[4.5rem] max-w-5xl" data-i18n="hero.title">
       <span class="rise block" style="animation-delay:.14s;">Industrial and energy</span>
       <span class="rise block" style="animation-delay:.28s;">infrastructure, <em class="it serif-gold">delivered</em>.</span>
     </h1>
 
-    <p class="rise mt-9 max-w-2xl text-lg text-stone font-light leading-relaxed" style="animation-delay:.42s;">
-      Inspace Global Holding Pte. Ltd. is a <span class="serif-gold">Singapore-incorporated industrial holding group</span> developing integrated industrial, metallurgical, and clean-energy infrastructure across <span class="text-cream">Indonesia and Southeast Asia</span> — operating through regional subsidiaries on a multi-year project cycle.
+    <p class="rise mt-9 max-w-2xl text-lg text-stone font-light leading-relaxed" style="animation-delay:.42s;" data-i18n="hero.body">
+      Inspace Global Holding Pte. Ltd. is a <span class="serif-gold">Singapore-incorporated industrial holding group</span> developing integrated industrial, metallurgical, and clean-energy infrastructure across <span class="text-cream">Indonesia and Southeast Asia</span> &mdash; operating through regional subsidiaries on a multi-year project cycle.
     </p>
 
     <div class="rise mt-8 flex flex-wrap gap-2.5" style="animation-delay:.52s;">
-      <span class="chip">Green Steel · Metallurgy</span>
-      <span class="chip">Industrial Logistics</span>
-      <span class="chip">Clean Energy</span>
-      <span class="chip">EPC Development</span>
+      <span class="chip" data-i18n="hero.chip1">Green Steel · Metallurgy</span>
+      <span class="chip" data-i18n="hero.chip2">Industrial Logistics</span>
+      <span class="chip" data-i18n="hero.chip3">Clean Energy</span>
+      <span class="chip" data-i18n="hero.chip4">EPC Development</span>
     </div>
 
     <div class="rise mt-14 flex flex-col sm:flex-row gap-4" style="animation-delay:.62s;">
-      <a href="#operations" class="btn-gold font-medium px-7 py-3.5 rounded-sm text-[13px]">Current Operations</a>
-      <a href="#contact" class="panel px-7 py-3.5 rounded-sm font-medium text-[13px] transition">Contact Inspace Global</a>
+      <a href="#operations" class="btn-gold font-medium px-7 py-3.5 rounded-sm text-[13px]" data-i18n="hero.cta1">Current Operations</a>
+      <a href="#contact" class="panel px-7 py-3.5 rounded-sm font-medium text-[13px] transition" data-i18n="hero.cta2">Contact Inspace Global</a>
     </div>
   </div>
 </section>
@@ -139,28 +146,26 @@
 <section id="about" class="relative py-28" style="background:#0d1f16;">
   <div class="max-w-6xl mx-auto px-6">
     <div class="reveal max-w-3xl">
-      <div class="kick text-[11px] gold font-mono uppercase mb-5">01 — About the Group</div>
-      <h2 class="font-serif font-light text-4xl sm:text-5xl leading-tight">A Singapore base for <em class="it serif-gold">long-cycle</em> regional infrastructure.</h2>
-      <p class="mt-6 text-stone text-lg font-light leading-relaxed">
-        Inspace Global Holding Pte. Ltd. was incorporated in the Republic of Singapore as the parent entity for industrial and energy infrastructure projects across Indonesia and Southeast Asia. The Group originates, structures, and oversees capital-intensive assets through dedicated local operating subsidiaries.
-      </p>
+      <div class="kick text-[11px] gold font-mono uppercase mb-5" data-i18n="about.kicker">01 — About the Group</div>
+      <h2 class="font-serif font-light text-4xl sm:text-5xl leading-tight" data-i18n="about.heading">A Singapore base for <em class="it serif-gold">long-cycle</em> regional infrastructure.</h2>
+      <p class="mt-6 text-stone text-lg font-light leading-relaxed" data-i18n="about.body">Inspace Global Holding Pte. Ltd. was incorporated in the Republic of Singapore as the parent entity for industrial and energy infrastructure projects across Indonesia and Southeast Asia. The Group originates, structures, and oversees capital-intensive assets through dedicated local operating subsidiaries.</p>
     </div>
 
     <div class="grid md:grid-cols-3 gap-5 mt-14">
       <div class="reveal panel rounded-md p-8">
-        <div class="kick text-[10px] gold font-mono uppercase mb-4">Purpose</div>
-        <h3 class="font-serif text-xl mb-3">Sustainable transformation</h3>
-        <p class="text-stone text-[14px] leading-relaxed">Heavy industry underpins every developing economy yet is among the slowest to decarbonize. The Group exists to close that gap with technically rigorous, capital-disciplined integrated complexes.</p>
+        <div class="kick text-[10px] gold font-mono uppercase mb-4" data-i18n="about.card1.kicker">Purpose</div>
+        <h3 class="font-serif text-xl mb-3" data-i18n="about.card1.title">Sustainable transformation</h3>
+        <p class="text-stone text-[14px] leading-relaxed" data-i18n="about.card1.body">Heavy industry underpins every developing economy yet is among the slowest to decarbonize. The Group exists to close that gap with technically rigorous, capital-disciplined integrated complexes.</p>
       </div>
       <div class="reveal panel rounded-md p-8" style="transition-delay:.08s;">
-        <div class="kick text-[10px] gold font-mono uppercase mb-4">Approach</div>
-        <h3 class="font-serif text-xl mb-3">Clean tech · logistics · partnership</h3>
-        <p class="text-stone text-[14px] leading-relaxed">Integrated sites that combine production, energy generation, port logistics, and digital infrastructure on a single permitted footprint — engineered from day one for international standards.</p>
+        <div class="kick text-[10px] gold font-mono uppercase mb-4" data-i18n="about.card2.kicker">Approach</div>
+        <h3 class="font-serif text-xl mb-3" data-i18n="about.card2.title">Clean tech · logistics · partnership</h3>
+        <p class="text-stone text-[14px] leading-relaxed" data-i18n="about.card2.body">Integrated sites that combine production, energy generation, port logistics, and digital infrastructure on a single permitted footprint &mdash; engineered from day one for international standards.</p>
       </div>
       <div class="reveal panel panel-gold rounded-md p-8" style="transition-delay:.16s;">
-        <div class="kick text-[10px] gold font-mono uppercase mb-4">Mandate</div>
-        <h3 class="font-serif text-xl mb-3">Industrial &amp; energy EPC platforms</h3>
-        <p class="text-stone text-[14px] leading-relaxed">Green steel complexes, hybrid power facilities, port-integrated logistics — structured for EPC engagement, local partnership, and international institutional comfort.</p>
+        <div class="kick text-[10px] gold font-mono uppercase mb-4" data-i18n="about.card3.kicker">Mandate</div>
+        <h3 class="font-serif text-xl mb-3" data-i18n="about.card3.title">Industrial &amp; energy EPC platforms</h3>
+        <p class="text-stone text-[14px] leading-relaxed" data-i18n="about.card3.body">Green steel complexes, hybrid power facilities, port-integrated logistics &mdash; structured for EPC engagement, local partnership, and international institutional comfort.</p>
       </div>
     </div>
   </div>
@@ -171,98 +176,108 @@
   <div class="aura" style="width:420px;height:420px;background:rgba(201,168,106,.10);top:8%;right:-130px;"></div>
   <div class="max-w-6xl mx-auto px-6 relative z-10">
     <div class="reveal max-w-3xl">
-      <div class="kick text-[11px] gold font-mono uppercase mb-5">02 — Current Operations</div>
-      <h2 class="font-serif font-light text-4xl sm:text-5xl leading-tight">An active <em class="it serif-gold">portfolio</em> across Indonesia.</h2>
-      <p class="mt-6 text-stone text-lg font-light leading-relaxed">The Group is concurrently developing a flagship metallurgical complex, a hybrid energy facility, and additional projects in earlier stages of structuring — each a distinct asset with its own EPC engagement timeline and capital plan.</p>
+      <div class="kick text-[11px] gold font-mono uppercase mb-5" data-i18n="ops.kicker">02 — Current Operations</div>
+      <h2 class="font-serif font-light text-4xl sm:text-5xl leading-tight" data-i18n="ops.heading">An active <em class="it serif-gold">portfolio</em> across Indonesia.</h2>
+      <p class="mt-6 text-stone text-lg font-light leading-relaxed" data-i18n="ops.body">The Group is concurrently developing a flagship metallurgical complex, a hybrid energy facility, and additional projects in earlier stages of structuring &mdash; each a distinct asset with its own EPC engagement timeline and capital plan.</p>
     </div>
+
+    <!-- ===== Project Location Map ===== -->
+    <figure class="mt-12 panel rounded-md p-6 sm:p-8 overflow-hidden">
+      <div class="flex items-center justify-between flex-wrap gap-4 mb-5">
+        <div>
+          <div class="kick text-[10px] gold font-mono uppercase mb-1" data-i18n="map.kicker">Project Location Map</div>
+          <p class="text-[13px] text-stone" data-i18n="map.caption">PT Atjeh Quantum Industrial Group operations · Aceh, Indonesia</p>
+        </div>
+        <p class="text-[11px] font-mono text-stone/60" data-i18n="map.region">Sumatra · Indian Ocean facing</p>
+      </div>
+      <div class="map-frame rounded-md overflow-hidden" style="background:rgba(13,31,22,.5);border:1px solid rgba(201,168,106,.18);">
+        <img src="/project-map.svg" alt="Map of IGH project locations in Sumatra, Indonesia" style="width:100%;height:auto;display:block;"/>
+      </div>
+    </figure>
 
     <!-- ===== FLAGSHIP : AGSC ===== -->
     <a href="/projects/agsc/" class="agsc-card panel panel-link panel-gold rounded-md p-8 sm:p-10 block mt-14 relative" style="border-top:2px solid var(--champ);">
       <span class="card-corner" aria-hidden="true">&#x2197;</span>
       <div class="flex items-start justify-between mb-7 flex-wrap gap-4 pr-12">
         <div>
-          <div class="kick text-[10px] gold font-mono uppercase">Project One · Flagship</div>
-          <h3 class="font-serif text-2xl sm:text-3xl mt-2">Aceh Integrated Green Steel Complex</h3>
-          <p class="text-[13px] text-stone mt-2">KEK Southwest Aceh · Sumatra · Indonesia</p>
+          <div class="kick text-[10px] gold font-mono uppercase" data-i18n="proj.one.kicker">Project One · Flagship</div>
+          <h3 class="font-serif text-2xl sm:text-3xl mt-2" data-i18n="proj.one.title">Aceh Integrated Green Steel Complex</h3>
+          <p class="text-[13px] text-stone mt-2" data-i18n="proj.one.location">KEK Southwest Aceh · Sumatra · Indonesia</p>
         </div>
-        <span class="chip whitespace-nowrap">Active · EPC Engagement</span>
+        <span class="chip whitespace-nowrap" data-i18n="proj.one.status">Active · EPC Engagement</span>
       </div>
 
       <div class="rule-soft my-7"></div>
 
       <div class="grid sm:grid-cols-2 gap-6 mt-2">
         <div>
-          <div class="label mb-2">Configuration</div>
-          <p class="text-stone text-[14px] leading-relaxed">Hydrogen-ready DRI-EAF green-steel line, thin-slab casting and rolling, co-located AI supercomputing center using steel waste-heat for cooling. Phase-1 bridge asset and integrated port logistics through Surin Port.</p>
+          <div class="label mb-2" data-i18n="proj.one.configLabel">Configuration</div>
+          <p class="text-stone text-[14px] leading-relaxed" data-i18n="proj.one.configBody">Hydrogen-ready DRI-EAF green-steel line, thin-slab casting and rolling, co-located AI supercomputing center using steel waste-heat for cooling. Phase-1 bridge asset and integrated port logistics through Surin Port.</p>
         </div>
         <div>
-          <div class="label mb-2">Scale</div>
-          <p class="text-stone text-[14px] leading-relaxed">2.5 MTPA hot-rolled coil capacity, 100 MW co-located AI compute, 40,000 DWT Handymax port access, within a 5,000-hectare KEK Special Economic Zone with 20-year corporate tax exemption.</p>
+          <div class="label mb-2" data-i18n="proj.one.scaleLabel">Scale</div>
+          <p class="text-stone text-[14px] leading-relaxed" data-i18n="proj.one.scaleBody">2.5 MTPA hot-rolled coil capacity, 100 MW co-located AI compute, 40,000 DWT Handymax port access, within a 5,000-hectare KEK Special Economic Zone with 20-year corporate tax exemption.</p>
         </div>
       </div>
 
       <div class="rule-soft my-7"></div>
 
       <div class="grid grid-cols-4 gap-3 text-center">
-        <div><div class="num text-xl gold">2.5 MTPA</div><div class="text-[10px] text-stone mt-1.5">Green Steel</div></div>
-        <div><div class="num text-xl gold">100 MW</div><div class="text-[10px] text-stone mt-1.5">AI Compute</div></div>
-        <div><div class="num text-xl gold">5,000 ha</div><div class="text-[10px] text-stone mt-1.5">KEK Zone</div></div>
-        <div><div class="num text-xl gold">20 YR</div><div class="text-[10px] text-stone mt-1.5">Tax Holiday</div></div>
+        <div><div class="num text-xl gold">2.5 MTPA</div><div class="text-[10px] text-stone mt-1.5" data-i18n="proj.one.stat1">Green Steel</div></div>
+        <div><div class="num text-xl gold">100 MW</div><div class="text-[10px] text-stone mt-1.5" data-i18n="proj.one.stat2">AI Compute</div></div>
+        <div><div class="num text-xl gold">5,000 ha</div><div class="text-[10px] text-stone mt-1.5" data-i18n="proj.one.stat3">KEK Zone</div></div>
+        <div><div class="num text-xl gold">20 YR</div><div class="text-[10px] text-stone mt-1.5" data-i18n="proj.one.stat4">Tax Holiday</div></div>
       </div>
 
       <div class="rule-soft my-7"></div>
 
       <div class="flex items-center justify-between flex-wrap gap-4">
-        <p class="text-[12px] font-mono text-stone/75">Click anywhere on this card to open the full project profile.</p>
-        <span class="cta-pill">View Full Project Profile <span aria-hidden="true">&rarr;</span></span>
+        <p class="text-[12px] font-mono text-stone/75" data-i18n="proj.one.clickHint">Click anywhere on this card to open the full project profile.</p>
+        <span class="cta-pill"><span data-i18n="proj.one.cta">View Full Project Profile</span> <span aria-hidden="true">&rarr;</span></span>
       </div>
     </a>
 
     <!-- ===== PIPELINE GRID : Jambi-1 + Additional Pipeline ===== -->
     <div class="grid lg:grid-cols-2 gap-6 mt-6">
 
-      <!-- Jambi-1 (placeholder card) -->
-      <div class="panel rounded-md p-8 sage-line opacity-95">
+      <!-- Project Two placeholder -->
+      <div class="panel placeholder-card rounded-md p-8" style="border-top:2px solid rgba(154,167,157,.3);">
         <div class="flex items-start justify-between mb-6 flex-wrap gap-3">
           <div>
-            <div class="kick text-[10px] font-mono uppercase" style="color:var(--sage)">Project Two · Pipeline</div>
-            <h3 class="font-serif text-xl mt-2">Jambi-1 Hybrid Energy Facility</h3>
-            <p class="text-[13px] text-stone mt-2">Jambi Province · Sumatra · Indonesia</p>
+            <div class="kick text-[10px] font-mono uppercase" style="color:rgba(154,167,157,.85)" data-i18n="proj.two.kicker">Project Two</div>
+            <h3 class="font-serif text-xl mt-2 text-stone" data-i18n="proj.two.title">Coming Soon</h3>
+            <p class="text-[13px] text-stone/70 mt-2" data-i18n="proj.two.location">Location · forthcoming</p>
           </div>
-          <span class="chip whitespace-nowrap" style="color:var(--sage);border-color:rgba(45,125,70,.4)">Engineering</span>
+          <span class="chip whitespace-nowrap" style="color:#9aa79d;border-color:rgba(154,167,157,.4)" data-i18n="proj.two.status">敬請期待</span>
         </div>
         <div class="rule-soft my-5"></div>
-        <p class="text-stone text-[14px] leading-relaxed">A 600 MW hybrid renewable-energy facility combining 100 MW solar with a 500 MW biomass-coupled thermal system — designed to deliver utility-backed base-load supply to industrial clusters across the Jambi corridor.</p>
+        <p class="text-stone/80 text-[14px] leading-relaxed" data-i18n="proj.two.body">Project profile under preparation. Specifications, scale, and partnership structure will be announced in due course.</p>
         <div class="rule-soft my-5"></div>
-        <div class="grid grid-cols-3 gap-3 text-center">
-          <div><div class="num text-base" style="color:var(--sage)">600 MW</div><div class="text-[10px] text-stone mt-1.5">Capacity</div></div>
-          <div><div class="num text-base" style="color:var(--sage)">100 MW</div><div class="text-[10px] text-stone mt-1.5">Solar</div></div>
-          <div><div class="num text-base" style="color:var(--sage)">500 MW</div><div class="text-[10px] text-stone mt-1.5">Hybrid Thermal</div></div>
+        <div class="grid place-items-center py-4">
+          <div class="font-serif text-stone/40 text-2xl tracking-[.2em]">— TBA —</div>
         </div>
         <div class="rule-soft my-5"></div>
-        <p class="text-[11px] font-mono text-stone/60">Detailed project page in preparation</p>
+        <p class="text-[11px] font-mono text-stone/60" data-i18n="proj.two.note">Stay tuned · Available upon qualified inquiry</p>
       </div>
 
-      <!-- Additional Pipeline placeholder -->
-      <div class="panel rounded-md p-8" style="border-top:2px solid rgba(154,167,157,.4);">
+      <!-- Project Three placeholder -->
+      <div class="panel placeholder-card rounded-md p-8" style="border-top:2px solid rgba(154,167,157,.3);">
         <div class="flex items-start justify-between mb-6 flex-wrap gap-3">
           <div>
-            <div class="kick text-[10px] font-mono uppercase text-stone">Additional Pipeline</div>
-            <h3 class="font-serif text-xl mt-2">Further Development Assets</h3>
-            <p class="text-[13px] text-stone mt-2">Multiple jurisdictions · Indonesia &amp; SEA</p>
+            <div class="kick text-[10px] font-mono uppercase" style="color:rgba(154,167,157,.85)" data-i18n="proj.three.kicker">Project Three</div>
+            <h3 class="font-serif text-xl mt-2 text-stone" data-i18n="proj.three.title">Coming Soon</h3>
+            <p class="text-[13px] text-stone/70 mt-2" data-i18n="proj.three.location">Location · forthcoming</p>
           </div>
-          <span class="chip whitespace-nowrap" style="color:#9aa79d;border-color:rgba(154,167,157,.4)">Structuring</span>
+          <span class="chip whitespace-nowrap" style="color:#9aa79d;border-color:rgba(154,167,157,.4)" data-i18n="proj.three.status">敬請期待</span>
         </div>
         <div class="rule-soft my-5"></div>
-        <p class="text-stone text-[14px] leading-relaxed">Additional industrial, logistics, and clean-energy development opportunities are at various stages of partnership structuring, permitting, and capital framework. Details available to qualified counterparties under appropriate engagement.</p>
+        <p class="text-stone/80 text-[14px] leading-relaxed" data-i18n="proj.three.body">Project profile under preparation. Specifications, scale, and partnership structure will be announced in due course.</p>
         <div class="rule-soft my-5"></div>
-        <div class="grid grid-cols-3 gap-3 text-center text-stone/70">
-          <div><div class="num text-base">EPC</div><div class="text-[10px] mt-1.5">Partnering</div></div>
-          <div><div class="num text-base">JV</div><div class="text-[10px] mt-1.5">Structuring</div></div>
-          <div><div class="num text-base">PE</div><div class="text-[10px] mt-1.5">Co-Investment</div></div>
+        <div class="grid place-items-center py-4">
+          <div class="font-serif text-stone/40 text-2xl tracking-[.2em]">— TBA —</div>
         </div>
         <div class="rule-soft my-5"></div>
-        <p class="text-[11px] font-mono text-stone/60">Contact for portfolio briefing</p>
+        <p class="text-[11px] font-mono text-stone/60" data-i18n="proj.three.note">Stay tuned · Available upon qualified inquiry</p>
       </div>
 
     </div>
@@ -273,23 +288,23 @@
 <section id="structure" class="relative py-28" style="background:#0d1f16;">
   <div class="max-w-6xl mx-auto px-6">
     <div class="reveal max-w-3xl">
-      <div class="kick text-[11px] gold font-mono uppercase mb-5">03 — Group Structure</div>
-      <h2 class="font-serif font-light text-4xl sm:text-5xl leading-tight">Singapore parent, <em class="it serif-gold">regional</em> operating subsidiaries.</h2>
-      <p class="mt-6 text-stone text-lg font-light leading-relaxed">A two-tier corporate architecture: an offshore Singapore holding entity for international capital engagement, and onshore operating SPVs aligned with each jurisdiction's regulatory and permitting framework.</p>
+      <div class="kick text-[11px] gold font-mono uppercase mb-5" data-i18n="struct.kicker">03 — Group Structure</div>
+      <h2 class="font-serif font-light text-4xl sm:text-5xl leading-tight" data-i18n="struct.heading">Singapore parent, <em class="it serif-gold">regional</em> operating subsidiaries.</h2>
+      <p class="mt-6 text-stone text-lg font-light leading-relaxed" data-i18n="struct.body">A two-tier corporate architecture: an offshore Singapore holding entity for international capital engagement, and onshore operating SPVs aligned with each jurisdiction's regulatory and permitting framework.</p>
     </div>
 
     <div class="grid md:grid-cols-2 gap-5 mt-14">
       <div class="reveal panel panel-gold rounded-md p-8" style="border-top:2px solid var(--champ);">
-        <div class="kick text-[10px] gold font-mono uppercase mb-4">Parent</div>
-        <h3 class="font-serif text-xl mb-2">Inspace Global Holding Pte. Ltd.</h3>
-        <p class="text-[13px] text-stone/80 mb-5">Incorporated in the Republic of Singapore</p>
-        <p class="text-stone text-[14px] leading-relaxed">Group-level capital structuring, EPC partner engagement, and international counterparty interface. Holds equity participation in regional operating entities and coordinates cross-border financing.</p>
+        <div class="kick text-[10px] gold font-mono uppercase mb-4" data-i18n="struct.parent.kicker">Parent</div>
+        <h3 class="font-serif text-xl mb-2" data-i18n="struct.parent.name">Inspace Global Holding Pte. Ltd.</h3>
+        <p class="text-[13px] text-stone/80 mb-5" data-i18n="struct.parent.incorp">Incorporated in the Republic of Singapore</p>
+        <p class="text-stone text-[14px] leading-relaxed" data-i18n="struct.parent.body">Group-level capital structuring, EPC partner engagement, and international counterparty interface. Holds equity participation in regional operating entities and coordinates cross-border financing.</p>
       </div>
       <div class="reveal panel rounded-md p-8" style="transition-delay:.08s;border-top:2px solid var(--sage);">
-        <div class="kick text-[10px] font-mono uppercase mb-4" style="color:var(--sage)">Operating Subsidiary (Indonesia)</div>
-        <h3 class="font-serif text-xl mb-2">PT. Atjeh Quantum Industrial Group</h3>
-        <p class="text-[13px] text-stone/80 mb-5">Indonesian Perseroan Terbatas (PT)</p>
-        <p class="text-stone text-[14px] leading-relaxed">On-the-ground operating entity for the Aceh integrated industrial complex. Coordinates permitting, KEK Special Economic Zone administration, local procurement, and Indonesian regulatory interface.</p>
+        <div class="kick text-[10px] font-mono uppercase mb-4" style="color:var(--sage)" data-i18n="struct.sub.kicker">Operating Subsidiary (Indonesia)</div>
+        <h3 class="font-serif text-xl mb-2" data-i18n="struct.sub.name">PT. Atjeh Quantum Industrial Group</h3>
+        <p class="text-[13px] text-stone/80 mb-5" data-i18n="struct.sub.incorp">Indonesian Perseroan Terbatas (PT)</p>
+        <p class="text-stone text-[14px] leading-relaxed" data-i18n="struct.sub.body">On-the-ground operating entity for the Aceh integrated industrial complex. Coordinates permitting, KEK Special Economic Zone administration, local procurement, and Indonesian regulatory interface.</p>
       </div>
     </div>
   </div>
@@ -300,32 +315,30 @@
   <div class="aura" style="width:380px;height:380px;background:rgba(45,125,70,.16);top:8%;left:-130px;"></div>
   <div class="max-w-6xl mx-auto px-6 relative z-10">
     <div class="reveal max-w-3xl">
-      <div class="kick text-[11px] gold font-mono uppercase mb-5">04 — Governance &amp; Compliance Posture</div>
-      <h2 class="font-serif font-light text-4xl sm:text-5xl leading-tight">Built for <em class="it serif-gold">institutional</em> counterparties.</h2>
+      <div class="kick text-[11px] gold font-mono uppercase mb-5" data-i18n="gov.kicker">04 — Governance &amp; Compliance Posture</div>
+      <h2 class="font-serif font-light text-4xl sm:text-5xl leading-tight" data-i18n="gov.heading">Built for <em class="it serif-gold">institutional</em> counterparties.</h2>
     </div>
 
     <div class="grid md:grid-cols-3 gap-5 mt-14">
       <div class="reveal panel rounded-md p-8">
-        <div class="label mb-4">Incorporation</div>
-        <h3 class="font-serif text-lg mb-3">Singapore Private Limited</h3>
-        <p class="text-stone text-[14px] leading-relaxed">Parent entity registered with the Accounting and Corporate Regulatory Authority (ACRA) of Singapore — providing a transparent and internationally recognised legal framework.</p>
+        <div class="label mb-4" data-i18n="gov.card1.label">Incorporation</div>
+        <h3 class="font-serif text-lg mb-3" data-i18n="gov.card1.title">Singapore Private Limited</h3>
+        <p class="text-stone text-[14px] leading-relaxed" data-i18n="gov.card1.body">Parent entity registered with the Accounting and Corporate Regulatory Authority (ACRA) of Singapore &mdash; providing a transparent and internationally recognised legal framework.</p>
       </div>
       <div class="reveal panel rounded-md p-8" style="transition-delay:.08s;">
-        <div class="label mb-4">Regulatory Engagement</div>
-        <h3 class="font-serif text-lg mb-3">Indonesia · KEK SEZ</h3>
-        <p class="text-stone text-[14px] leading-relaxed">Operating within the regulatory perimeter of Indonesia's Special Economic Zones (KEK), with active engagement with BKPM (Indonesia Investment Coordinating Board) and local authorities.</p>
+        <div class="label mb-4" data-i18n="gov.card2.label">Regulatory Engagement</div>
+        <h3 class="font-serif text-lg mb-3" data-i18n="gov.card2.title">Indonesia · KEK SEZ</h3>
+        <p class="text-stone text-[14px] leading-relaxed" data-i18n="gov.card2.body">Operating within the regulatory perimeter of Indonesia's Special Economic Zones (KEK), with active engagement with BKPM (Indonesia Investment Coordinating Board) and local authorities.</p>
       </div>
       <div class="reveal panel panel-gold rounded-md p-8" style="transition-delay:.16s;">
-        <div class="label mb-4">Sustainability Standard</div>
-        <h3 class="font-serif text-lg mb-3">CBAM-aligned Design</h3>
-        <p class="text-stone text-[14px] leading-relaxed">Project-level decarbonization trajectories engineered into design — not retrofitted — targeting European Carbon Border Adjustment Mechanism (CBAM) standards from inception.</p>
+        <div class="label mb-4" data-i18n="gov.card3.label">Sustainability Standard</div>
+        <h3 class="font-serif text-lg mb-3" data-i18n="gov.card3.title">CBAM-aligned Design</h3>
+        <p class="text-stone text-[14px] leading-relaxed" data-i18n="gov.card3.body">Project-level decarbonization trajectories engineered into design &mdash; not retrofitted &mdash; targeting European Carbon Border Adjustment Mechanism (CBAM) standards from inception.</p>
       </div>
     </div>
 
     <div class="reveal panel rounded-md mt-6 p-7">
-      <p class="text-[13px] text-stone leading-relaxed">
-        Detailed corporate documents — including certificate of incorporation, project-level due diligence package, and capital structure disclosures — are made available to qualified counterparties under appropriate confidentiality arrangements upon engagement.
-      </p>
+      <p class="text-[13px] text-stone leading-relaxed" data-i18n="gov.disclosure">Detailed corporate documents &mdash; including certificate of incorporation, project-level due diligence package, and capital structure disclosures &mdash; are made available to qualified counterparties under appropriate confidentiality arrangements upon engagement.</p>
     </div>
   </div>
 </section>
@@ -336,27 +349,25 @@
     <div class="reveal rounded-lg p-10 sm:p-16 text-center relative overflow-hidden" style="background:radial-gradient(120% 130% at 50% 0%, #1a3a2a 0%, #13291e 70%);border:1px solid rgba(201,168,106,.28);">
       <div class="aura" style="width:380px;height:380px;background:rgba(201,168,106,.14);top:-140px;left:50%;transform:translateX(-50%);"></div>
       <div class="relative z-10">
-        <div class="kick text-[11px] gold font-mono uppercase mb-6">05 — Engage With Inspace Global</div>
-        <h2 class="font-serif font-light text-3xl sm:text-5xl leading-tight max-w-3xl mx-auto">Open to <em class="it serif-gold">qualified</em> partners and counterparties.</h2>
-        <p class="text-stone mt-6 max-w-xl mx-auto font-light leading-relaxed">
-          We welcome inquiries from EPC firms, engineering and technical advisors, infrastructure investors, lenders, and institutional partners for collaboration and project development.
-        </p>
+        <div class="kick text-[11px] gold font-mono uppercase mb-6" data-i18n="contact.kicker">05 — Engage With Inspace Global</div>
+        <h2 class="font-serif font-light text-3xl sm:text-5xl leading-tight max-w-3xl mx-auto" data-i18n="contact.heading">Open to <em class="it serif-gold">qualified</em> partners and counterparties.</h2>
+        <p class="text-stone mt-6 max-w-xl mx-auto font-light leading-relaxed" data-i18n="contact.body">We welcome inquiries from EPC firms, engineering and technical advisors, infrastructure investors, lenders, and institutional partners for collaboration and project development.</p>
         <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
           <a href="mailto:info@inspaceglobal.com?subject=Inspace%20Global%20Holding%20Inquiry" class="btn-gold font-medium px-9 py-4 rounded-sm">info@inspaceglobal.com</a>
-          <a href="/projects/agsc/" class="panel px-9 py-4 rounded-sm font-medium transition">Flagship Project</a>
+          <a href="/projects/agsc/" class="panel px-9 py-4 rounded-sm font-medium transition" data-i18n="contact.flagshipBtn">Flagship Project</a>
         </div>
         <div class="mt-9 grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
           <div>
-            <div class="label mb-2">Response</div>
-            <p class="text-[12px] text-stone">Within 2–3 business days</p>
+            <div class="label mb-2" data-i18n="contact.col1Label">Response</div>
+            <p class="text-[12px] text-stone" data-i18n="contact.col1Body">Within 2–3 business days</p>
           </div>
           <div>
-            <div class="label mb-2">Communication</div>
-            <p class="text-[12px] text-stone">Confidential &amp; professional</p>
+            <div class="label mb-2" data-i18n="contact.col2Label">Communication</div>
+            <p class="text-[12px] text-stone" data-i18n="contact.col2Body">Confidential &amp; professional</p>
           </div>
           <div>
-            <div class="label mb-2">Working Language</div>
-            <p class="text-[12px] text-stone">English / 中文</p>
+            <div class="label mb-2" data-i18n="contact.col3Label">Working Language</div>
+            <p class="text-[12px] text-stone" data-i18n="contact.col3Body">English / 中文</p>
           </div>
         </div>
       </div>
@@ -370,28 +381,28 @@
     <div class="flex flex-col md:flex-row md:items-center justify-between gap-5">
       <div class="flex items-center gap-3">
         <div class="h-8 px-2.5 rounded-sm flex items-center justify-center" style="background:var(--moss);border:1px solid rgba(201,168,106,.4);"><span class="font-serif text-champ leading-none tracking-[.12em] text-sm font-medium">IGH</span></div>
-        <span class="font-serif text-sm">Inspace Global Holding Pte. Ltd.</span>
+        <span class="font-serif text-sm" data-i18n="footer.entity">Inspace Global Holding Pte. Ltd.</span>
       </div>
-      <div class="text-[11px] text-stone font-mono">Singapore · Industrial &amp; Energy Infrastructure</div>
+      <div class="text-[11px] text-stone font-mono" data-i18n="footer.tagline">Singapore · Industrial &amp; Energy Infrastructure</div>
     </div>
     <div class="rule my-8"></div>
     <div class="grid sm:grid-cols-3 gap-6 text-[12px] text-stone">
       <div>
-        <div class="label mb-3">Registered Office</div>
-        <p class="leading-relaxed">Republic of Singapore<br/>(ACRA-registered Pte. Ltd.)</p>
+        <div class="label mb-3" data-i18n="footer.col1Label">Registered Office</div>
+        <p class="leading-relaxed" data-i18n="footer.col1Body">Republic of Singapore<br/>(ACRA-registered Pte. Ltd.)</p>
       </div>
       <div>
-        <div class="label mb-3">General Inquiries</div>
-        <p class="leading-relaxed"><a href="mailto:info@inspaceglobal.com" class="hover:text-champ transition">info@inspaceglobal.com</a><br/>Response within 2–3 business days</p>
+        <div class="label mb-3" data-i18n="footer.col2Label">General Inquiries</div>
+        <p class="leading-relaxed"><a href="mailto:info@inspaceglobal.com" class="hover:text-champ transition">info@inspaceglobal.com</a><br/><span data-i18n="footer.col2Body">Response within 2–3 business days</span></p>
       </div>
       <div>
-        <div class="label mb-3">Operating Region</div>
-        <p class="leading-relaxed">Indonesia · Southeast Asia<br/>(Aceh, Sumatra and beyond)</p>
+        <div class="label mb-3" data-i18n="footer.col3Label">Operating Region</div>
+        <p class="leading-relaxed" data-i18n="footer.col3Body">Indonesia · Southeast Asia<br/>(Aceh, Sumatra and beyond)</p>
       </div>
     </div>
     <div class="rule my-8"></div>
     <p class="text-[10.5px] leading-relaxed text-stone/55 max-w-4xl">
-      <span class="text-stone">Disclaimer.</span> This website is provided for general information and qualified business engagement only. All project figures — including land footprint, capacity, capital structure, timeline, and partnership references — are indicative, unaudited, and subject to ongoing engineering, due diligence, permitting, and definitive documentation. Nothing on this site constitutes an offer, solicitation, or investment recommendation. Forward-looking statements involve risks and uncertainties; actual outcomes may differ materially. Recipients should conduct independent verification and obtain professional advice.
+      <span data-i18n="footer.disclaimer"><span class="text-stone">Disclaimer.</span> This website is provided for general information and qualified business engagement only. All project figures &mdash; including land footprint, capacity, capital structure, timeline, and partnership references &mdash; are indicative, unaudited, and subject to ongoing engineering, due diligence, permitting, and definitive documentation. Nothing on this site constitutes an offer, solicitation, or investment recommendation. Forward-looking statements involve risks and uncertainties; actual outcomes may differ materially. Recipients should conduct independent verification and obtain professional advice.</span>
     </p>
     <p class="text-[10.5px] text-stone/40 font-mono mt-6">© 2026 Inspace Global Holding Pte. Ltd. · All rights reserved</p>
   </div>
@@ -402,6 +413,156 @@
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   // Fallback: ensure all .reveal elements become visible+clickable after 1.2s no matter what
   setTimeout(()=>{document.querySelectorAll('.reveal:not(.in)').forEach(el=>el.classList.add('in'));}, 1200);
+</script>
+
+<script>
+const I18N = {
+  zh: {
+    'nav.about': '关于',
+    'nav.operations': '业务',
+    'nav.structure': '集团架构',
+    'nav.governance': '治理',
+    'nav.contact': '联系',
+    'nav.contactBtn': '联系我们',
+
+    'hero.eyebrow': '新加坡 · 工业控股集团',
+    'hero.title': '工业与能源基础设施，<em class="it serif-gold">从规划到交付</em>。',
+    'hero.body': 'Inspace Global Holding Pte. Ltd. 是一家<span class="serif-gold">于新加坡注册的工业控股集团</span>，在<span class="text-cream">印度尼西亚与东南亚</span>开发综合性工业、冶金及清洁能源基础设施，透过区域子公司以多年期项目周期运营。',
+    'hero.chip1': '绿色钢铁 · 冶金',
+    'hero.chip2': '工业物流',
+    'hero.chip3': '清洁能源',
+    'hero.chip4': 'EPC 开发',
+    'hero.cta1': '当前业务',
+    'hero.cta2': '联系 Inspace Global',
+
+    'about.kicker': '01 — 关于集团',
+    'about.heading': '为<em class="it serif-gold">长周期</em>区域基础设施而立的新加坡总部。',
+    'about.body': 'Inspace Global Holding Pte. Ltd. 于新加坡共和国注册成立，作为集团母公司统筹印度尼西亚与东南亚的工业及能源基础设施项目。集团透过当地操作子公司发起、构建并管理资本密集型资产。',
+    'about.card1.kicker': '目的',
+    'about.card1.title': '可持续转型',
+    'about.card1.body': '重工业是每个发展中经济体的支柱，却也是脱碳速度最慢的产业之一。集团的存在，是以技术严谨、资本纪律的综合性园区缩小这道落差。',
+    'about.card2.kicker': '路径',
+    'about.card2.title': '清洁科技 · 物流 · 合作',
+    'about.card2.body': '将生产、能源、港口物流与数位基础设施整合在单一已取证场地，自规划之初即以国际标准设计建造。',
+    'about.card3.kicker': '业务范畴',
+    'about.card3.title': '工业与能源 EPC 平台',
+    'about.card3.body': '绿色钢铁综合体、混合能源设施、港口整合物流——为 EPC 合作、本地伙伴关系及国际机构投资人量身打造。',
+
+    'ops.kicker': '02 — 当前业务',
+    'ops.heading': '横跨印度尼西亚的<em class="it serif-gold">活跃组合</em>。',
+    'ops.body': '集团同步推进一个旗舰冶金综合体、一个混合能源设施，以及多个处于较早期阶段的项目——每个资产均有独立的 EPC 合作时程与资本计划。',
+    'map.kicker': '专案位置示意图',
+    'map.caption': 'PT Atjeh Quantum Industrial Group 营运 · 印尼亚齐',
+    'map.region': '苏门答腊 · 面向印度洋',
+
+    'proj.one.kicker': '专案一 · 旗舰',
+    'proj.one.title': '亚齐综合绿色钢铁复合体（AGSC）',
+    'proj.one.location': 'KEK 西南亚齐 · 苏门答腊 · 印度尼西亚',
+    'proj.one.status': '进行中 · 工程承包阶段',
+    'proj.one.configLabel': '配置',
+    'proj.one.configBody': '氢气兼容 DRI-EAF 绿色钢铁产线、薄板连铸连轧、采用钢厂废热冷却的 AI 超算中心、阶段一过渡资产，以及经 Surin Port 的整合港口物流。',
+    'proj.one.scaleLabel': '规模',
+    'proj.one.scaleBody': '热轧卷年产能 2.5 MTPA、共址 100 MW AI 算力、40,000 DWT Handymax 港口、5,000 公顷 KEK 经济特区，享 20 年企业所得税豁免。',
+    'proj.one.stat1': '绿色钢铁',
+    'proj.one.stat2': 'AI 算力',
+    'proj.one.stat3': 'KEK 经济特区',
+    'proj.one.stat4': '免税年限',
+    'proj.one.clickHint': '点击卡片任一位置进入完整专案页',
+    'proj.one.cta': '查看完整专案介绍',
+
+    'proj.two.kicker': '专案二',
+    'proj.two.title': '敬请期待',
+    'proj.two.location': '地点 · 待公布',
+    'proj.two.status': '敬请期待',
+    'proj.two.body': '专案介绍准备中。规格、规模与合作架构将适时对外公布。',
+    'proj.two.note': '敬请关注 · 可于资格审查后了解详情',
+
+    'proj.three.kicker': '专案三',
+    'proj.three.title': '敬请期待',
+    'proj.three.location': '地点 · 待公布',
+    'proj.three.status': '敬请期待',
+    'proj.three.body': '专案介绍准备中。规格、规模与合作架构将适时对外公布。',
+    'proj.three.note': '敬请关注 · 可于资格审查后了解详情',
+
+    'struct.kicker': '03 — 集团架构',
+    'struct.heading': '新加坡母公司，<em class="it serif-gold">区域</em>操作子公司。',
+    'struct.body': '两层公司架构：境外新加坡控股实体对接国际资本，境内操作 SPV 对接当地监管与许可框架。',
+    'struct.parent.kicker': '母公司',
+    'struct.parent.name': 'Inspace Global Holding Pte. Ltd.',
+    'struct.parent.incorp': '于新加坡共和国注册成立',
+    'struct.parent.body': '集团层级的资本架构设计、EPC 合作方对接、国际交易对手介面。持有区域操作实体股权，并统筹跨境融资。',
+    'struct.sub.kicker': '操作子公司（印度尼西亚）',
+    'struct.sub.name': 'PT. Atjeh Quantum Industrial Group',
+    'struct.sub.incorp': '印度尼西亚有限责任公司（PT）',
+    'struct.sub.body': '亚齐综合工业复合体的在地操作实体，统筹许可证申请、KEK 经济特区行政、本地采购及印度尼西亚监管对接。',
+
+    'gov.kicker': '04 — 治理与合规',
+    'gov.heading': '为<em class="it serif-gold">机构</em>交易对手而设计。',
+    'gov.card1.label': '注册地',
+    'gov.card1.title': '新加坡私人有限公司',
+    'gov.card1.body': '母公司于新加坡会计与企业管制局（ACRA）注册，提供透明且国际认可的法律框架。',
+    'gov.card2.label': '监管对接',
+    'gov.card2.title': '印度尼西亚 · KEK 经济特区',
+    'gov.card2.body': '在印度尼西亚经济特区（KEK）的监管范围内运作，与 BKPM（印尼投资协调委员会）及地方政府保持积极对接。',
+    'gov.card3.label': '永续标准',
+    'gov.card3.title': 'CBAM 合规设计',
+    'gov.card3.body': '项目层级的减碳路径于设计阶段即纳入，非事后改造——自始即对标欧洲碳边境调整机制（CBAM）。',
+    'gov.disclosure': '详尽公司文件——包括公司注册证书、项目层级尽职调查包及资本结构披露——将于合格交易对手介入后，依适当保密安排提供。',
+
+    'contact.kicker': '05 — 与 Inspace Global 接洽',
+    'contact.heading': '欢迎<em class="it serif-gold">合格</em>合作伙伴与交易对手。',
+    'contact.body': '我们欢迎 EPC 公司、工程及技术顾问、基础设施投资人、债权人，以及机构合作伙伴就合作与项目开发提出洽询。',
+    'contact.flagshipBtn': '旗舰专案',
+    'contact.col1Label': '回复时效',
+    'contact.col1Body': '2–3 个工作日内',
+    'contact.col2Label': '沟通原则',
+    'contact.col2Body': '保密 · 专业',
+    'contact.col3Label': '工作语言',
+    'contact.col3Body': 'English / 中文',
+
+    'footer.entity': 'Inspace Global Holding Pte. Ltd.',
+    'footer.tagline': '新加坡 · 工业与能源基础设施',
+    'footer.col1Label': '注册办公室',
+    'footer.col1Body': '新加坡共和国<br/>（于 ACRA 注册之 Pte. Ltd.）',
+    'footer.col2Label': '一般洽询',
+    'footer.col2Body': '2–3 个工作日内回复',
+    'footer.col3Label': '运营区域',
+    'footer.col3Body': '印度尼西亚 · 东南亚<br/>（亚齐、苏门答腊及周边）',
+    'footer.disclaimer': '<span class="text-stone">免责声明。</span>本网站仅供一般资讯及合格商业洽询之用。所有项目数据——包括用地面积、产能、资本结构、时程及合作引用——皆为指示性、未经审计，并以持续之工程、尽职调查、许可证申请及最终文件为准。本网站任何内容均不构成要约、招揽或投资建议。前瞻性陈述涉及风险与不确定性，实际结果可能存在重大差异。接收者应进行独立核实并寻求专业建议。'
+  }
+};
+
+(function(){
+  const STORAGE_KEY = 'igh-lang';
+  function applyLang(lang){
+    document.body.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-Hans' : 'en');
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if(!el.dataset.origHtml){ el.dataset.origHtml = el.innerHTML; }
+      if(lang === 'zh' && I18N.zh[key]){
+        el.innerHTML = I18N.zh[key];
+      } else {
+        el.innerHTML = el.dataset.origHtml;
+      }
+    });
+    const btn = document.getElementById('lang-toggle');
+    if(btn){ btn.textContent = (lang === 'zh') ? 'EN' : '中'; btn.setAttribute('aria-label', lang === 'zh' ? 'Switch to English' : '切換為中文'); }
+    localStorage.setItem(STORAGE_KEY, lang);
+  }
+  function init(){
+    const stored = localStorage.getItem(STORAGE_KEY) || 'en';
+    applyLang(stored);
+    const btn = document.getElementById('lang-toggle');
+    if(btn){
+      btn.addEventListener('click', () => {
+        const current = localStorage.getItem(STORAGE_KEY) || 'en';
+        applyLang(current === 'zh' ? 'en' : 'zh');
+      });
+    }
+  }
+  if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', init); } else { init(); }
+})();
 </script>
 </body>
 </html>
