@@ -175,17 +175,23 @@
 <section id="operations" class="relative py-28 overflow-hidden" style="background:radial-gradient(120% 80% at 20% 30%, #15301f 0%, #0d1f16 60%);">
   <div class="aura" style="width:420px;height:420px;background:rgba(201,168,106,.10);top:8%;right:-130px;"></div>
   <div class="max-w-6xl mx-auto px-6 relative z-10">
-    <!-- Heading text + Map side-by-side on lg+, stacked on mobile -->
-    <div class="flex flex-col lg:flex-row gap-10 lg:gap-12 lg:items-start">
-      <div class="reveal lg:flex-1">
-        <div class="kick text-[11px] gold font-mono uppercase mb-5" data-i18n="ops.kicker">02 — Current Operations</div>
-        <h2 class="font-serif font-light text-4xl sm:text-5xl leading-tight" data-i18n="ops.heading">An active <em class="it serif-gold">portfolio</em> across Indonesia.</h2>
-        <p class="mt-6 text-stone text-lg font-light leading-relaxed" data-i18n="ops.body">The Group is concurrently developing a flagship metallurgical complex, a hybrid energy facility, and additional projects in earlier stages of structuring &mdash; each a distinct asset with its own EPC engagement timeline and capital plan.</p>
+    <!-- Heading text (col-span-2) + Map (col-span-1, aligned with About's 3rd card) -->
+    <div class="grid lg:grid-cols-3 gap-10 lg:gap-5 lg:items-end">
+      <div class="reveal lg:col-span-2 flex flex-col gap-6 lg:h-full lg:justify-between">
+        <div>
+          <div class="kick text-[11px] gold font-mono uppercase mb-5" data-i18n="ops.kicker">02 — Current Operations</div>
+          <h2 class="font-serif font-light text-4xl sm:text-5xl leading-tight" data-i18n="ops.heading">An active <em class="it serif-gold">portfolio</em> across Indonesia.</h2>
+        </div>
+        <div class="space-y-5 text-stone text-lg font-light leading-relaxed max-w-2xl">
+          <p data-i18n="ops.body1">The Group is concurrently developing a flagship metallurgical complex, a hybrid energy facility, and additional projects in earlier stages of structuring.</p>
+          <p data-i18n="ops.body2">Each is a distinct asset, with its own EPC engagement timeline, capital framework, and partnership structure &mdash; advanced in parallel rather than in sequence.</p>
+          <p data-i18n="ops.body3">Together they form a phased portfolio designed for long-cycle institutional engagement, structured capital deployment, and integrated EPC delivery across Indonesia and Southeast Asia.</p>
+        </div>
       </div>
 
-      <!-- ===== Project Location Map ===== -->
-      <figure class="panel rounded-md p-4 sm:p-5 overflow-hidden w-full mx-auto lg:mx-0 lg:flex-shrink-0" style="max-width:260px;">
-        <div class="mb-4">
+      <!-- ===== Project Location Map (1 column, aligned with 3rd About card) ===== -->
+      <figure class="panel rounded-md p-4 overflow-hidden lg:col-span-1">
+        <div class="mb-3">
           <div class="kick text-[10px] gold font-mono uppercase mb-1" data-i18n="map.kicker">Project Location Map</div>
           <p class="text-[12px] text-stone" data-i18n="map.caption">PT Atjeh Quantum Industrial Group · Aceh, Indonesia</p>
         </div>
@@ -450,7 +456,9 @@ const I18N = {
 
     'ops.kicker': '02 — 当前业务',
     'ops.heading': '横跨印度尼西亚的<em class="it serif-gold">活跃组合</em>。',
-    'ops.body': '集团同步推进一个旗舰冶金综合体、一个混合能源设施，以及多个处于较早期阶段的项目——每个资产均有独立的 EPC 合作时程与资本计划。',
+    'ops.body1': '集团同步推进一个旗舰冶金综合体、一个混合能源设施，以及多个处于较早期阶段的结构化项目。',
+    'ops.body2': '每一个资产均为独立标的，拥有专属的 EPC 合作时程、资本框架及合作伙伴架构——以并行而非顺序的方式推进。',
+    'ops.body3': '三者共同构成一个分期推进的投资组合，专为长周期机构合作、结构化资本部署，以及横跨印度尼西亚与东南亚的整合式 EPC 交付而设。',
     'map.kicker': '专案位置示意图',
     'map.caption': 'PT Atjeh Quantum Industrial Group 营运 · 印尼亚齐',
     'map.region': '苏门答腊 · 面向印度洋',
