@@ -71,6 +71,10 @@
   .btn-gold:hover{background:#E3CFA0;transform:translateY(-1px);box-shadow:0 18px 40px -18px rgba(201,168,106,.7);}
   .ledger tr:hover{background:rgba(201,168,106,.05);}
   em.it{font-style:italic;}
+  .lang-toggle{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:30px;padding:0 10px;border:1px solid rgba(201,168,106,.4);background:transparent;color:var(--champ);font-family:'Spline Sans',sans-serif;font-size:13px;font-weight:500;border-radius:2px;cursor:pointer;transition:all .25s ease;line-height:1;}
+  .lang-toggle:hover{background:var(--champ);color:#13291E;}
+  body[data-lang="zh"] em.it{font-style:normal;}
+
 </style>
 </head>
 
@@ -87,12 +91,15 @@
       <span class="font-serif text-[15px] tracking-wide">AGSC<span class="text-stone font-body text-[13px]"> · Aceh Green Steel Complex</span></span>
     </div>
     <div class="hidden md:flex items-center gap-9 text-[13px] text-stone">
-      <a href="#case"  class="nav-link transition">Investment Case</a>
-      <a href="#bases" class="nav-link transition">Architecture</a>
-      <a href="#capex" class="nav-link transition">Capital Framework</a>
-      <a href="#moat"  class="nav-link transition">Strategic Moat</a>
+      <a href="#case"  class="nav-link transition" data-i18n="nav.case">Investment Case</a>
+      <a href="#bases" class="nav-link transition" data-i18n="nav.arch">Architecture</a>
+      <a href="#capex" class="nav-link transition" data-i18n="nav.capex">Capital Framework</a>
+      <a href="#moat"  class="nav-link transition" data-i18n="nav.moat">Strategic Moat</a>
     </div>
-    <a href="#cta" class="text-[12px] font-medium btn-gold px-4 py-2 rounded-sm">Data Room</a>
+    <div class="flex items-center gap-2">
+      <button id="lang-toggle" type="button" class="lang-toggle" aria-label="Toggle language">中</button>
+      <a href="#cta" class="text-[12px] font-medium btn-gold px-4 py-2 rounded-sm" data-i18n="nav.dataRoom">Data Room</a>
+    </div>
   </nav>
 </header>
 
@@ -104,48 +111,43 @@
   <div class="relative z-10 max-w-6xl mx-auto px-6 w-full">
     <div class="rise flex items-center gap-3 mb-9" style="animation-delay:.05s;">
       <span class="dot"></span>
-      <span class="eyebrow text-[11px] gold font-mono uppercase">Confidential Lender's Teaser</span>
-      <span class="hidden sm:inline text-stone/70 text-[11px] font-mono">— KEK Southwest Aceh, Indonesia</span>
+      <span class="eyebrow text-[11px] gold font-mono uppercase" data-i18n="hero.eyebrow">Confidential Lender's Teaser</span>
+      <span class="hidden sm:inline text-stone/70 text-[11px] font-mono" data-i18n="hero.region">— KEK Southwest Aceh, Indonesia</span>
     </div>
 
-    <h1 class="font-serif font-light leading-[1.02] tracking-tight text-[2.7rem] sm:text-6xl lg:text-[5rem] max-w-5xl">
-      <span class="rise block" style="animation-delay:.14s;">From Indonesian Captive Ore</span>
-      <span class="rise block" style="animation-delay:.28s;">to European <em class="it serif-gold">Clean Mobility</em>.</span>
-    </h1>
+    <h1 class="font-serif font-light leading-[1.02] tracking-tight text-[2.7rem] sm:text-6xl lg:text-[5rem] max-w-5xl" data-i18n="hero.title"><span class="rise block" style="animation-delay:.14s;">From Indonesian Captive Ore</span> <span class="rise block" style="animation-delay:.28s;">to European <em class="it serif-gold">Clean Mobility</em>.</span></h1>
 
-    <p class="rise mt-9 max-w-2xl text-lg text-stone font-light leading-relaxed" style="animation-delay:.42s;">
-      Southeast Asia's first <span class="serif-gold">AI-Native Green Manufacturing Platform</span> — an independent micro-grid steel complex with a co-located <span class="text-cream">100&nbsp;MW green supercomputing center</span>, deploying green steel as the first industrial payload of the Pan-Eurasian Green Steel Corridor.
-    </p>
+    <p class="rise mt-9 max-w-2xl text-lg text-stone font-light leading-relaxed" style="animation-delay:.42s;" data-i18n="hero.body">Southeast Asia's first <span class="serif-gold">AI-Native Green Manufacturing Platform</span> &mdash; an independent micro-grid steel complex with a co-located <span class="text-cream">100&nbsp;MW green supercomputing center</span>, deploying green steel as the first industrial payload of the Pan-Eurasian Green Steel Corridor.</p>
 
     <div class="rise mt-8 flex flex-wrap gap-2.5" style="animation-delay:.52s;">
-      <span class="chip">DRI-EAF · Hydrogen-Ready</span>
-      <span class="chip">2.5 MTPA HRC</span>
-      <span class="chip">100 MW AI Compute · PUE ≤ 1.3</span>
-      <span class="chip">EU CBAM-Compliant Line</span>
+      <span class="chip" data-i18n="hero.chip1">DRI-EAF · Hydrogen-Ready</span>
+      <span class="chip" data-i18n="hero.chip2">2.5 MTPA HRC</span>
+      <span class="chip" data-i18n="hero.chip3">100 MW AI Compute · PUE ≤ 1.3</span>
+      <span class="chip" data-i18n="hero.chip4">EU CBAM-Compliant Line</span>
     </div>
 
     <div id="case" class="rise mt-16" style="animation-delay:.62s;">
       <div class="rule mb-px"></div>
       <div class="grid grid-cols-2 lg:grid-cols-4">
         <div class="panel border-r-0 lg:border-r border-b lg:border-b-0 p-6">
-          <div class="kick text-[10px] text-stone font-mono uppercase mb-4">Equity CapEx (Lease Plan)</div>
+          <div class="kick text-[10px] text-stone font-mono uppercase mb-4" data-i18n="stat1.label">Equity CapEx (Lease Plan)</div>
           <div class="num text-3xl text-cream"><span class="text-stone text-lg">USD </span><span data-count="1140" data-dp="0">0</span><span class="text-stone text-lg"> M</span></div>
-          <div class="text-[12px] text-stone mt-3">vs. $2,323M buy-outright · −51% equity</div>
+          <div class="text-[12px] text-stone mt-3" data-i18n="stat1.note">vs. $2,323M buy-outright · −51% equity</div>
         </div>
         <div class="panel border-r-0 lg:border-r border-b lg:border-b-0 p-6">
-          <div class="kick text-[10px] text-stone font-mono uppercase mb-4">Project IRR (Equity, Lease)</div>
+          <div class="kick text-[10px] text-stone font-mono uppercase mb-4" data-i18n="stat2.label">Project IRR (Equity, Lease)</div>
           <div class="num text-3xl gold">~<span data-count="24" data-dp="0">0</span><span class="text-lg">%</span></div>
-          <div class="text-[12px] text-stone mt-3">Payback 5.3 yrs · up to 28% / 4.6 yrs on gas strike</div>
+          <div class="text-[12px] text-stone mt-3" data-i18n="stat2.note">Payback 5.3 yrs · up to 28% / 4.6 yrs on gas strike</div>
         </div>
         <div class="panel border-r-0 lg:border-r border-b sm:border-b-0 p-6">
-          <div class="kick text-[10px] text-stone font-mono uppercase mb-4">Upstream Offtake Framework</div>
+          <div class="kick text-[10px] text-stone font-mono uppercase mb-4" data-i18n="stat3.label">Upstream Offtake Framework</div>
           <div class="num text-3xl text-cream"><span data-count="1.0" data-dp="1">0.0</span><span class="text-lg"> MTPA</span></div>
-          <div class="text-[12px] text-stone mt-3">MoU · Skyline Automotive Romania² · per-order contracts</div>
+          <div class="text-[12px] text-stone mt-3" data-i18n="stat3.note">MoU · Skyline Automotive Romania² · per-order contracts</div>
         </div>
         <div class="panel p-6">
-          <div class="kick text-[10px] text-stone font-mono uppercase mb-4">Equity NPV @ 8%</div>
+          <div class="kick text-[10px] text-stone font-mono uppercase mb-4" data-i18n="stat4.label">Equity NPV @ 8%</div>
           <div class="num text-3xl gold">+<span class="text-stone text-lg">$</span><span data-count="380" data-dp="0">0</span><span class="text-lg">M</span></div>
-          <div class="text-[12px] text-stone mt-3">EBITDA / lease coverage 2.6× · CBAM-compliant green line¹</div>
+          <div class="text-[12px] text-stone mt-3" data-i18n="stat4.note">EBITDA / lease coverage 2.6× · CBAM-compliant green line¹</div>
         </div>
       </div>
       <div class="rule mt-px"></div>
@@ -160,8 +162,8 @@
 <section id="bases" class="relative py-28" style="background:#0d1f16;">
   <div class="max-w-6xl mx-auto px-6">
     <div class="reveal max-w-3xl">
-      <div class="kick text-[11px] gold font-mono uppercase mb-5">02 — Site Architecture</div>
-      <h2 class="font-serif font-light text-4xl sm:text-5xl leading-tight">Two-Base, <em class="it serif-gold">Staggered</em> Deployment</h2>
+      <div class="kick text-[11px] gold font-mono uppercase mb-5" data-i18n="arch.kicker">02 — Site Architecture</div>
+      <h2 class="font-serif font-light text-4xl sm:text-5xl leading-tight" data-i18n="arch.heading">Two-Base, <em class="it serif-gold">Staggered</em> Deployment</h2>
       <p class="mt-6 text-stone text-lg font-light leading-relaxed">A deliberate split that smooths capital intensity across time and engineers out the <span class="text-cream">funding-gap valley</span> that sinks single-site megaprojects. Base A generates cash from Month 12; that cash services Base B's construction-phase debt.</p>
     </div>
 
@@ -224,8 +226,8 @@
   <div class="aura" style="width:420px;height:420px;background:rgba(201,168,106,.10);top:8%;right:-130px;"></div>
   <div class="max-w-6xl mx-auto px-6 relative z-10">
     <div class="reveal max-w-3xl">
-      <div class="kick text-[11px] gold font-mono uppercase mb-5">03 — Capital Discipline</div>
-      <h2 class="font-serif font-light text-4xl sm:text-5xl leading-tight">A <em class="it serif-gold">Subtract-Only</em> Capital Framework</h2>
+      <div class="kick text-[11px] gold font-mono uppercase mb-5" data-i18n="capex.kicker">03 — Capital Discipline</div>
+      <h2 class="font-serif font-light text-4xl sm:text-5xl leading-tight" data-i18n="capex.heading">A <em class="it serif-gold">Subtract-Only</em> Capital Framework</h2>
       <p class="mt-6 text-stone text-lg font-light leading-relaxed">We decompose a rigid, monolithic fixed-asset base into a sequence of <span class="text-cream">real options</span>. Phase 1 is tendered in five packages, on demand. Asymmetric by design — the budget can only ever move down.</p>
     </div>
 
@@ -259,8 +261,8 @@
 <section id="moat" class="relative py-28" style="background:#0d1f16;">
   <div class="max-w-6xl mx-auto px-6">
     <div class="reveal max-w-3xl">
-      <div class="kick text-[11px] gold font-mono uppercase mb-5">04 — Strategic Moat</div>
-      <h2 class="font-serif font-light text-4xl sm:text-5xl leading-tight">A <em class="it serif-gold">Regulatory & Geographic</em> Moat</h2>
+      <div class="kick text-[11px] gold font-mono uppercase mb-5" data-i18n="moat.kicker">04 — Strategic Moat</div>
+      <h2 class="font-serif font-light text-4xl sm:text-5xl leading-tight" data-i18n="moat.heading">A <em class="it serif-gold">Regulatory & Geographic</em> Moat</h2>
     </div>
 
     <div class="grid md:grid-cols-3 gap-5 mt-12">
@@ -284,12 +286,12 @@
     <div id="cta" class="reveal mt-16 rounded-lg p-10 sm:p-16 text-center relative overflow-hidden" style="background:radial-gradient(120% 130% at 50% 0%, #1a3a2a 0%, #13291e 70%);border:1px solid rgba(201,168,106,.28);">
       <div class="aura" style="width:380px;height:380px;background:rgba(201,168,106,.14);top:-140px;left:50%;transform:translateX(-50%);"></div>
       <div class="relative z-10">
-        <div class="kick text-[11px] gold font-mono uppercase mb-6">Strategic Anchor · Lender Engagement</div>
-        <h2 class="font-serif font-light text-3xl sm:text-5xl leading-tight max-w-3xl mx-auto">Request Full Lender's <em class="it serif-gold">Data Room</em> Access</h2>
+        <div class="kick text-[11px] gold font-mono uppercase mb-6" data-i18n="cta.kicker">Strategic Anchor · Lender Engagement</div>
+        <h2 class="font-serif font-light text-3xl sm:text-5xl leading-tight max-w-3xl mx-auto" data-i18n="cta.heading">Request Full Lender's <em class="it serif-gold">Data Room</em> Access</h2>
         <p class="text-stone mt-6 max-w-xl mx-auto font-light leading-relaxed">Including the <span class="text-cream">36-Month Capital Liquidity Balance Sheet</span>, EPC package schedule, and CBAM intensity dossier.</p>
         <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="mailto:info@inspaceglobal.com?subject=AGSC%20Lender%20Data%20Room%20Access%20Request" class="btn-gold font-medium px-9 py-4 rounded-sm">Request Data Room Access →</a>
-          <a href="#case" class="panel px-9 py-4 rounded-sm font-medium transition">Review Investment Case</a>
+          <a href="mailto:info@inspaceglobal.com?subject=AGSC%20Lender%20Data%20Room%20Access%20Request" class="btn-gold font-medium px-9 py-4 rounded-sm" data-i18n="cta.button">Request Data Room Access →</a>
+          <a href="#case" class="panel px-9 py-4 rounded-sm font-medium transition" data-i18n="cta.review">Review Investment Case</a>
         </div>
         <div class="mt-9 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[11px] text-stone font-mono">
           <span>PIF</span><span class="text-champ/30">·</span><span>DBS</span><span class="text-champ/30">·</span><span>BKPM</span><span class="text-champ/30">·</span><span>Confidential</span>
@@ -305,9 +307,9 @@
     <div class="flex flex-col md:flex-row md:items-center justify-between gap-5">
       <div class="flex items-center gap-3">
         <div class="w-7 h-7 rounded-sm flex items-center justify-center" style="background:var(--moss);border:1px solid rgba(201,168,106,.4);"><span class="font-serif text-champ leading-none">A</span></div>
-        <span class="font-serif text-sm">Aceh Integrated Green Steel Complex</span>
+        <span class="font-serif text-sm" data-i18n="footer.title">Aceh Integrated Green Steel Complex</span>
       </div>
-      <div class="text-[11px] text-stone font-mono">KEK Southwest Aceh · Inspace Global Holding Pte. Ltd.</div>
+      <div class="text-[11px] text-stone font-mono" data-i18n="footer.subtitle">KEK Southwest Aceh · Inspace Global Holding Pte. Ltd.</div>
     </div>
     <div class="rule my-8"></div>
     <p class="text-[10.5px] leading-relaxed text-stone/55 max-w-4xl">
@@ -328,6 +330,85 @@
     requestAnimationFrame(f);
   }
   window.addEventListener('load',()=>setTimeout(()=>document.querySelectorAll('[data-count]').forEach(countUp),700));
+</script>
+
+<script>
+const I18N_AGSC = {
+  zh: {
+    'nav.case': '投資概要',
+    'nav.arch': '基地架構',
+    'nav.capex': '資本框架',
+    'nav.moat': '戰略護城河',
+    'nav.dataRoom': '資料室',
+
+    'hero.eyebrow': '機密放款人簡介',
+    'hero.region': '— 印度尼西亞 西南亞齊 KEK',
+    'hero.title': '從印尼自有礦源，<br/>到歐洲 <em class="it serif-gold">清潔出行</em>。',
+    'hero.body': '東南亞首個 <span class="serif-gold">AI 原生綠色製造平台</span>——獨立微網鋼鐵綜合體，共址 <span class="text-cream">100 MW 綠色超算中心</span>，以綠鋼作為泛歐亞綠鋼走廊的首批工業載荷。',
+    'hero.chip1': 'DRI-EAF · 氫氣兼容',
+    'hero.chip2': '2.5 MTPA 熱軋卷',
+    'hero.chip3': '100 MW AI 算力 · PUE ≤ 1.3',
+    'hero.chip4': '歐盟 CBAM 合規產線',
+
+    'stat1.label': '股權資本支出（租賃方案）',
+    'stat1.note': '相較 2,323M 美元買斷 · 股權減 51%',
+    'stat2.label': '專案股權 IRR（租賃）',
+    'stat2.note': '回收 5.3 年 · 燃氣命中可達 28% / 4.6 年',
+    'stat3.label': '上游承購架構',
+    'stat3.note': 'MoU · Skyline Automotive Romania² · 逐單合約',
+    'stat4.label': '股權淨現值 NPV @ 8%',
+    'stat4.note': 'EBITDA / 租賃覆蓋率 2.6× · CBAM 合規綠線¹',
+
+    'arch.kicker': '02 — 場地架構',
+    'arch.heading': '兩基地 <em class="it serif-gold">分期</em> 部署',
+
+    'capex.kicker': '03 — 資本紀律',
+    'capex.heading': '<em class="it serif-gold">只減不加</em> 的資本框架',
+
+    'moat.kicker': '04 — 戰略護城河',
+    'moat.heading': '監管與地理 <em class="it serif-gold">雙重</em> 護城河',
+
+    'cta.kicker': '戰略錨點 · 放款人對接',
+    'cta.heading': '申請完整放款人 <em class="it serif-gold">資料室</em> 存取',
+    'cta.button': '申請資料室存取 →',
+    'cta.review': '回顧投資概要',
+
+    'footer.title': '亞齊綜合綠色鋼鐵複合體',
+    'footer.subtitle': '西南亞齊 KEK · Inspace Global Holding Pte. Ltd.'
+  }
+};
+
+(function(){
+  const STORAGE_KEY = 'igh-lang';
+  function applyLang(lang){
+    document.body.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-Hans' : 'en');
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if(!el.dataset.origHtml){ el.dataset.origHtml = el.innerHTML; }
+      if(lang === 'zh' && I18N_AGSC.zh[key]){
+        el.innerHTML = I18N_AGSC.zh[key];
+      } else {
+        el.innerHTML = el.dataset.origHtml;
+      }
+    });
+    const btn = document.getElementById('lang-toggle');
+    if(btn){ btn.textContent = (lang === 'zh') ? 'EN' : '中'; }
+    localStorage.setItem(STORAGE_KEY, lang);
+  }
+  function init(){
+    const stored = localStorage.getItem(STORAGE_KEY) || 'en';
+    applyLang(stored);
+    const btn = document.getElementById('lang-toggle');
+    if(btn){
+      btn.addEventListener('click', () => {
+        const current = localStorage.getItem(STORAGE_KEY) || 'en';
+        applyLang(current === 'zh' ? 'en' : 'zh');
+      });
+    }
+  }
+  if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', init); } else { init(); }
+})();
 </script>
 </body>
 </html>
