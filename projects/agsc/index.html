@@ -70,6 +70,7 @@
   .btn-gold{background:var(--champ);color:#13291E;transition:all .3s ease;}
   .btn-gold:hover{background:#E3CFA0;transform:translateY(-1px);box-shadow:0 18px 40px -18px rgba(201,168,106,.7);}
   .ledger tr:hover{background:rgba(201,168,106,.05);}
+  .img-equal-frame{aspect-ratio:16/9;min-height:200px;}
   em.it{font-style:italic;}
   .lang-toggle{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:30px;padding:0 10px;border:1px solid rgba(201,168,106,.4);background:transparent;color:var(--champ);font-family:'Spline Sans',sans-serif;font-size:13px;font-weight:500;border-radius:2px;cursor:pointer;transition:all .25s ease;line-height:1;}
   .lang-toggle:hover{background:var(--champ);color:#13291E;}
@@ -219,10 +220,10 @@
       <p class="text-[13px] text-stone">The staggered model converts a single capital-intensity spike into <span class="text-cream">two financeable tranches</span>, with operating cash from the bridge asset de-risking lender exposure throughout Base B build-out.</p>
     </div>
 
-    <!-- ===== System Map + Surin Port (side-by-side) ===== -->
-    <div class="grid lg:grid-cols-3 gap-5 mt-10">
-      <!-- System map (col-span-2) -->
-      <figure class="reveal panel rounded-md p-4 sm:p-5 overflow-hidden lg:col-span-2">
+    <!-- ===== System Map + Surin Port (equal side-by-side) ===== -->
+    <div class="grid lg:grid-cols-2 gap-5 mt-10 lg:items-stretch">
+      <!-- System map -->
+      <figure class="reveal panel rounded-md p-4 sm:p-5 overflow-hidden flex flex-col">
         <div class="mb-3 flex items-end justify-between flex-wrap gap-3">
           <div>
             <div class="kick text-[10px] gold font-mono uppercase mb-1" data-i18n="ecosystem.kicker">System Map</div>
@@ -230,18 +231,18 @@
           </div>
           <p class="text-[11px] font-mono text-stone/60" data-i18n="ecosystem.note">DRI · EAF · EFCE · TSCR</p>
         </div>
-        <div class="rounded-md overflow-hidden" style="background:rgba(244,240,230,.92);border:1px solid rgba(201,168,106,.18);">
-          <img src="/projects/agsc/system-map.png" alt="AGSC system map: mineral → DRI → EAF → EFCE → TSCR production flow, integrated with power, hydrogen, and Surin Port logistics" style="width:100%;height:auto;display:block;"/>
+        <div class="img-equal-frame rounded-md overflow-hidden flex-1" style="background:rgba(244,240,230,.92);border:1px solid rgba(201,168,106,.18);">
+          <img src="/projects/agsc/system-map.png" alt="AGSC system map: mineral → DRI → EAF → EFCE → TSCR production flow, integrated with power, hydrogen, and Surin Port logistics" style="width:100%;height:100%;object-fit:contain;display:block;"/>
         </div>
       </figure>
-      <!-- Surin Port (col-span-1) -->
-      <figure class="reveal panel rounded-md p-4 sm:p-5 overflow-hidden" style="transition-delay:.08s;">
+      <!-- Surin Port -->
+      <figure class="reveal panel rounded-md p-4 sm:p-5 overflow-hidden flex flex-col" style="transition-delay:.08s;">
         <div class="mb-3">
           <div class="kick text-[10px] gold font-mono uppercase mb-1" data-i18n="surin.kicker">Surin Port</div>
           <p class="text-[13px] text-stone" data-i18n="surin.caption">Integrated export terminal · 40,000 DWT Handymax</p>
         </div>
-        <div class="rounded-md overflow-hidden" style="background:rgba(13,31,22,.5);border:1px solid rgba(201,168,106,.18);">
-          <img src="/projects/agsc/surin-port.png" alt="Surin Port aerial view: integrated export terminal serving the AGSC green steel complex, with bulk carrier berthing and protected harbor on the western Sumatra coast" style="width:100%;height:auto;display:block;"/>
+        <div class="img-equal-frame rounded-md overflow-hidden flex-1" style="background:rgba(13,31,22,.5);border:1px solid rgba(201,168,106,.18);">
+          <img src="/projects/agsc/surin-port.png" alt="Surin Port aerial view: integrated export terminal serving the AGSC green steel complex, with bulk carrier berthing and protected harbor on the western Sumatra coast" style="width:100%;height:100%;object-fit:cover;display:block;"/>
         </div>
       </figure>
     </div>
