@@ -73,6 +73,13 @@
   .cta-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,106,.12);border:1px solid rgba(201,168,106,.45);color:var(--champ);font-family:'Spline Sans Mono',monospace;font-size:12px;letter-spacing:.06em;padding:9px 18px;border-radius:2px;transition:all .3s ease;}
   .agsc-card:hover .cta-pill{background:var(--champ);color:#13291E;border-color:var(--champ);}
   .agsc-card{cursor:pointer;}
+  .lightbox{position:fixed;inset:0;background:rgba(13,31,22,.94);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;z-index:1000;opacity:0;pointer-events:none;transition:opacity .3s ease;cursor:zoom-out;}
+  .lightbox.active{opacity:1;pointer-events:auto;}
+  .lightbox img{max-width:95vw;max-height:90vh;object-fit:contain;box-shadow:0 30px 80px rgba(0,0,0,.6);transform:scale(.92);transition:transform .35s cubic-bezier(.16,1,.3,1);border-radius:4px;}
+  .lightbox.active img{transform:scale(1);}
+  .lightbox-close{position:absolute;top:20px;right:20px;width:44px;height:44px;border-radius:50%;background:rgba(13,31,22,.7);border:1px solid rgba(201,168,106,.45);color:var(--champ);font-size:24px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;font-family:'Spline Sans',sans-serif;transition:background .25s ease;z-index:1001;}
+  .lightbox-close:hover{background:var(--champ);color:#13291E;}
+  .lightbox-hint{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.06em;color:rgba(201,168,106,.6);}
   em.it{font-style:italic;}
   .lang-toggle{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:30px;padding:0 10px;border:1px solid rgba(201,168,106,.4);background:transparent;color:var(--champ);font-family:'Spline Sans',sans-serif;font-size:13px;font-weight:500;border-radius:2px;cursor:pointer;transition:all .25s ease;line-height:1;}
   .lang-toggle:hover{background:var(--champ);color:#13291E;}
@@ -196,7 +203,9 @@
           <p class="text-[12px] text-stone" data-i18n="map.caption">PT Atjeh Quantum Industrial Group · Aceh, Indonesia</p>
         </div>
         <div class="map-frame rounded-md overflow-hidden" style="background:rgba(13,31,22,.5);border:1px solid rgba(201,168,106,.18);">
-          <img src="/project-map.jpg" alt="Hand-illustrated map of IGH project locations in Aceh, Sumatra, Indonesia" style="width:100%;height:auto;display:block;"/>
+          <a href="/project-map.jpg" target="_blank" rel="noopener" style="display:block;cursor:zoom-in;" title="Click to enlarge">
+            <img src="/project-map.jpg" alt="Hand-illustrated map of IGH project locations in Aceh, Sumatra, Indonesia" style="width:100%;height:auto;display:block;"/>
+          </a>
         </div>
       </figure>
     </div>
@@ -424,6 +433,7 @@
 <script>
 const I18N = {
   zh: {
+    'lightbox.hint': '点击任意位置或按 ESC 关闭',
     'nav.about': '集团介绍',
     'nav.operations': '业务版图',
     'nav.structure': '集团架构',
@@ -571,6 +581,45 @@ const I18N = {
     }
   }
   if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', init); } else { init(); }
+})();
+</script>
+
+<!-- Lightbox overlay -->
+<div id="lightbox" class="lightbox" aria-hidden="true" role="dialog">
+  <button class="lightbox-close" type="button" aria-label="Close">&times;</button>
+  <img id="lightbox-img" src="" alt=""/>
+  <div class="lightbox-hint" data-i18n="lightbox.hint">Click anywhere or press ESC to close</div>
+</div>
+
+<script>
+(function(){
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  function openLightbox(src, alt){
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || '';
+    lightbox.classList.add('active');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(){
+    lightbox.classList.remove('active');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    setTimeout(()=>{ lightboxImg.src=''; }, 350);
+  }
+  // Intercept clicks on image anchors
+  document.querySelectorAll('a[href$="project-map.jpg"], a[href$="project-map.png"]').forEach(a => {
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      const img = a.querySelector('img');
+      openLightbox(a.href, img?.alt);
+    });
+  });
+  lightbox.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+  });
 })();
 </script>
 </body>
