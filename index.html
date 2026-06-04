@@ -89,6 +89,13 @@
   .lang-zh{display:none;}
   body[data-lang="zh"] .lang-en{display:none;}
   body[data-lang="zh"] .lang-zh{display:revert;}
+  .igh-ticker{display:inline-block;animation:igh-mq 46s linear infinite;}
+  .igh-ticker:hover{animation-play-state:paused;}
+  @keyframes igh-mq{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  .tk-sep{color:rgba(201,168,106,.5);margin:0 20px;}
+  .tk-h{color:#cfd8d0;font-size:13px;}
+  .feat-arrow{transition:transform .3s ease;display:inline-block;}
+  a.feat:hover .feat-arrow{transform:translateX(4px);}
 </style>
 </head>
 
@@ -119,8 +126,23 @@
   </nav>
 </header>
 
+<!-- ===== TICKER ===== -->
+<div class="fixed left-0 right-0 z-40" style="top:68px;background:rgba(8,18,13,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,168,106,.22);">
+  <div class="max-w-6xl mx-auto px-6 h-[40px] flex items-center gap-4 overflow-hidden">
+    <span class="flex-none flex items-center gap-2" style="color:#C9A86A;font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.18em;"><span class="dot"></span>LIVE</span>
+    <span class="flex-none" style="color:rgba(255,255,255,.15);">|</span>
+    <div class="flex-1 overflow-hidden whitespace-nowrap">
+      <div class="igh-ticker">
+<!--TICKER_START-->
+        <span class="tk-h"><span class="lang-en">Historic breakthrough — BDx secures 1.2 GW power commitment for AI expansion</span><span class="lang-zh">历史性突破：BDx 取得 1.2 GW 供电承诺以扩张 AI</span></span><span class="tk-sep">◆</span><span class="tk-h"><span class="lang-en">Chinese tech giant’s $5 billion AI project lands in Batam</span><span class="lang-zh">中国科技巨头 50 亿美元 AI 项目落脚巴淡岛</span></span><span class="tk-sep">◆</span><span class="tk-h"><span class="lang-en">Sovereign wealth funds (INA &amp; Danantara) aggressively back AI compute</span><span class="lang-zh">主权基金（INA 与 Danantara）大力押注 AI 算力</span></span><span class="tk-sep">◆</span><span class="tk-h"><span class="lang-en">Forward blueprint — drafting the “Eastern Indonesia expansion blueprint”</span><span class="lang-zh">前瞻蓝图：起草「印尼东部扩展蓝图」</span></span><span class="tk-sep">◆</span><span class="tk-h"><span class="lang-en">Industry concern — the AI boom sparks a “water crisis”</span><span class="lang-zh">产业隐忧：AI 热潮引发「水资源危机」</span></span><span class="tk-sep">◆</span><span class="tk-h"><span class="lang-en">Flagship “free nutritious lunch” agency chief replaced</span><span class="lang-zh">旗舰政策「免费营养午餐」机构首长遭撤换</span></span><span class="tk-sep">◆</span><span class="tk-h"><span class="lang-en">Pancasila Day address — Prabowo declares war on “corruption and smuggling networks”</span><span class="lang-zh">建国五原则纪念日演说，普拉博沃向「贪腐与走私集团」宣战</span></span><span class="tk-sep">◆</span><span class="tk-h"><span class="lang-en">Rupiah tests 17,900 as the central bank imposes FX purchase limits</span><span class="lang-zh">印尼盾面临 17,900 保卫战，央行祭出外汇限购铁腕</span></span><span class="tk-sep">◆</span><span class="tk-h"><span class="lang-en">Indonesia and Malaysia convene bilateral commission (JCBC)</span><span class="lang-zh">印尼与马来西亚召开双边高层会议（JCBC）</span></span><span class="tk-sep">◆</span><span class="tk-h"><span class="lang-en">Historic breakthrough — BDx secures 1.2 GW power commitment for AI expansion</span><span class="lang-zh">历史性突破：BDx 取得 1.2 GW 供电承诺以扩张 AI</span></span><span class="tk-sep">◆</span><span class="tk-h"><span class="lang-en">Chinese tech giant’s $5 billion AI project lands in Batam</span><span class="lang-zh">中国科技巨头 50 亿美元 AI 项目落脚巴淡岛</span></span><span class="tk-sep">◆</span><span class="tk-h"><span class="lang-en">Sovereign wealth funds (INA &amp; Danantara) aggressively back AI compute</span><span class="lang-zh">主权基金（INA 与 Danantara）大力押注 AI 算力</span></span><span class="tk-sep">◆</span><span class="tk-h"><span class="lang-en">Forward blueprint — drafting the “Eastern Indonesia expansion blueprint”</span><span class="lang-zh">前瞻蓝图：起草「印尼东部扩展蓝图」</span></span><span class="tk-sep">◆</span><span class="tk-h"><span class="lang-en">Industry concern — the AI boom sparks a “water crisis”</span><span class="lang-zh">产业隐忧：AI 热潮引发「水资源危机」</span></span><span class="tk-sep">◆</span><span class="tk-h"><span class="lang-en">Flagship “free nutritious lunch” agency chief replaced</span><span class="lang-zh">旗舰政策「免费营养午餐」机构首长遭撤换</span></span><span class="tk-sep">◆</span><span class="tk-h"><span class="lang-en">Pancasila Day address — Prabowo declares war on “corruption and smuggling networks”</span><span class="lang-zh">建国五原则纪念日演说，普拉博沃向「贪腐与走私集团」宣战</span></span><span class="tk-sep">◆</span><span class="tk-h"><span class="lang-en">Rupiah tests 17,900 as the central bank imposes FX purchase limits</span><span class="lang-zh">印尼盾面临 17,900 保卫战，央行祭出外汇限购铁腕</span></span><span class="tk-sep">◆</span><span class="tk-h"><span class="lang-en">Indonesia and Malaysia convene bilateral commission (JCBC)</span><span class="lang-zh">印尼与马来西亚召开双边高层会议（JCBC）</span></span><span class="tk-sep">◆</span>
+<!--TICKER_END-->
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- ===== HERO ===== -->
-<section class="relative min-h-screen flex items-center pt-32 pb-24 overflow-hidden" style="background:radial-gradient(130% 90% at 70% 0%, #1a3a2a 0%, #13291e 42%, #0d1f16 100%);">
+<section class="relative min-h-screen flex items-center pt-40 pb-24 overflow-hidden" style="background:radial-gradient(130% 90% at 70% 0%, #1a3a2a 0%, #13291e 42%, #0d1f16 100%);">
   <div class="aura" style="width:560px;height:560px;background:rgba(45,125,70,.22);top:-160px;right:-120px;"></div>
   <div class="aura" style="width:480px;height:480px;background:rgba(201,168,106,.10);bottom:-180px;left:-140px;"></div>
 
@@ -154,29 +176,27 @@
 </section>
 
 <!-- ===== INTELLIGENCE (lead) ===== -->
-<section id="intelligence" class="relative py-20" style="background:#0d1f16;border-bottom:1px solid rgba(255,255,255,.06);">
+<section id="intelligence" class="relative pt-16 pb-20" style="background:#0d1f16;border-bottom:1px solid rgba(255,255,255,.06);">
   <div class="max-w-6xl mx-auto px-6">
-    <div class="reveal flex items-end justify-between flex-wrap gap-6 mb-8">
-      <div>
-        <div class="flex items-center gap-3 mb-4">
-          <span class="dot"></span>
-          <span class="eyebrow text-[11px] gold font-mono uppercase" data-i18n="intel.kicker">Market Intelligence · Updated weekly</span>
-        </div>
-        <h2 class="font-serif font-light text-3xl sm:text-4xl leading-tight" data-i18n="intel.heading">The <em class="it serif-gold">developments</em> that shape our region, updated weekly.</h2>
-      </div>
-      <a href="/news/" class="cta-pill" data-i18n="intel.viewall">View all intelligence</a>
-    </div>
-    <div class="reveal panel rounded-md overflow-hidden">
 <!--INTEL_LATEST_START-->
-      <a href="/news/#2026-06-indonesia-ai" class="flex items-center justify-between gap-5 px-6 py-5 transition group hover:bg-white/[0.02]" style="">
-        <span class="font-serif text-[17px] sm:text-[18px] leading-snug pr-4"><span class="lang-en">Indonesia, AI and data centers</span><span class="lang-zh">印尼、AI 与数据中心</span></span>
-        <span class="shrink-0 flex items-center gap-3 num text-[12px] text-stone"><span class="lang-en">June 2026</span><span class="lang-zh">2026 年 6 月</span><span class="gold transition group-hover:translate-x-1">&rarr;</span></span>
+      <a href="/news/#2026-06-indonesia-ai" class="feat reveal panel panel-gold rounded-md p-8 sm:p-10 block" style="border-top:2px solid var(--champ);">
+        <div class="flex items-center gap-3 mb-5">
+          <span class="dot"></span>
+          <span class="kick text-[11px] gold font-mono uppercase"><span class="lang-en">Latest intelligence · </span><span class="lang-zh">最新情报 · </span><span class="lang-en">June 2026</span><span class="lang-zh">2026 年 6 月</span></span>
+        </div>
+        <h2 class="font-serif font-light text-3xl sm:text-4xl lg:text-5xl leading-[1.12] mb-5"><span class="lang-en">Indonesia, AI and data centers</span><span class="lang-zh">印尼、AI 与数据中心</span></h2>
+        <p class="text-stone text-lg font-light leading-relaxed max-w-3xl mb-7"><span class="lang-en">A summary of Indonesia’s AI and data-center developments as of June 2026 — power, capital and the resource constraints now shaping the build-out.</span><span class="lang-zh">截至 2026 年 6 月，印尼在 AI 与数据中心领域的最新动态——电力、资本，以及正在塑造这波建设的资源限制。</span></p>
+        <span class="cta-pill"><span class="lang-en">Read all 5 briefings</span><span class="lang-zh">阅读全部 5 则</span> <span class="feat-arrow" aria-hidden="true">&rarr;</span></span>
       </a>
-      <a href="/news/#2026-06-indonesia-macro" class="flex items-center justify-between gap-5 px-6 py-5 transition group hover:bg-white/[0.02]" style="border-top:1px solid rgba(255,255,255,.06);">
-        <span class="font-serif text-[17px] sm:text-[18px] leading-snug pr-4"><span class="lang-en">Indonesia briefing — domestic affairs, FX markets and regional diplomacy</span><span class="lang-zh">印尼要闻 — 内政、汇市与区域外交</span></span>
-        <span class="shrink-0 flex items-center gap-3 num text-[12px] text-stone"><span class="lang-en">Early June 2026</span><span class="lang-zh">2026 年 6 月初</span><span class="gold transition group-hover:translate-x-1">&rarr;</span></span>
-      </a>
+      <div class="reveal panel rounded-md overflow-hidden mt-4">
+        <a href="/news/#2026-06-indonesia-macro" class="flex items-center justify-between gap-5 px-6 py-4 transition group hover:bg-white/[0.02]" style="">
+          <span class="font-serif text-[16px] sm:text-[17px] leading-snug pr-4"><span class="lang-en">Indonesia briefing — domestic affairs, FX markets and regional diplomacy</span><span class="lang-zh">印尼要闻 — 内政、汇市与区域外交</span></span>
+          <span class="shrink-0 flex items-center gap-3 num text-[12px] text-stone"><span class="lang-en">Early June 2026</span><span class="lang-zh">2026 年 6 月初</span><span class="gold transition group-hover:translate-x-1">&rarr;</span></span>
+        </a>
+      </div>
 <!--INTEL_LATEST_END-->
+    <div class="reveal mt-6 text-right">
+      <a href="/news/" class="cta-pill" data-i18n="intel.viewall">View all intelligence</a>
     </div>
   </div>
 </section>

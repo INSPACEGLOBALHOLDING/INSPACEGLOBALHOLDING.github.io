@@ -89,6 +89,13 @@
   .lang-zh{display:none;}
   body[data-lang="zh"] .lang-en{display:none;}
   body[data-lang="zh"] .lang-zh{display:revert;}
+  .igh-ticker{display:inline-block;animation:igh-mq 46s linear infinite;}
+  .igh-ticker:hover{animation-play-state:paused;}
+  @keyframes igh-mq{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  .tk-sep{color:rgba(201,168,106,.5);margin:0 20px;}
+  .tk-h{color:#cfd8d0;font-size:13px;}
+  .feat-arrow{transition:transform .3s ease;display:inline-block;}
+  a.feat:hover .feat-arrow{transform:translateX(4px);}
 </style>
 <style>
   .lang-zh{display:none;}
@@ -133,7 +140,7 @@
   <section class="relative pt-24 pb-14 overflow-hidden" style="background:radial-gradient(130% 90% at 70% 0%, #1a3a2a 0%, #13291e 42%, #0d1f16 100%);">
     <div class="aura" style="width:520px;height:520px;background:rgba(45,125,70,.2);top:-180px;right:-120px;"></div>
     <div class="max-w-4xl mx-auto px-6 relative z-10">
-      <div class="kick text-[11px] gold font-mono uppercase mb-5">Market Intelligence</div>
+      <div class="flex items-center gap-3 mb-5"><span class="dot"></span><span class="kick text-[11px] gold font-mono uppercase">Market Intelligence · Updated weekly</span></div>
       <h1 class="font-serif font-light leading-[1.06] tracking-tight text-4xl sm:text-5xl lg:text-6xl"><span class="lang-en">The <em class='it serif-gold'>developments</em> that shape our region.</span><span class="lang-zh">关注与我们相关的<em class='it serif-gold'>区域动态</em>。</span></h1>
       <p class="mt-7 max-w-2xl text-lg text-stone font-light leading-relaxed"><span class="lang-en">Curated developments across Indonesia, AI infrastructure and green steel — the operating environment around our projects.</span><span class="lang-zh">精选印度尼西亚、AI 基础设施与绿色钢铁的关键动态——我们项目所处的运营环境。</span></p>
     </div>
