@@ -86,6 +86,9 @@
   body[data-lang="zh"] em.it{font-style:normal;}
 
   .label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-family:'Spline Sans Mono',monospace;color:rgba(154,167,157,.85);}
+  .lang-zh{display:none;}
+  body[data-lang="zh"] .lang-en{display:none;}
+  body[data-lang="zh"] .lang-zh{display:revert;}
 </style>
 </head>
 
@@ -106,6 +109,7 @@
       <a href="#operations" class="nav-link transition" data-i18n="nav.operations">Operations</a>
       <a href="#structure"  class="nav-link transition" data-i18n="nav.structure">Group Structure</a>
       <a href="#governance" class="nav-link transition" data-i18n="nav.governance">Governance</a>
+      <a href="/news/"      class="nav-link transition" data-i18n="nav.intel">Intelligence</a>
       <a href="#contact"    class="nav-link transition" data-i18n="nav.contact">Contact</a>
     </div>
     <div class="flex items-center gap-2">
@@ -358,13 +362,38 @@
   </div>
 </section>
 
+<!-- ===== INTELLIGENCE ===== -->
+<section id="intelligence" class="relative py-24" style="background:#0d1f16;border-top:1px solid rgba(255,255,255,.05);">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="reveal flex items-end justify-between flex-wrap gap-6 mb-9">
+      <div>
+        <div class="kick text-[11px] gold font-mono uppercase mb-5" data-i18n="intel.kicker">05 — Market Intelligence</div>
+        <h2 class="font-serif font-light text-4xl sm:text-5xl leading-tight" data-i18n="intel.heading">The <em class="it serif-gold">developments</em> that shape our region.</h2>
+      </div>
+      <a href="/news/" class="cta-pill" data-i18n="intel.viewall">View all intelligence</a>
+    </div>
+    <div class="reveal panel rounded-md overflow-hidden">
+<!--INTEL_LATEST_START-->
+      <a href="/news/#2026-06-indonesia-ai" class="flex items-center justify-between gap-5 px-6 py-5 transition group hover:bg-white/[0.02]" style="">
+        <span class="font-serif text-[17px] sm:text-[18px] leading-snug pr-4"><span class="lang-en">Indonesia, AI and data centers</span><span class="lang-zh">印尼、AI 與資料中心</span></span>
+        <span class="shrink-0 flex items-center gap-3 num text-[12px] text-stone"><span class="lang-en">June 2026</span><span class="lang-zh">2026 年 6 月</span><span class="gold transition group-hover:translate-x-1">&rarr;</span></span>
+      </a>
+      <a href="/news/#2026-06-indonesia-macro" class="flex items-center justify-between gap-5 px-6 py-5 transition group hover:bg-white/[0.02]" style="border-top:1px solid rgba(255,255,255,.06);">
+        <span class="font-serif text-[17px] sm:text-[18px] leading-snug pr-4"><span class="lang-en">Indonesia briefing — domestic affairs, FX markets and regional diplomacy</span><span class="lang-zh">印尼要聞 — 內政、匯市與區域外交</span></span>
+        <span class="shrink-0 flex items-center gap-3 num text-[12px] text-stone"><span class="lang-en">Early June 2026</span><span class="lang-zh">2026 年 6 月初</span><span class="gold transition group-hover:translate-x-1">&rarr;</span></span>
+      </a>
+<!--INTEL_LATEST_END-->
+    </div>
+  </div>
+</section>
+
 <!-- ===== CONTACT ===== -->
 <section id="contact" class="relative py-28" style="background:#0d1f16;">
   <div class="max-w-6xl mx-auto px-6">
     <div class="reveal rounded-lg p-10 sm:p-16 text-center relative overflow-hidden" style="background:radial-gradient(120% 130% at 50% 0%, #1a3a2a 0%, #13291e 70%);border:1px solid rgba(201,168,106,.28);">
       <div class="aura" style="width:380px;height:380px;background:rgba(201,168,106,.14);top:-140px;left:50%;transform:translateX(-50%);"></div>
       <div class="relative z-10">
-        <div class="kick text-[11px] gold font-mono uppercase mb-6" data-i18n="contact.kicker">05 — Engage With Inspace Global</div>
+        <div class="kick text-[11px] gold font-mono uppercase mb-6" data-i18n="contact.kicker">06 — Engage With Inspace Global</div>
         <h2 class="font-serif font-light text-3xl sm:text-5xl leading-tight max-w-3xl mx-auto" data-i18n="contact.heading">Open to <em class="it serif-gold">qualified</em> partners and counterparties.</h2>
         <p class="text-stone mt-6 max-w-xl mx-auto font-light leading-relaxed" data-i18n="contact.body">We welcome inquiries from EPC firms, engineering and technical advisors, infrastructure investors, lenders, and institutional partners for collaboration and project development.</p>
         <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
@@ -434,6 +463,10 @@
 const I18N = {
   zh: {
     'lightbox.hint': '点击任意位置或按 ESC 关闭',
+    'nav.intel': '市场情报',
+    'intel.kicker': '05 — 市场情报',
+    'intel.heading': '关注与我们相关的<em class=\"it serif-gold\">区域动态</em>。',
+    'intel.viewall': '查看全部情报',
     'nav.about': '集团介绍',
     'nav.operations': '业务版图',
     'nav.structure': '集团架构',
@@ -528,7 +561,7 @@ const I18N = {
     'gov.card3.body': '项目级的脱碳路径自设计阶段即纳入，非事后改造——自始即对标欧洲碳边境调整机制（CBAM）。',
     'gov.disclosure': '详尽公司文件——包括公司注册证书、项目级尽职调查包及资本架构信息披露——将在合格交易对手介入后，依保密约定提供。',
 
-    'contact.kicker': '05 — 业务联络',
+    'contact.kicker': '06 — 业务联络',
     'contact.heading': '欢迎<em class="it serif-gold">合格</em>合作方与机构交易对手。',
     'contact.body': '诚邀 EPC 承包方、工程与技术顾问、基础设施投资者、贷款机构以及机构合作方，就合作与项目开发与我们联络。',
     'contact.flagshipBtn': '旗舰项目',

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<title>Inspace Global Holding Pte. Ltd.</title>
+<meta name="description" content="Singapore-based industrial and energy infrastructure development group, executing integrated EPC projects across Indonesia and Southeast Asia." />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Spline+Sans:wght@300;400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          forest:  "#13291E",
+          forest2: "#0d1f16",
+          moss:    "#1A3A2A",
+          sage:    "#2D7D46",
+          cream:   "#F4F0E6",
+          champ:   "#C9A86A",
+          champ2:  "#E3CFA0",
+          stone:   "#9aa79d",
+        },
+        fontFamily: {
+          serif: ['Fraunces', 'serif'],
+          body:  ['"Spline Sans"', 'sans-serif'],
+          mono:  ['"Spline Sans Mono"', 'monospace'],
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  :root{ --champ:#C9A86A; --sage:#2D7D46; --moss:#1A3A2A; }
+  html{scroll-behavior:smooth;}
+  body{ background:#0d1f16; color:#e7e9e4; font-family:'Spline Sans',sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  ::selection{background:var(--champ);color:#0d1f16;}
+  .grain{ position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.035;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  .aura{position:absolute;border-radius:9999px;filter:blur(90px);pointer-events:none;}
+  .rule{height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,106,.4),transparent);}
+  .rule-soft{height:1px;background:rgba(255,255,255,.08);}
+  .panel{ background:linear-gradient(165deg, rgba(255,255,255,.045), rgba(255,255,255,.012)); border:1px solid rgba(255,255,255,.08); backdrop-filter:blur(8px); transition:border-color .35s ease, transform .35s ease; }
+  .panel-gold{ border-color:rgba(201,168,106,.32); }
+  .panel:hover{ border-color:rgba(201,168,106,.28); }
+  .panel-link:hover{ transform:translateY(-2px); border-color:rgba(201,168,106,.45); }
+  .eyebrow{ letter-spacing:.32em; }
+  .kick{ letter-spacing:.22em; }
+  .num{ font-family:'Spline Sans Mono',monospace; font-variant-numeric:tabular-nums; }
+  .gold{ color:var(--champ); }
+  .serif-gold{ color:#E3CFA0; }
+  .rise{opacity:0;transform:translateY(34px);animation:rise 1s cubic-bezier(.16,1,.3,1) forwards;}
+  @keyframes rise{to{opacity:1;transform:none;}}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);}
+  .reveal.in{opacity:1 !important;transform:none !important;}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--champ);box-shadow:0 0 0 0 rgba(201,168,106,.55);animation:p 2.6s infinite;}
+  @keyframes p{0%{box-shadow:0 0 0 0 rgba(201,168,106,.5);}70%{box-shadow:0 0 0 11px rgba(201,168,106,0);}100%{box-shadow:0 0 0 0 rgba(201,168,106,0);}}
+  .chip{font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.06em;border:1px solid rgba(201,168,106,.3);color:var(--champ);padding:5px 12px;border-radius:2px;}
+  .nav-link{position:relative;}
+  .nav-link::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:1px;background:var(--champ);transition:width .3s ease;}
+  .nav-link:hover::after{width:100%;}
+  .nav-link:hover{color:#E3CFA0;}
+  .btn-gold{background:var(--champ);color:#13291E;transition:all .3s ease;}
+  .btn-gold:hover{background:#E3CFA0;transform:translateY(-1px);box-shadow:0 18px 40px -18px rgba(201,168,106,.7);}
+  .card-corner{position:absolute;top:20px;right:24px;width:40px;height:40px;display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--champ);border:1px solid rgba(201,168,106,.35);border-radius:50%;background:rgba(13,31,22,.4);transition:all .3s ease;}
+  .agsc-card:hover .card-corner{background:var(--champ);color:#13291E;border-color:var(--champ);transform:translate(3px,-3px);}
+  .cta-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,106,.12);border:1px solid rgba(201,168,106,.45);color:var(--champ);font-family:'Spline Sans Mono',monospace;font-size:12px;letter-spacing:.06em;padding:9px 18px;border-radius:2px;transition:all .3s ease;}
+  .agsc-card:hover .cta-pill{background:var(--champ);color:#13291E;border-color:var(--champ);}
+  .agsc-card{cursor:pointer;}
+  .lightbox{position:fixed;inset:0;background:rgba(13,31,22,.94);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;z-index:1000;opacity:0;pointer-events:none;transition:opacity .3s ease;cursor:zoom-out;}
+  .lightbox.active{opacity:1;pointer-events:auto;}
+  .lightbox img{max-width:95vw;max-height:90vh;object-fit:contain;box-shadow:0 30px 80px rgba(0,0,0,.6);transform:scale(.92);transition:transform .35s cubic-bezier(.16,1,.3,1);border-radius:4px;}
+  .lightbox.active img{transform:scale(1);}
+  .lightbox-close{position:absolute;top:20px;right:20px;width:44px;height:44px;border-radius:50%;background:rgba(13,31,22,.7);border:1px solid rgba(201,168,106,.45);color:var(--champ);font-size:24px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;font-family:'Spline Sans',sans-serif;transition:background .25s ease;z-index:1001;}
+  .lightbox-close:hover{background:var(--champ);color:#13291E;}
+  .lightbox-hint{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.06em;color:rgba(201,168,106,.6);}
+  em.it{font-style:italic;}
+  .lang-toggle{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:30px;padding:0 10px;border:1px solid rgba(201,168,106,.4);background:transparent;color:var(--champ);font-family:'Spline Sans',sans-serif;font-size:13px;font-weight:500;border-radius:2px;cursor:pointer;transition:all .25s ease;line-height:1;}
+  .lang-toggle:hover{background:var(--champ);color:#13291E;}
+  body[data-lang="zh"] em.it{font-style:normal;}
+
+  .label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-family:'Spline Sans Mono',monospace;color:rgba(154,167,157,.85);}
+  .lang-zh{display:none;}
+  body[data-lang="zh"] .lang-en{display:none;}
+  body[data-lang="zh"] .lang-zh{display:revert;}
+</style>
+<style>
+  .lang-zh{display:none;}
+  body[data-lang="zh"] .lang-en{display:none;}
+  body[data-lang="zh"] .lang-zh{display:revert;}
+  details.brief>summary{list-style:none;cursor:pointer;display:flex;gap:14px;align-items:baseline;padding:18px 0;transition:color .25s ease;border-top:1px solid rgba(255,255,255,.07);}
+  details.brief>summary::-webkit-details-marker{display:none;}
+  details.brief>summary:hover{color:#E3CFA0;}
+  details.brief .qn{font-family:'Spline Sans Mono',monospace;color:var(--champ);font-size:13px;flex:none;}
+  details.brief .qt{font-family:'Fraunces',serif;font-size:18px;line-height:1.45;}
+  details.brief .chev{margin-left:auto;color:var(--champ);transition:transform .3s ease;flex:none;font-size:20px;}
+  details.brief[open]>summary .chev{transform:rotate(90deg);}
+  details.brief .qb{color:#c9d2cb;font-weight:300;line-height:1.85;padding:2px 0 22px 34px;font-size:15px;}
+</style>
+<title>Market Intelligence · Inspace Global Holding Pte. Ltd.</title>
+</head>
+<body>
+<div class="grain"></div>
+<header class="fixed top-0 inset-x-0 z-50" style="background:rgba(13,31,22,.72);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06);">
+  <nav class="max-w-6xl mx-auto px-6 h-[68px] flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3">
+      <div class="h-9 px-2.5 rounded-sm flex items-center justify-center" style="background:var(--moss);border:1px solid rgba(201,168,106,.4);">
+        <span class="font-serif text-champ text-base leading-none tracking-[.12em] font-medium">IGH</span>
+      </div>
+      <span class="font-serif text-[15px] tracking-wide hidden sm:inline">Inspace Global Holding<span class="text-stone font-body text-[13px]"> · Pte. Ltd.</span></span>
+    </a>
+    <div class="hidden md:flex items-center gap-9 text-[13px] text-stone">
+      <a href="/#about"      class="nav-link transition" data-i18n="nav.about">About</a>
+      <a href="/#operations" class="nav-link transition" data-i18n="nav.operations">Operations</a>
+      <a href="/#structure"  class="nav-link transition" data-i18n="nav.structure">Group Structure</a>
+      <a href="/#governance" class="nav-link transition" data-i18n="nav.governance">Governance</a>
+      <a href="/news/"      class="nav-link transition" data-i18n="nav.intel">Intelligence</a>
+      <a href="/#contact"    class="nav-link transition" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="flex items-center gap-2">
+      <button id="lang-toggle" type="button" class="lang-toggle" aria-label="Toggle language">中</button>
+      <a href="/#contact" class="text-[12px] font-medium btn-gold px-4 py-2 rounded-sm" data-i18n="nav.contactBtn">Contact</a>
+    </div>
+  </nav>
+</header>
+<main class="pt-[68px]">
+  <section class="relative pt-24 pb-14 overflow-hidden" style="background:radial-gradient(130% 90% at 70% 0%, #1a3a2a 0%, #13291e 42%, #0d1f16 100%);">
+    <div class="aura" style="width:520px;height:520px;background:rgba(45,125,70,.2);top:-180px;right:-120px;"></div>
+    <div class="max-w-4xl mx-auto px-6 relative z-10">
+      <div class="kick text-[11px] gold font-mono uppercase mb-5">Market Intelligence</div>
+      <h1 class="font-serif font-light leading-[1.06] tracking-tight text-4xl sm:text-5xl lg:text-6xl"><span class="lang-en">The <em class='it serif-gold'>developments</em> that shape our region.</span><span class="lang-zh">关注与我们相关的<em class='it serif-gold'>区域动态</em>。</span></h1>
+      <p class="mt-7 max-w-2xl text-lg text-stone font-light leading-relaxed"><span class="lang-en">Curated developments across Indonesia, AI infrastructure and green steel — the operating environment around our projects.</span><span class="lang-zh">精选印度尼西亚、AI 基础设施与绿色钢铁的关键动态——我们项目所处的营运环境。</span></p>
+    </div>
+  </section>
+  <section class="py-20" style="background:#0d1f16;">
+    <div class="max-w-4xl mx-auto px-6 space-y-8">
+      <article id="2026-06-indonesia-ai" class="reveal panel rounded-lg p-8 sm:p-10 scroll-mt-28">
+        <div class="flex items-center gap-3 mb-5 flex-wrap">
+          <span class="chip"><span class="lang-en">June 2026</span><span class="lang-zh">2026 年 6 月</span></span>
+          <span class="label"><span class="lang-en">Indonesia · AI · Data Centers</span><span class="lang-zh">印尼 · AI · 資料中心</span></span>
+        </div>
+        <h2 class="font-serif text-2xl sm:text-3xl leading-snug mb-4"><span class="lang-en">Indonesia, AI and data centers</span><span class="lang-zh">印尼、AI 與資料中心</span></h2>
+        <p class="text-stone font-light leading-relaxed mb-2"><span class="lang-en">A summary of Indonesia’s AI and data-center developments as of June 2026 — power, capital and the resource constraints now shaping the build-out.</span><span class="lang-zh">截至 2026 年 6 月，印尼在 AI 與資料中心領域的最新動態——電力、資本，以及正在塑造這波建設的資源限制。</span></p>
+        <details class="brief">
+          <summary><span class="qn">01</span><span class="qt"><span class="lang-en">Historic breakthrough — BDx secures 1.2 GW power commitment for AI expansion</span><span class="lang-zh">歷史性突破：BDx 取得 1.2 GW 供電承諺以擴張 AI</span></span><span class="chev">&rsaquo;</span></summary>
+          <div class="qb"><span class="lang-en">BDx Data Centers, a leading Asian data-center platform, announced landmark strategic agreements with Indonesia’s state utility PLN, securing a 1.2 GW power-capacity commitment for its Indonesian portfolio. The deal mainly powers its flagship CGK4 AI Campus in West Java (788 MVA of grid power) and high-voltage, AI-ready expansion in South Jakarta and Suryacipta. Officials stressed that stable, scalable power is the bedrock of Indonesia’s AI and digital-economy expansion.</span><span class="lang-zh">亞洲領先的資料中心平台 BDx Data Centers 宣布與印尼國營電力公司 PLN 達成里程碑式戰略協議，為其印尼資產取得 1.2 GW 供電容量承諺。該協議主要供應位於西爪哇的旗艦 CGK4 AI 園區（788 MVA 電網電力），以及南雅加達與 Suryacipta 的高壓、AI-ready 基礎設施擴建。官方強調，穩定且可擴展的電力是印尼 AI 與數位經濟擴張的根本基石。</span></div>
+        </details>
+        <details class="brief">
+          <summary><span class="qn">02</span><span class="qt"><span class="lang-en">Chinese tech giant’s $5 billion AI project lands in Batam</span><span class="lang-zh">中國科技巨頭 50 億美元 AI 專案落腳巴洡島</span></span><span class="chev">&rsaquo;</span></summary>
+          <div class="qb"><span class="lang-en">Chinese data-center giant RangeIDC officially launched a US$5 billion (approx. IDR 88 trillion) mega AI data-center project in Batam’s Nongsa Digital Park (NDP). Indonesia’s Ministry of Transmigration responded by announcing a “Local High-Tech Talent Cultivation Initiative,” stressing the investment must benefit local youth through university collaborations so the next generation is prepared for core roles in global digital transformation.</span><span class="lang-zh">中國資料中心巨頭 RangeIDC 正式啟動位於巴洡島 Nongsa Digital Park（NDP）、總額 50 億美元（約 88 兆印尼盾）的大型 AI 資料中心專案。印尼移民部隨即宣布推出「在地高科技人才培育計畫」，強調這筆投資必須透過大學合作直接惠及本地青年，確保新一代具備投入全球數位轉型核心職位的能力。</span></div>
+        </details>
+        <details class="brief">
+          <summary><span class="qn">03</span><span class="qt"><span class="lang-en">Sovereign wealth funds (INA &amp; Danantara) aggressively back AI compute</span><span class="lang-zh">主權基金（INA 與 Danantara）大力押注 AI 算力</span></span><span class="chev">&rsaquo;</span></summary>
+          <div class="qb"><span class="lang-en">Responding to the global $3 trillion wave into data centers, Indonesia’s sovereign wealth fund INA will allocate up to 30% of its annual capital to digital infrastructure; its portfolio data-center capacity (74 MW) is already 100% pre-leased. INA’s CIO emphasised a “non-aligned” stance amid US–China tech rivalry to welcome global capital, while the broader-mandate fund Danantara is actively seeking to anchor major AI data-center projects — signalling unprecedented state-backed financial support.</span><span class="lang-zh">因應全球湧入資料中心的 3 兆美元投資潮，印尼主權基金 INA（印尼投資管理局）宣布將年度資本至多 30% 專門配置於數位基礎設施；其投資組合中的資料中心容量（74 MW）已達 100% 預租率。INA 投資長強調，在美中科技角力下印尼維持「不結盟」立場以廣納全球資本；另一授權更廣的國家基金 Danantara 也積極尋求錦定大型 AI 資料中心專案，顯示前所未見的國家級資金支持。</span></div>
+        </details>
+        <details class="brief">
+          <summary><span class="qn">04</span><span class="qt"><span class="lang-en">Forward blueprint — drafting the “Eastern Indonesia expansion blueprint”</span><span class="lang-zh">前瞻藍圖：研擬「印尼東部擴展藍圖」</span></span><span class="chev">&rsaquo;</span></summary>
+          <div class="qb"><span class="lang-en">With the vast majority of Indonesia’s 170+ data centers concentrated in western hubs like Greater Jakarta and Batam, the Ministry of Communication and Digital Affairs (Komdigi) is drafting a “Sovereign Blueprint for Private Data Center Expansion in Eastern Indonesia,” aiming to steer future AI data centers toward distributed eastern layouts that tap local alternative and green energy for nationwide data sovereignty and infrastructure balance.</span><span class="lang-zh">印尼 170 多座資料中心絕大多數集中於大雅加達與巴洡島等西部樞紐，通訊與數位事務部（Komdigi）正研擬「印尼東部民營資料中心擴展主權藍圖」，目標引導未來 AI 資料中心朝東部分散式布局發展，善用當地替代與綠色能源，以確保全國資料主權與基礎設施平衡。</span></div>
+        </details>
+        <details class="brief">
+          <summary><span class="qn">05</span><span class="qt"><span class="lang-en">Industry concern — the AI boom sparks a “water crisis”</span><span class="lang-zh">產業隱憂：AI 熱潮引發「水資源危機」</span></span><span class="chev">&rsaquo;</span></summary>
+          <div class="qb"><span class="lang-en">As high-density AI servers (such as NVIDIA’s latest GB200 systems) flood in, demand for water- and liquid-cooling has surged. Recent environmental reports warn that in Batam alone, 9 planned and existing AI data centers could consume 29 million liters of water per day (equivalent to 30,000 residents), nearly 8% of the island’s total supply. Balancing this “tech gold rush” with local water sustainability has become the government’s most pressing second-half challenge.</span><span class="lang-zh">隨著高密度 AI 伺服器（如 NVIDIA 最新的 GB200 系統）大量湧入，水冷與液冷系統需求激增。近期環境報告警告，僅巴洡島一地，9 座規劃中與既有的 AI 資料中心預計每日耗水 2,900 萬公升（相當於 3 萬名居民用量），吞掉全島近 8% 供水。如何在這場「科技洘金熱」與當地水資源永續間取得平衡，已成為印尼政府下半年最迫切的課題。</span></div>
+        </details>
+      </article>
+      <article id="2026-06-indonesia-macro" class="reveal panel rounded-lg p-8 sm:p-10 scroll-mt-28">
+        <div class="flex items-center gap-3 mb-5 flex-wrap">
+          <span class="chip"><span class="lang-en">Early June 2026</span><span class="lang-zh">2026 年 6 月初</span></span>
+          <span class="label"><span class="lang-en">Indonesia · Politics · Macro · Diplomacy</span><span class="lang-zh">印尼 · 內政 · 財經 · 外交</span></span>
+        </div>
+        <h2 class="font-serif text-2xl sm:text-3xl leading-snug mb-4"><span class="lang-en">Indonesia briefing — domestic affairs, FX markets and regional diplomacy</span><span class="lang-zh">印尼要聞 — 內政、匯市與區域外交</span></h2>
+        <p class="text-stone font-light leading-relaxed mb-2"><span class="lang-en">Key Indonesian developments as of early June 2026 — several indicative shifts across domestic policy, currency markets and regional diplomacy this week.</span><span class="lang-zh">截至 2026 年 6 月初的印尼核心動態——本週在內政、財經匯市與區域外交上出現數項指標性變動。</span></p>
+        <details class="brief">
+          <summary><span class="qn">01</span><span class="qt"><span class="lang-en">Flagship “free nutritious lunch” agency chief replaced</span><span class="lang-zh">旗艦政策「免費營養午餐」機構首長遭撤換</span></span><span class="chev">&rsaquo;</span></summary>
+          <div class="qb"><span class="lang-en">On 2 June, President Prabowo Subianto removed National Nutrition Agency (BGN) head Dadan Hindayana, installing his deputy. The campaign’s flagship programme has been troubled since launching last January, causing mass food poisoning among tens of thousands of students and drawing anti-corruption scrutiny over budget irregularities; the former chief had recently floated expanding it “to Saudi Arabia.” Prabowo cited “food safety quality and management problems” for the leadership overhaul.</span><span class="lang-zh">總統普拉博沃於 6 月 2 日免去國家營養局（BGN）局長 Dadan Hindayana 職務，改由其副手接任。這項競選核心旗艦政策自去年 1 月上路後風波不斷，已累計導致數萬名學生集體食物中毒，並遭廉政組織調查預算違規；前局長近日更拋出將計畫「擴大至沙烏地阿拉伯」的提議。普拉博沃以「食品安全品質與管理問題」為由進行領導層大洗牌。</span></div>
+        </details>
+        <details class="brief">
+          <summary><span class="qn">02</span><span class="qt"><span class="lang-en">Pancasila Day address — Prabowo declares war on “corruption and smuggling networks”</span><span class="lang-zh">建國五原則紀念日演說，普拉博沃向「貧腐與走私集團」宣戰</span></span><span class="chev">&rsaquo;</span></summary>
+          <div class="qb"><span class="lang-en">On 1 June’s Pancasila Day, Prabowo delivered a forceful address, reiterating that Indonesia must drive a thorough “economic transformation” and warning that pushing single-window state-controlled commodity exports and industrial downstreaming will meet resistance from vested interests: “We will confront head-on those groups indulging in corruption, smuggling and the illegal economy.” The message signalled to global investors his resolve to curb resource outflows and enforce economic fairness.</span><span class="lang-zh">6 月 1 日建國五原則（Pancasila）紀念日，普拉博沃發表強硬演說，重申印尼必須彻底推動「經濟轉型」，並警告政府在推動大宗商品「單一窗口國營專營出口」及產業下游化時，必將遭既得利益者抵抗：「我們將正面迎戰那些耽溺於貧腐、走私與非法經濟活動的群體。」藉此向全球投資人展現整頓資源外流、落實經濟公平的決心。</span></div>
+        </details>
+        <details class="brief">
+          <summary><span class="qn">03</span><span class="qt"><span class="lang-en">Rupiah tests 17,900 as the central bank imposes FX purchase limits</span><span class="lang-zh">印尼盾面臨 17,900 保衛戰，央行祭出外匯限購鐵腕</span></span><span class="chev">&rsaquo;</span></summary>
+          <div class="qb"><span class="lang-en">Hit by a prolonged Middle East situation, high international energy prices and a strengthening dollar, the rupiah weakened sharply, briefly breaching 17,900 per US dollar. Bank Indonesia (BI) and the finance ministry jointly imposed strict FX purchase limits from 2 June: conversions lacking proof of underlying assets (such as import invoices or debt-repayment evidence) are capped at US$25,000 per person per transaction per month, targeting speculative trading.</span><span class="lang-zh">受中東局勢延宕、國際能源價格高企及美元走強衝擊，印尼盾近期大幅走弱，一度跌破 1 美元兌 17,900 印尼盾關卡。央行（BI）與財政部緊急連手，自 6 月 2 日起實施嚴格外匯購買限額：凡缺乏實質資產證明（如進口發票或債務償還證明）者，每人每月每筆兌換上限壓低至 25,000 美元，全力打擊投機炒匯。</span></div>
+        </details>
+        <details class="brief">
+          <summary><span class="qn">04</span><span class="qt"><span class="lang-en">Indonesia and Malaysia convene bilateral commission (JCBC)</span><span class="lang-zh">印尼與馬來西亞召開雙邊高層會議（JCBC）</span></span><span class="chev">&rsaquo;</span></summary>
+          <div class="qb"><span class="lang-en">On 4 June, Malaysia’s foreign minister led a senior delegation to Jakarta to co-chair the 17th Malaysia–Indonesia Joint Commission for Bilateral Cooperation (JCBC) with Indonesian counterpart Sugiono. Against continued global supply-chain volatility, the two prioritised economic resilience, energy security and food supply, while advancing longer-term agendas including border trade, maritime boundary delimitation and halal-industry cooperation.</span><span class="lang-zh">馬來西亞外長於 6 月 4 日率高階代表團抵達雅加達，與印尼外長 Sugiono 共同主持第 17 屆馬印雙邊合作聯合委員會（JCBC）。在全球供應鏈持續動盪下，兩國將協商重點放在經濟抗險、能源安全與糧食供應，並就邊境貿易、海上邊界劃定及清真產業合作等長期議題展開具體對接。</span></div>
+        </details>
+      </article>
+      <p class="text-center text-[11px] text-stone/50 font-mono pt-4"><span class="lang-en">Updated weekly · indicative summaries, not investment advice.</span><span class="lang-zh">每周更新 · 仅为指示性摘要，非投资建议。</span></p>
+    </div>
+  </section>
+</main>
+<footer class="py-12" style="background:#0d1f16;border-top:1px solid rgba(255,255,255,.06);">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-5">
+      <div class="flex items-center gap-3">
+        <div class="h-8 px-2.5 rounded-sm flex items-center justify-center" style="background:var(--moss);border:1px solid rgba(201,168,106,.4);"><span class="font-serif text-champ leading-none tracking-[.12em] text-sm font-medium">IGH</span></div>
+        <span class="font-serif text-sm" data-i18n="footer.entity">Inspace Global Holding Pte. Ltd.</span>
+      </div>
+      <div class="text-[11px] text-stone font-mono" data-i18n="footer.tagline">Singapore · Industrial &amp; Energy Infrastructure</div>
+    </div>
+    <div class="rule my-8"></div>
+    <div class="grid sm:grid-cols-3 gap-6 text-[12px] text-stone">
+      <div>
+        <div class="label mb-3" data-i18n="footer.col1Label">Registered Office</div>
+        <p class="leading-relaxed" data-i18n="footer.col1Body">Republic of Singapore<br/>(ACRA-registered Pte. Ltd.)</p>
+      </div>
+      <div>
+        <div class="label mb-3" data-i18n="footer.col2Label">General Inquiries</div>
+        <p class="leading-relaxed"><a href="mailto:info@inspaceglobal.com" class="hover:text-champ transition">info@inspaceglobal.com</a><br/><span data-i18n="footer.col2Body">Response within 5 business days</span></p>
+      </div>
+      <div>
+        <div class="label mb-3" data-i18n="footer.col3Label">Operating Region</div>
+        <p class="leading-relaxed" data-i18n="footer.col3Body">Indonesia · Southeast Asia<br/>(Aceh, Sumatra and beyond)</p>
+      </div>
+    </div>
+    <div class="rule my-8"></div>
+    <p class="text-[10.5px] leading-relaxed text-stone/55 max-w-4xl">
+      <span data-i18n="footer.disclaimer"><span class="text-stone">Disclaimer.</span> This website is provided for general information and qualified business engagement only. All project figures &mdash; including land footprint, capacity, capital structure, timeline, and partnership references &mdash; are indicative, unaudited, and subject to ongoing engineering, due diligence, permitting, and definitive documentation. Nothing on this site constitutes an offer, solicitation, or investment recommendation. Forward-looking statements involve risks and uncertainties; actual outcomes may differ materially. Recipients should conduct independent verification and obtain professional advice.</span>
+    </p>
+    <p class="text-[10.5px] text-stone/40 font-mono mt-6">© 2026 Inspace Global Holding Pte. Ltd. · All rights reserved</p>
+  </div>
+</footer>
+<script>
+  const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.08, rootMargin:'0px 0px -10% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  // Fallback: ensure all .reveal elements become visible+clickable after 1.2s no matter what
+  setTimeout(()=>{document.querySelectorAll('.reveal:not(.in)').forEach(el=>el.classList.add('in'));}, 1200);
+</script>
+<script>
+const I18N = {
+  zh: {
+    'lightbox.hint': '点击任意位置或按 ESC 关闭',
+    'nav.intel': '市场情报',
+    'intel.kicker': '05 — 市场情报',
+    'intel.heading': '关注与我们相关的<em class=\"it serif-gold\">区域动态</em>。',
+    'intel.viewall': '查看全部情报',
+    'nav.about': '集团介绍',
+    'nav.operations': '业务版图',
+    'nav.structure': '集团架构',
+    'nav.governance': '治理与合规',
+    'nav.contact': '联络方式',
+    'nav.contactBtn': '立即联络',
+
+    'hero.eyebrow': '新加坡注册 · 工业控股集团',
+    'hero.title': '工业与能源基础设施，<em class="it serif-gold">整合落地</em>。',
+    'hero.body': 'Inspace Global Holding Pte. Ltd. 是<span class="serif-gold">注册于新加坡的工业控股集团</span>，深耕<span class="text-cream">印度尼西亚及东南亚</span>，承接综合性工业、冶金及清洁能源基础设施项目，通过属地运营子公司以多年期周期推进。',
+    'hero.chip1': '绿色钢铁与冶金',
+    'hero.chip2': '工业物流',
+    'hero.chip3': '清洁能源',
+    'hero.chip4': 'EPC 总承包',
+    'hero.cta1': '查看业务版图',
+    'hero.cta2': '联络 Inspace Global',
+
+    'about.kicker': '01 — 集团介绍',
+    'about.heading': '立足新加坡，专注亚太<em class="it serif-gold">长周期</em>基础设施。',
+    'about.body': 'Inspace Global Holding Pte. Ltd. 注册于新加坡共和国，作为集团母公司统筹印度尼西亚及东南亚的工业与能源基础设施项目。集团从项目源起、架构设计到资本部署一体化推进，并由属地运营子公司具体落地执行。',
+    'about.card1.kicker': '使命',
+    'about.card1.title': '推动可持续转型',
+    'about.card1.body': '重工业是发展中经济体的支柱，却也是脱碳进程最迟缓的产业之一。集团以严谨的工程标准与资本纪律，致力于压缩这一落差。',
+    'about.card2.kicker': '方法',
+    'about.card2.title': '清洁科技 · 整合物流 · 战略合作',
+    'about.card2.body': '将生产、能源、港口物流与数字基础设施整合于同一持证园区，自规划阶段即对标国际标准设计建造。',
+    'about.card3.kicker': '业务定位',
+    'about.card3.title': '工业与能源 EPC 总承包平台',
+    'about.card3.body': '绿色钢铁综合体、混合能源设施、港口整合物流——为 EPC 合作方、属地伙伴及国际机构投资者量身搭建。',
+
+    'ops.kicker': '02 — 业务版图',
+    'ops.heading': '横跨印度尼西亚的<em class="it serif-gold">活跃投资组合</em>。',
+    'ops.body1': '集团并行推进一处旗舰冶金综合体、一处混合能源设施，以及多个处于早期结构化阶段的项目。',
+    'ops.body2': '每一项资产均为独立标的，拥有专属的 EPC 合作时程、资本框架与合作方架构——以并行而非顺序的方式推进。',
+    'ops.body3': '三者共同构成一个分期推进的投资组合，专为长周期机构资金合作、结构化资本部署，以及横跨印度尼西亚与东南亚的整合式 EPC 交付而设计。',
+
+    'map.kicker': '项目位置示意图',
+    'map.caption': 'PT Atjeh Quantum Industrial Group · 印度尼西亚 亚齐',
+    'map.region': '苏门答腊 · 面向印度洋',
+
+    'proj.one.kicker': '项目一 · 旗舰',
+    'proj.one.title': '亚齐绿色钢铁综合体（AGSC）',
+    'proj.one.location': '印度尼西亚 亚齐西南 KEK 经济特区 · 苏门答腊',
+    'proj.one.status': '推进中 · EPC 总承包',
+    'proj.one.configLabel': '装置配置',
+    'proj.one.configBody': '兼容氢气的 DRI-EAF 绿色钢铁产线、薄板连铸连轧、利用钢厂余热冷却的 AI 超算中心、一期过渡资产，以及经 Surin Port 的整合港口物流。',
+    'proj.one.scaleLabel': '产能规模',
+    'proj.one.scaleBody': '年产能 2.5 MTPA 热轧卷板、共址 100 MW AI 算力、40,000 DWT Handymax 等级港口，地处 5,000 公顷 KEK 经济特区，享 20 年企业所得税豁免。',
+    'proj.one.stat1': '绿色钢铁',
+    'proj.one.stat2': 'AI 算力',
+    'proj.one.stat3': 'KEK 经济特区',
+    'proj.one.stat4': '免税年限',
+    'proj.one.clickHint': '点击卡片任意位置查看完整项目档案',
+    'proj.one.cta': '查看完整项目档案',
+
+    'proj.two.kicker': '项目二',
+    'proj.two.title': '敬请期待',
+    'proj.two.location': '地点 · 待公布',
+    'proj.two.status': '敬请期待',
+    'proj.two.body': '项目档案准备中。装置规格、产能规模与合作架构将适时对外披露。',
+    'proj.two.note': '敬请关注 · 可于合格审查后获取详情',
+
+    'proj.three.kicker': '项目三',
+    'proj.three.title': '敬请期待',
+    'proj.three.location': '地点 · 待公布',
+    'proj.three.status': '敬请期待',
+    'proj.three.body': '项目档案准备中。装置规格、产能规模与合作架构将适时对外披露。',
+    'proj.three.note': '敬请关注 · 可于合格审查后获取详情',
+
+    'struct.kicker': '03 — 集团架构',
+    'struct.heading': '新加坡母公司，<em class="it serif-gold">属地</em>运营子公司。',
+    'struct.body': '两层公司架构：境外新加坡控股实体对接国际资本，境内属地运营子公司对接本地监管与许可框架。',
+    'struct.parent.kicker': '母公司',
+    'struct.parent.name': 'Inspace Global Holding Pte. Ltd.',
+    'struct.parent.incorp': '注册于新加坡共和国',
+    'struct.parent.body': '负责集团层级的资本架构设计、EPC 合作方对接，以及国际交易对手关系管理；持有区域运营实体股权，并统筹跨境融资。',
+    'struct.sub.kicker': '属地运营子公司（印度尼西亚）',
+    'struct.sub.name': 'PT. Atjeh Quantum Industrial Group',
+    'struct.sub.incorp': '印度尼西亚 PT（有限责任公司）',
+    'struct.sub.body': '亚齐综合工业园区的属地运营主体，负责许可证申请、KEK 经济特区行政事务、本地采购，以及印度尼西亚政府监管对接。',
+
+    'gov.kicker': '04 — 治理与合规',
+    'gov.heading': '为<em class="it serif-gold">机构级</em>交易对手量身打造。',
+    'gov.card1.label': '注册架构',
+    'gov.card1.title': '新加坡私人有限公司',
+    'gov.card1.body': '母公司于新加坡会计与企业管制局（ACRA）注册，提供透明、国际认可的法律框架。',
+    'gov.card2.label': '监管对接',
+    'gov.card2.title': '印度尼西亚 · KEK 经济特区',
+    'gov.card2.body': '在印度尼西亚经济特区（KEK）监管框架内运营，与 BKPM（印尼投资协调委员会）及地方政府保持常态化沟通。',
+    'gov.card3.label': '可持续标准',
+    'gov.card3.title': 'CBAM 合规设计',
+    'gov.card3.body': '项目级的脱碳路径自设计阶段即纳入，非事后改造——自始即对标欧洲碳边境调整机制（CBAM）。',
+    'gov.disclosure': '详尽公司文件——包括公司注册证书、项目级尽职调查包及资本架构信息披露——将在合格交易对手介入后，依保密约定提供。',
+
+    'contact.kicker': '06 — 业务联络',
+    'contact.heading': '欢迎<em class="it serif-gold">合格</em>合作方与机构交易对手。',
+    'contact.body': '诚邀 EPC 承包方、工程与技术顾问、基础设施投资者、贷款机构以及机构合作方，就合作与项目开发与我们联络。',
+    'contact.flagshipBtn': '旗舰项目',
+    'contact.col1Label': '回复时效',
+    'contact.col1Body': '5 个工作日内',
+    'contact.col2Label': '沟通原则',
+    'contact.col2Body': '保密 · 专业',
+    'contact.col3Label': '工作语言',
+    'contact.col3Body': 'English / 中文',
+
+    'footer.entity': 'Inspace Global Holding Pte. Ltd.',
+    'footer.tagline': '新加坡 · 工业与能源基础设施',
+    'footer.col1Label': '注册地',
+    'footer.col1Body': '新加坡共和国<br/>（ACRA 注册私人有限公司）',
+    'footer.col2Label': '业务联络',
+    'footer.col2Body': '5 个工作日内回复',
+    'footer.col3Label': '运营版图',
+    'footer.col3Body': '印度尼西亚 · 东南亚<br/>（亚齐、苏门答腊及邻近区域）',
+    'footer.disclaimer': '<span class="text-stone">免责声明。</span>本网站仅用于一般信息披露及合格商业洽询。所有项目数据——包括用地面积、产能、资本架构、推进时程及合作方信息——均为指示性、未经审计，以持续之工程、尽职调查、许可证申请及最终文件为准。本网站任何内容不构成要约、招揽或投资建议。前瞻性陈述涉及风险与不确定性，实际结果可能存在重大差异。接收者应自行独立核实并寻求专业意见。'
+  }
+};
+
+(function(){
+  const STORAGE_KEY = 'igh-lang';
+  function applyLang(lang){
+    document.body.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-Hans' : 'en');
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if(!el.dataset.origHtml){ el.dataset.origHtml = el.innerHTML; }
+      if(lang === 'zh' && I18N.zh[key]){
+        el.innerHTML = I18N.zh[key];
+      } else {
+        el.innerHTML = el.dataset.origHtml;
+      }
+    });
+    const btn = document.getElementById('lang-toggle');
+    if(btn){ btn.textContent = (lang === 'zh') ? 'EN' : '中'; btn.setAttribute('aria-label', lang === 'zh' ? 'Switch to English' : '切換為中文'); }
+    localStorage.setItem(STORAGE_KEY, lang);
+  }
+  function init(){
+    const stored = localStorage.getItem(STORAGE_KEY) || 'en';
+    applyLang(stored);
+    const btn = document.getElementById('lang-toggle');
+    if(btn){
+      btn.addEventListener('click', () => {
+        const current = localStorage.getItem(STORAGE_KEY) || 'en';
+        applyLang(current === 'zh' ? 'en' : 'zh');
+      });
+    }
+  }
+  if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', init); } else { init(); }
+})();
+</script>
+<script>
+const I18N = {
+  zh: {
+    'lightbox.hint': '点击任意位置或按 ESC 关闭',
+    'nav.intel': '市场情报',
+    'intel.kicker': '05 — 市场情报',
+    'intel.heading': '关注与我们相关的<em class=\"it serif-gold\">区域动态</em>。',
+    'intel.viewall': '查看全部情报',
+    'nav.about': '集团介绍',
+    'nav.operations': '业务版图',
+    'nav.structure': '集团架构',
+    'nav.governance': '治理与合规',
+    'nav.contact': '联络方式',
+    'nav.contactBtn': '立即联络',
+
+    'hero.eyebrow': '新加坡注册 · 工业控股集团',
+    'hero.title': '工业与能源基础设施，<em class="it serif-gold">整合落地</em>。',
+    'hero.body': 'Inspace Global Holding Pte. Ltd. 是<span class="serif-gold">注册于新加坡的工业控股集团</span>，深耕<span class="text-cream">印度尼西亚及东南亚</span>，承接综合性工业、冶金及清洁能源基础设施项目，通过属地运营子公司以多年期周期推进。',
+    'hero.chip1': '绿色钢铁与冶金',
+    'hero.chip2': '工业物流',
+    'hero.chip3': '清洁能源',
+    'hero.chip4': 'EPC 总承包',
+    'hero.cta1': '查看业务版图',
+    'hero.cta2': '联络 Inspace Global',
+
+    'about.kicker': '01 — 集团介绍',
+    'about.heading': '立足新加坡，专注亚太<em class="it serif-gold">长周期</em>基础设施。',
+    'about.body': 'Inspace Global Holding Pte. Ltd. 注册于新加坡共和国，作为集团母公司统筹印度尼西亚及东南亚的工业与能源基础设施项目。集团从项目源起、架构设计到资本部署一体化推进，并由属地运营子公司具体落地执行。',
+    'about.card1.kicker': '使命',
+    'about.card1.title': '推动可持续转型',
+    'about.card1.body': '重工业是发展中经济体的支柱，却也是脱碳进程最迟缓的产业之一。集团以严谨的工程标准与资本纪律，致力于压缩这一落差。',
+    'about.card2.kicker': '方法',
+    'about.card2.title': '清洁科技 · 整合物流 · 战略合作',
+    'about.card2.body': '将生产、能源、港口物流与数字基础设施整合于同一持证园区，自规划阶段即对标国际标准设计建造。',
+    'about.card3.kicker': '业务定位',
+    'about.card3.title': '工业与能源 EPC 总承包平台',
+    'about.card3.body': '绿色钢铁综合体、混合能源设施、港口整合物流——为 EPC 合作方、属地伙伴及国际机构投资者量身搭建。',
+
+    'ops.kicker': '02 — 业务版图',
+    'ops.heading': '横跨印度尼西亚的<em class="it serif-gold">活跃投资组合</em>。',
+    'ops.body1': '集团并行推进一处旗舰冶金综合体、一处混合能源设施，以及多个处于早期结构化阶段的项目。',
+    'ops.body2': '每一项资产均为独立标的，拥有专属的 EPC 合作时程、资本框架与合作方架构——以并行而非顺序的方式推进。',
+    'ops.body3': '三者共同构成一个分期推进的投资组合，专为长周期机构资金合作、结构化资本部署，以及横跨印度尼西亚与东南亚的整合式 EPC 交付而设计。',
+
+    'map.kicker': '项目位置示意图',
+    'map.caption': 'PT Atjeh Quantum Industrial Group · 印度尼西亚 亚齐',
+    'map.region': '苏门答腊 · 面向印度洋',
+
+    'proj.one.kicker': '项目一 · 旗舰',
+    'proj.one.title': '亚齐绿色钢铁综合体（AGSC）',
+    'proj.one.location': '印度尼西亚 亚齐西南 KEK 经济特区 · 苏门答腊',
+    'proj.one.status': '推进中 · EPC 总承包',
+    'proj.one.configLabel': '装置配置',
+    'proj.one.configBody': '兼容氢气的 DRI-EAF 绿色钢铁产线、薄板连铸连轧、利用钢厂余热冷却的 AI 超算中心、一期过渡资产，以及经 Surin Port 的整合港口物流。',
+    'proj.one.scaleLabel': '产能规模',
+    'proj.one.scaleBody': '年产能 2.5 MTPA 热轧卷板、共址 100 MW AI 算力、40,000 DWT Handymax 等级港口，地处 5,000 公顷 KEK 经济特区，享 20 年企业所得税豁免。',
+    'proj.one.stat1': '绿色钢铁',
+    'proj.one.stat2': 'AI 算力',
+    'proj.one.stat3': 'KEK 经济特区',
+    'proj.one.stat4': '免税年限',
+    'proj.one.clickHint': '点击卡片任意位置查看完整项目档案',
+    'proj.one.cta': '查看完整项目档案',
+
+    'proj.two.kicker': '项目二',
+    'proj.two.title': '敬请期待',
+    'proj.two.location': '地点 · 待公布',
+    'proj.two.status': '敬请期待',
+    'proj.two.body': '项目档案准备中。装置规格、产能规模与合作架构将适时对外披露。',
+    'proj.two.note': '敬请关注 · 可于合格审查后获取详情',
+
+    'proj.three.kicker': '项目三',
+    'proj.three.title': '敬请期待',
+    'proj.three.location': '地点 · 待公布',
+    'proj.three.status': '敬请期待',
+    'proj.three.body': '项目档案准备中。装置规格、产能规模与合作架构将适时对外披露。',
+    'proj.three.note': '敬请关注 · 可于合格审查后获取详情',
+
+    'struct.kicker': '03 — 集团架构',
+    'struct.heading': '新加坡母公司，<em class="it serif-gold">属地</em>运营子公司。',
+    'struct.body': '两层公司架构：境外新加坡控股实体对接国际资本，境内属地运营子公司对接本地监管与许可框架。',
+    'struct.parent.kicker': '母公司',
+    'struct.parent.name': 'Inspace Global Holding Pte. Ltd.',
+    'struct.parent.incorp': '注册于新加坡共和国',
+    'struct.parent.body': '负责集团层级的资本架构设计、EPC 合作方对接，以及国际交易对手关系管理；持有区域运营实体股权，并统筹跨境融资。',
+    'struct.sub.kicker': '属地运营子公司（印度尼西亚）',
+    'struct.sub.name': 'PT. Atjeh Quantum Industrial Group',
+    'struct.sub.incorp': '印度尼西亚 PT（有限责任公司）',
+    'struct.sub.body': '亚齐综合工业园区的属地运营主体，负责许可证申请、KEK 经济特区行政事务、本地采购，以及印度尼西亚政府监管对接。',
+
+    'gov.kicker': '04 — 治理与合规',
+    'gov.heading': '为<em class="it serif-gold">机构级</em>交易对手量身打造。',
+    'gov.card1.label': '注册架构',
+    'gov.card1.title': '新加坡私人有限公司',
+    'gov.card1.body': '母公司于新加坡会计与企业管制局（ACRA）注册，提供透明、国际认可的法律框架。',
+    'gov.card2.label': '监管对接',
+    'gov.card2.title': '印度尼西亚 · KEK 经济特区',
+    'gov.card2.body': '在印度尼西亚经济特区（KEK）监管框架内运营，与 BKPM（印尼投资协调委员会）及地方政府保持常态化沟通。',
+    'gov.card3.label': '可持续标准',
+    'gov.card3.title': 'CBAM 合规设计',
+    'gov.card3.body': '项目级的脱碳路径自设计阶段即纳入，非事后改造——自始即对标欧洲碳边境调整机制（CBAM）。',
+    'gov.disclosure': '详尽公司文件——包括公司注册证书、项目级尽职调查包及资本架构信息披露——将在合格交易对手介入后，依保密约定提供。',
+
+    'contact.kicker': '06 — 业务联络',
+    'contact.heading': '欢迎<em class="it serif-gold">合格</em>合作方与机构交易对手。',
+    'contact.body': '诚邀 EPC 承包方、工程与技术顾问、基础设施投资者、贷款机构以及机构合作方，就合作与项目开发与我们联络。',
+    'contact.flagshipBtn': '旗舰项目',
+    'contact.col1Label': '回复时效',
+    'contact.col1Body': '5 个工作日内',
+    'contact.col2Label': '沟通原则',
+    'contact.col2Body': '保密 · 专业',
+    'contact.col3Label': '工作语言',
+    'contact.col3Body': 'English / 中文',
+
+    'footer.entity': 'Inspace Global Holding Pte. Ltd.',
+    'footer.tagline': '新加坡 · 工业与能源基础设施',
+    'footer.col1Label': '注册地',
+    'footer.col1Body': '新加坡共和国<br/>（ACRA 注册私人有限公司）',
+    'footer.col2Label': '业务联络',
+    'footer.col2Body': '5 个工作日内回复',
+    'footer.col3Label': '运营版图',
+    'footer.col3Body': '印度尼西亚 · 东南亚<br/>（亚齐、苏门答腊及邻近区域）',
+    'footer.disclaimer': '<span class="text-stone">免责声明。</span>本网站仅用于一般信息披露及合格商业洽询。所有项目数据——包括用地面积、产能、资本架构、推进时程及合作方信息——均为指示性、未经审计，以持续之工程、尽职调查、许可证申请及最终文件为准。本网站任何内容不构成要约、招揽或投资建议。前瞻性陈述涉及风险与不确定性，实际结果可能存在重大差异。接收者应自行独立核实并寻求专业意见。'
+  }
+};
+
+(function(){
+  const STORAGE_KEY = 'igh-lang';
+  function applyLang(lang){
+    document.body.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-Hans' : 'en');
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if(!el.dataset.origHtml){ el.dataset.origHtml = el.innerHTML; }
+      if(lang === 'zh' && I18N.zh[key]){
+        el.innerHTML = I18N.zh[key];
+      } else {
+        el.innerHTML = el.dataset.origHtml;
+      }
+    });
+    const btn = document.getElementById('lang-toggle');
+    if(btn){ btn.textContent = (lang === 'zh') ? 'EN' : '中'; btn.setAttribute('aria-label', lang === 'zh' ? 'Switch to English' : '切換為中文'); }
+    localStorage.setItem(STORAGE_KEY, lang);
+  }
+  function init(){
+    const stored = localStorage.getItem(STORAGE_KEY) || 'en';
+    applyLang(stored);
+    const btn = document.getElementById('lang-toggle');
+    if(btn){
+      btn.addEventListener('click', () => {
+        const current = localStorage.getItem(STORAGE_KEY) || 'en';
+        applyLang(current === 'zh' ? 'en' : 'zh');
+      });
+    }
+  }
+  if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', init); } else { init(); }
+})();
+</script>
+</body>
+</html>

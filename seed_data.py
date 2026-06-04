@@ -1,0 +1,92 @@
+# -*- coding: utf-8 -*-
+import json, os
+
+issues = [
+  {
+    "id": "2026-06-indonesia-ai",
+    "sort_date": "2026-06-04",
+    "date_en": "June 2026",
+    "date_zh": "2026 年 6 月",
+    "tags_en": "Indonesia · AI · Data Centers",
+    "tags_zh": "印尼 · AI · 資料中心",
+    "title_en": "Indonesia, AI and data centers",
+    "title_zh": "印尼、AI 與資料中心",
+    "intro_en": "A summary of Indonesia’s AI and data-center developments as of June 2026 — power, capital and the resource constraints now shaping the build-out.",
+    "intro_zh": "截至 2026 年 6 月，印尼在 AI 與資料中心領域的最新動態——電力、資本，以及正在塑造這波建設的資源限制。",
+    "items": [
+      {
+        "t_en": "Historic breakthrough — BDx secures 1.2 GW power commitment for AI expansion",
+        "t_zh": "歷史性突破：BDx 取得 1.2 GW 供電承諺以擴張 AI",
+        "b_en": "BDx Data Centers, a leading Asian data-center platform, announced landmark strategic agreements with Indonesia’s state utility PLN, securing a 1.2 GW power-capacity commitment for its Indonesian portfolio. The deal mainly powers its flagship CGK4 AI Campus in West Java (788 MVA of grid power) and high-voltage, AI-ready expansion in South Jakarta and Suryacipta. Officials stressed that stable, scalable power is the bedrock of Indonesia’s AI and digital-economy expansion.",
+        "b_zh": "亞洲領先的資料中心平台 BDx Data Centers 宣布與印尼國營電力公司 PLN 達成里程碑式戰略協議，為其印尼資產取得 1.2 GW 供電容量承諺。該協議主要供應位於西爪哇的旗艦 CGK4 AI 園區（788 MVA 電網電力），以及南雅加達與 Suryacipta 的高壓、AI-ready 基礎設施擴建。官方強調，穩定且可擴展的電力是印尼 AI 與數位經濟擴張的根本基石。"
+      },
+      {
+        "t_en": "Chinese tech giant’s $5 billion AI project lands in Batam",
+        "t_zh": "中國科技巨頭 50 億美元 AI 專案落腳巴洡島",
+        "b_en": "Chinese data-center giant RangeIDC officially launched a US$5 billion (approx. IDR 88 trillion) mega AI data-center project in Batam’s Nongsa Digital Park (NDP). Indonesia’s Ministry of Transmigration responded by announcing a “Local High-Tech Talent Cultivation Initiative,” stressing the investment must benefit local youth through university collaborations so the next generation is prepared for core roles in global digital transformation.",
+        "b_zh": "中國資料中心巨頭 RangeIDC 正式啟動位於巴洡島 Nongsa Digital Park（NDP）、總額 50 億美元（約 88 兆印尼盾）的大型 AI 資料中心專案。印尼移民部隨即宣布推出「在地高科技人才培育計畫」，強調這筆投資必須透過大學合作直接惠及本地青年，確保新一代具備投入全球數位轉型核心職位的能力。"
+      },
+      {
+        "t_en": "Sovereign wealth funds (INA & Danantara) aggressively back AI compute",
+        "t_zh": "主權基金（INA 與 Danantara）大力押注 AI 算力",
+        "b_en": "Responding to the global $3 trillion wave into data centers, Indonesia’s sovereign wealth fund INA will allocate up to 30% of its annual capital to digital infrastructure; its portfolio data-center capacity (74 MW) is already 100% pre-leased. INA’s CIO emphasised a “non-aligned” stance amid US–China tech rivalry to welcome global capital, while the broader-mandate fund Danantara is actively seeking to anchor major AI data-center projects — signalling unprecedented state-backed financial support.",
+        "b_zh": "因應全球湧入資料中心的 3 兆美元投資潮，印尼主權基金 INA（印尼投資管理局）宣布將年度資本至多 30% 專門配置於數位基礎設施；其投資組合中的資料中心容量（74 MW）已達 100% 預租率。INA 投資長強調，在美中科技角力下印尼維持「不結盟」立場以廣納全球資本；另一授權更廣的國家基金 Danantara 也積極尋求錦定大型 AI 資料中心專案，顯示前所未見的國家級資金支持。"
+      },
+      {
+        "t_en": "Forward blueprint — drafting the “Eastern Indonesia expansion blueprint”",
+        "t_zh": "前瞻藍圖：研擬「印尼東部擴展藍圖」",
+        "b_en": "With the vast majority of Indonesia’s 170+ data centers concentrated in western hubs like Greater Jakarta and Batam, the Ministry of Communication and Digital Affairs (Komdigi) is drafting a “Sovereign Blueprint for Private Data Center Expansion in Eastern Indonesia,” aiming to steer future AI data centers toward distributed eastern layouts that tap local alternative and green energy for nationwide data sovereignty and infrastructure balance.",
+        "b_zh": "印尼 170 多座資料中心絕大多數集中於大雅加達與巴洡島等西部樞紐，通訊與數位事務部（Komdigi）正研擬「印尼東部民營資料中心擴展主權藍圖」，目標引導未來 AI 資料中心朝東部分散式布局發展，善用當地替代與綠色能源，以確保全國資料主權與基礎設施平衡。"
+      },
+      {
+        "t_en": "Industry concern — the AI boom sparks a “water crisis”",
+        "t_zh": "產業隱憂：AI 熱潮引發「水資源危機」",
+        "b_en": "As high-density AI servers (such as NVIDIA’s latest GB200 systems) flood in, demand for water- and liquid-cooling has surged. Recent environmental reports warn that in Batam alone, 9 planned and existing AI data centers could consume 29 million liters of water per day (equivalent to 30,000 residents), nearly 8% of the island’s total supply. Balancing this “tech gold rush” with local water sustainability has become the government’s most pressing second-half challenge.",
+        "b_zh": "隨著高密度 AI 伺服器（如 NVIDIA 最新的 GB200 系統）大量湧入，水冷與液冷系統需求激增。近期環境報告警告，僅巴洡島一地，9 座規劃中與既有的 AI 資料中心預計每日耗水 2,900 萬公升（相當於 3 萬名居民用量），吞掉全島近 8% 供水。如何在這場「科技洘金熱」與當地水資源永續間取得平衡，已成為印尼政府下半年最迫切的課題。"
+      }
+    ]
+  },
+  {
+    "id": "2026-06-indonesia-macro",
+    "sort_date": "2026-06-03",
+    "date_en": "Early June 2026",
+    "date_zh": "2026 年 6 月初",
+    "tags_en": "Indonesia · Politics · Macro · Diplomacy",
+    "tags_zh": "印尼 · 內政 · 財經 · 外交",
+    "title_en": "Indonesia briefing — domestic affairs, FX markets and regional diplomacy",
+    "title_zh": "印尼要聞 — 內政、匯市與區域外交",
+    "intro_en": "Key Indonesian developments as of early June 2026 — several indicative shifts across domestic policy, currency markets and regional diplomacy this week.",
+    "intro_zh": "截至 2026 年 6 月初的印尼核心動態——本週在內政、財經匯市與區域外交上出現數項指標性變動。",
+    "items": [
+      {
+        "t_en": "Flagship “free nutritious lunch” agency chief replaced",
+        "t_zh": "旗艦政策「免費營養午餐」機構首長遭撤換",
+        "b_en": "On 2 June, President Prabowo Subianto removed National Nutrition Agency (BGN) head Dadan Hindayana, installing his deputy. The campaign’s flagship programme has been troubled since launching last January, causing mass food poisoning among tens of thousands of students and drawing anti-corruption scrutiny over budget irregularities; the former chief had recently floated expanding it “to Saudi Arabia.” Prabowo cited “food safety quality and management problems” for the leadership overhaul.",
+        "b_zh": "總統普拉博沃於 6 月 2 日免去國家營養局（BGN）局長 Dadan Hindayana 職務，改由其副手接任。這項競選核心旗艦政策自去年 1 月上路後風波不斷，已累計導致數萬名學生集體食物中毒，並遭廉政組織調查預算違規；前局長近日更拋出將計畫「擴大至沙烏地阿拉伯」的提議。普拉博沃以「食品安全品質與管理問題」為由進行領導層大洗牌。"
+      },
+      {
+        "t_en": "Pancasila Day address — Prabowo declares war on “corruption and smuggling networks”",
+        "t_zh": "建國五原則紀念日演說，普拉博沃向「貧腐與走私集團」宣戰",
+        "b_en": "On 1 June’s Pancasila Day, Prabowo delivered a forceful address, reiterating that Indonesia must drive a thorough “economic transformation” and warning that pushing single-window state-controlled commodity exports and industrial downstreaming will meet resistance from vested interests: “We will confront head-on those groups indulging in corruption, smuggling and the illegal economy.” The message signalled to global investors his resolve to curb resource outflows and enforce economic fairness.",
+        "b_zh": "6 月 1 日建國五原則（Pancasila）紀念日，普拉博沃發表強硬演說，重申印尼必須彻底推動「經濟轉型」，並警告政府在推動大宗商品「單一窗口國營專營出口」及產業下游化時，必將遭既得利益者抵抗：「我們將正面迎戰那些耽溺於貧腐、走私與非法經濟活動的群體。」藉此向全球投資人展現整頓資源外流、落實經濟公平的決心。"
+      },
+      {
+        "t_en": "Rupiah tests 17,900 as the central bank imposes FX purchase limits",
+        "t_zh": "印尼盾面臨 17,900 保衛戰，央行祭出外匯限購鐵腕",
+        "b_en": "Hit by a prolonged Middle East situation, high international energy prices and a strengthening dollar, the rupiah weakened sharply, briefly breaching 17,900 per US dollar. Bank Indonesia (BI) and the finance ministry jointly imposed strict FX purchase limits from 2 June: conversions lacking proof of underlying assets (such as import invoices or debt-repayment evidence) are capped at US$25,000 per person per transaction per month, targeting speculative trading.",
+        "b_zh": "受中東局勢延宕、國際能源價格高企及美元走強衝擊，印尼盾近期大幅走弱，一度跌破 1 美元兌 17,900 印尼盾關卡。央行（BI）與財政部緊急連手，自 6 月 2 日起實施嚴格外匯購買限額：凡缺乏實質資產證明（如進口發票或債務償還證明）者，每人每月每筆兌換上限壓低至 25,000 美元，全力打擊投機炒匯。"
+      },
+      {
+        "t_en": "Indonesia and Malaysia convene bilateral commission (JCBC)",
+        "t_zh": "印尼與馬來西亞召開雙邊高層會議（JCBC）",
+        "b_en": "On 4 June, Malaysia’s foreign minister led a senior delegation to Jakarta to co-chair the 17th Malaysia–Indonesia Joint Commission for Bilateral Cooperation (JCBC) with Indonesian counterpart Sugiono. Against continued global supply-chain volatility, the two prioritised economic resilience, energy security and food supply, while advancing longer-term agendas including border trade, maritime boundary delimitation and halal-industry cooperation.",
+        "b_zh": "馬來西亞外長於 6 月 4 日率高階代表團抵達雅加達，與印尼外長 Sugiono 共同主持第 17 屆馬印雙邊合作聯合委員會（JCBC）。在全球供應鏈持續動盪下，兩國將協商重點放在經濟抗險、能源安全與糧食供應，並就邊境貿易、海上邊界劃定及清真產業合作等長期議題展開具體對接。"
+      }
+    ]
+  }
+]
+
+data = {"updated": "2026-06-04", "issues": issues}
+with open("news/data.json", "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+print("data.json written:", len(issues), "issues,", sum(len(i["items"]) for i in issues), "items total")
