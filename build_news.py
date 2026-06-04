@@ -76,7 +76,7 @@ news_html = f'''<!DOCTYPE html>
     <div class="max-w-4xl mx-auto px-6 relative z-10">
       <div class="kick text-[11px] gold font-mono uppercase mb-5">Market Intelligence</div>
       <h1 class="font-serif font-light leading-[1.06] tracking-tight text-4xl sm:text-5xl lg:text-6xl">{L("The <em class='it serif-gold'>developments</em> that shape our region.", "关注与我们相关的<em class='it serif-gold'>区域动态</em>。")}</h1>
-      <p class="mt-7 max-w-2xl text-lg text-stone font-light leading-relaxed">{L("Curated developments across Indonesia, AI infrastructure and green steel — the operating environment around our projects.", "精选印度尼西亚、AI 基础设施与绿色钢铁的关键动态——我们项目所处的营运环境。")}</p>
+      <p class="mt-7 max-w-2xl text-lg text-stone font-light leading-relaxed">{L("Curated developments across Indonesia, AI infrastructure and green steel — the operating environment around our projects.", "精选印度尼西亚、AI 基础设施与绿色钢铁的关键动态——我们项目所处的运营环境。")}</p>
     </div>
   </section>
   <section class="py-20" style="background:#0d1f16;">
