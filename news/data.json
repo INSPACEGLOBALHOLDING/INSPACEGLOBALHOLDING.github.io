@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-04",
+  "updated": "2026-06-09",
   "issues": [
     {
       "id": "2026-06-indonesia-ai",
@@ -84,6 +84,63 @@
         }
       ],
       "src_id": "1jg9RXazryU-MVKkMQKn3D9VrR5LUzXp2"
+    },
+    {
+      "id": "2026-06-global-steel",
+      "src_id": "1vybS3t1CKpvDHgoke_Pe6Mp6xfDEibgg",
+      "sort_date": "2026-06-06",
+      "date_en": "June 2026",
+      "date_zh": "2026 年 6 月",
+      "tags_en": "Steel · Decarbonization · Industry 4.0",
+      "tags_zh": "钢铁 · 脱碳 · 工业 4.0",
+      "title_en": "Global steel: upheaval, decarbonization and digital transformation",
+      "title_zh": "全球钢铁制造业：市场剧变、脱碳工程与数字化转型",
+      "intro_en": "Global steelmaking has entered a decisive era. High energy costs, hardening trade barriers and looming sustainability mandates are testing incumbents, even as a wave of green and digital breakthroughs accelerates toward commercial market.",
+      "intro_zh": "全球钢铁制造业正迎来一个决定性的时代。高昂的能源成本、日益严峻的贸易壁垒，以及迫在眉睫的可持续发展指令，正深刻考验着传统钢铁企业，而一系列数字化与绿色工程突破也正加速推向商业市场。",
+      "items": [
+        {
+          "t_en": "EU tightens import quotas and carbon-tariff walls",
+          "t_zh": "欧盟收紧进口配额与碳关税壁垒",
+          "b_en": "International steel trade is contracting sharply. From 1 July 2026 the EU replaces its long-running safeguard measures, expiring at end-June, with a new tariff-rate-quota (TRQ) regime: duty-free import quotas are cut by roughly 47% versus 2024, the over-quota tariff jumps from 25% to 50%, and a new “melt and pour” origin declaration is added to curb transshipment relabeling. This heavily protectionist mechanism aims to insulate environmentally conscious domestic mills from cheap, high-carbon foreign steel. In parallel, the EU’s Carbon Border Adjustment Mechanism (CBAM) entered its definitive charging phase on 1 January 2026, requiring importers to buy CBAM certificates for embedded emissions or face steep costs.",
+          "b_zh": "国际钢铁贸易格局正急剧收紧。2026 年 7 月 1 日，欧盟以全新的关税配额（TRQ）制度取代于 6 月底到期的保障措施：免税进口配额较 2024 年削减约 47%，配额用尽后的超额关税由 25% 一举提高至 50%，并新增“熔炼与浇铸地（melt and pour）”原产地申报要求，以遏制转口换标。这一重保护机制旨在将注重环保的本土钢企，与海外廉价、高碳排钢材隔离开来。与此并行，欧盟碳边境调节机制（CBAM）已于 2026 年 1 月 1 日进入正式征费阶段，进口商须按产品隐含的碳排放购买 CBAM 证书，否则将承担高额成本。"
+        },
+        {
+          "t_en": "US tariff incentives for domestic steel",
+          "t_zh": "美国对本土钢材的关税激励政策",
+          "b_en": "In the US, steel manufacturing is riding a large capex wave. Under the Section 232 tariff framework, base steel rates have risen; meanwhile a new rule lets multi-material industrial equipment qualify for a preferential 10% rate if at least 85% by weight of its steel is melted and poured in the US — a threshold loosened from the prior 95% to push supply chains toward “Made in America.” Compounded by geopolitically inflated freight and fuel surcharges, procurement managers are abandoning just-in-time (JIT) offshore sourcing in favor of higher domestic safety stock.",
+          "b_zh": "在美国，钢铁制造业正迎来一轮庞大的资本支出热潮。在 232 条款关税框架下，钢材基础税率已升至较高水平；新政策同时规定，多材料制成的工业设备若其所含钢材中至少 85%（按重量计）为美国本土熔炼并浇铸，即可适用 10% 的优惠税率——门槛较此前的 95% 有所放宽，以激励供应链向“美国制造”倾斜。叠加地缘冲突推高的海运运费与燃油附加费，采购经理们正放弃原有的“准时制（JIT）”离岸采购模式，转向建立更高的本土安全库存。"
+        },
+        {
+          "t_en": "Global demand polarizes",
+          "t_zh": "全球需求呈现两极分化",
+          "b_en": "Per worldsteel’s latest short-range outlook, 2026 global steel demand is seen growing just 0.3% (to 1.724 billion tonnes), regarded as a cyclical bottom, with a rebound to about +2.2% in 2027. Regionally the contrast is stark: China contracts (about -1.5% in 2026) amid an extended property and construction adjustment; India remains the fastest-growing major market, with demand up roughly 7% on infrastructure and autos; and the US, shielded by federal infrastructure spending and Buy-American rules, sees domestic consumption up about 1.7%.",
+          "b_zh": "根据世界钢铁协会（worldsteel）最新短期需求预测，2026 年全球钢铁需求预计仅微幅增长 0.3%（至 17.24 亿吨），被视为周期触底，2027 年有望回升至约 +2.2%。地域上反差极大：中国受房地产及建筑市场持续调整影响，国内需求阶段性收缩（2026 年约 -1.5%）；印度继续蝉联全球增长最快的大型市场，基建与汽车工业推动需求增长约 7%；美国在联邦基建法案与“购买美国货”规则庇护下，国内消费预计增长约 1.7%。"
+        },
+        {
+          "t_en": "Decarbonization chemistry: blast furnace vs. direct-reduction routes",
+          "t_zh": "脱碳化学：高炉与各类直接还原路线",
+          "b_en": "Traditional BF-BOF production burns large volumes of coke to reduce iron ore, releasing about 2.0–2.3 t CO₂ per tonne of crude steel. The industry is shifting to cleaner paths: scrap-based EAF (~0.3–0.7 t CO₂, clean power), natural-gas DRI-EAF (~1.1–1.4 t), and green-hydrogen DRI-EAF (~0.1–0.3 t). Scrap recycling consumes 5–7x less energy than primary smelting, making scrap a scarce strategic resource. The hydrogen route strips oxygen from ore via Fe₂O₃ + 3H₂ → 2Fe + 3H₂O; powered by renewables it can cut emissions to roughly 0.3 t CO₂ per tonne, with harmless water vapor as the only byproduct.",
+          "b_zh": "传统高炉-转炉（BF-BOF）路线燃烧大量焦炭还原铁矿石，平均每吨粗钢释放约 2.0–2.3 吨 CO₂。行业正加速转向更清洁的路径：废钢循环电炉（EAF，清洁电力，约 0.3–0.7 吨）、天然气直接还原（NG-DRI-EAF，约 1.1–1.4 吨）、绿氢直接还原（H₂-DRI-EAF，约 0.1–0.3 吨）。废钢循环利用的能耗比原生冶炼低 5 到 7 倍，已被视为高度稀缺的战略资源。氢基路线以绿氢剥离铁矿石中的氧，反应式为 Fe₂O₃ + 3H₂ → 2Fe + 3H₂O；当由可再生能源供电时，碳排放可骤降至约 0.3 吨 CO₂/吨钢，唯一副产物是无害的水蒸气。"
+        },
+        {
+          "t_en": "NG-DRI: today’s most mature low-carbon bridge",
+          "t_zh": "天然气直接还原：当前最成熟的低碳过渡路线",
+          "b_en": "With scrap supply limited and green hydrogen not yet cost-competitive at scale, natural-gas-based direct reduction is the most commercially mature low-carbon transition. Using hydrogen and carbon monoxide from gas reforming as reductants, it produces DRI in a shaft furnace for subsequent EAF steelmaking, cutting emissions about 50–60% versus the blast furnace. Modern shafts are designed “H₂-ready,” able to raise the hydrogen blend toward full-hydrogen operation as green supply arrives — a realistic bridge to zero carbon. Note: coal-based DRI can actually emit more than a blast furnace, so not all DRI routes are low-carbon.",
+          "b_zh": "在废钢供应有限、绿氢成本与规模化尚未成熟的当下，天然气基直接还原已成为全球商业化最成熟的低碳过渡路线。该工艺以天然气重整产生的氢与一氧化碳为还原剂，在竖炉中将铁矿石还原为直接还原铁（DRI），再经电弧炉炼钢，碳排放较传统高炉降低约 50–60%。现代竖炉多设计为“氢就绪（H₂-ready）”，可随绿氢供应到位逐步提高掺氢比例直至全氢运行，被视为通向零碳的现实桥梁。需注意的是，以煤为还原剂的煤基 DRI 碳排放反而可能高于高炉——并非所有 DRI 路线都属低碳。"
+        },
+        {
+          "t_en": "Industrial breakthroughs: Stegra’s Boden plant and direct electrolysis",
+          "t_zh": "工业级突破：Stegra 博登项目与直接电解",
+          "b_en": "Full-scale industrialization of hydrogen steel is now underway — while exposing capital-intensity limits. Sweden’s Stegra (formerly H2 Green Steel) Boden plant, the most-watched green-steel benchmark, pairs high-power EAFs with a 100% green-hydrogen direct-reduction shaft. In April 2026 a Wallenberg-led consortium provided about €1.4 billion of new financing toward completion, after cost overruns and delays pushed first steel from 2024 to around 2027. Separately, frontier players like Electra pursue low-temperature electrochemical-hydrometallurgical routes that bypass costly green-hydrogen production to electrolyze low-grade ore; its Colorado demo plant targets clean iron by mid-2026, though commercial scale-up has slipped toward 2029.",
+          "b_zh": "氢能炼钢的全尺寸工业化已开始落地，但也暴露出资本强度与规模化的现实门槛。瑞典 Stegra（原 H2 Green Steel）的博登（Boden）项目是全球最受瞩目的绿色炼钢标杆，采用高功率电弧炉搭配 100% 绿氢的直接还原竖炉。2026 年 4 月，项目获瓦伦堡（Wallenberg）领衔财团约 14 亿欧元新融资，为完工开辟资金路径；此前因成本上升与多次延期，首炉钢投产已由最初的 2024 年推迟至 2027 年前后。另外，Electra 等前沿企业正推进低温、电化学—湿法冶金路线，绕过昂贵的绿氢制备阶段，直接电解低品位铁矿石；其科罗拉多示范厂计划于 2026 年中产出清洁铁，但商业化时间表已后推至 2029 年前后。"
+        },
+        {
+          "t_en": "Industry 4.0: digital dominance amid a labor gap",
+          "t_zh": "工业 4.0：数字化主导与劳动力断层",
+          "b_en": "With heavy industry facing severe workforce aging and structural shortages (skilled welders, precision machinists), smart automation has shifted from frontier experiment to survival baseline. Modern rolling mills deploy industrial AI — LSTM networks and random forests reading real-time thermal-imaging and chemistry data — to predict metallurgical anomalies and surface defects during rolling and continuous casting, cutting scrap rates by nearly 40%. Meanwhile, surging demand from defense, aerospace and EVs for ultra-high-strength, corrosion-resistant, lightweight alloys is squeezing commodity crude and structural steel, pushing more production from outdoor work into highly controlled, robot-led modular smart factories.",
+          "b_zh": "全球重工业普遍面临严重的劳动力老龄化与结构性短缺（如熟练焊接工与精密机械师的断层），智能自动化已从“前沿尝试”变为“生存底线”。现代轧钢厂深入普及工业人工智能——通过长短期记忆网络（LSTM）与随机森林等算法，依据实时热成像与化学数据，在滚轧与连铸阶段自动预测冶金异常与表面缺陷，使废品率降低近 40%。与此同时，国防、航空航天及新能源汽车（EV）对超高强度、耐腐蚀、轻量化特种合金的需求爆发式增长，正压缩粗钢及基础结构钢的生存空间，促使更多生产流程从室外作业转入高度可控、由机器人主导的模块化智能工厂。"
+        }
+      ]
     }
   ]
 }
