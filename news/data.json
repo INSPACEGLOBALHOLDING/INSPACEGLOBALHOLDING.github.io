@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-12",
+  "updated": "2026-07-21",
   "issues": [
     {
       "id": "2026-06-indonesia-ai",
@@ -332,6 +332,108 @@
           "t_zh": "BPOM 推行包装食品正面营养标签制度",
           "b_en": "Indonesia's Food and Drug Authority (BPOM) passed regulations formally introducing a front-of-pack nutrition-labeling system for packaged food and drinks — including a mandatory 'Nutri-Level' grading for beverages — with clear labeling of sugar, sodium and fat content, targeting full mandatory compliance by 2028.",
           "b_zh": "印尼国家食品药品监督管理局（BPOM）通过法规，正式推行包装食品与饮料的正面营养标签制度（包括强制实施饮料的「Nutri-Level」分级），针对糖、钠、脂肪含量进行明确标示，预计于 2028 年前全面强制合规。"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-indonesia-domestic",
+      "src_id": "1ksu4WDqzsM05vtM6UQwTsyNW1uvAMiCd",
+      "sort_date": "2026-07-17",
+      "date_en": "July 2026",
+      "date_zh": "2026 年 7 月",
+      "tags_en": "Indonesia · Politics · Economy · Technology",
+      "tags_zh": "印尼 · 政治 · 经济 · 科技",
+      "title_en": "Indonesia mid-July 2026 — corruption shockwaves, visa-free reopening, and a nuclear restart",
+      "title_zh": "2026 年 7 月中旬印尼要闻——反腐风暴、免签重启与核反应堆重启",
+      "intro_en": "This briefing covers mid-July developments across three fronts: domestic politics and the judiciary, diplomacy and the economy, and science and technology — from high-profile corruption cases to a strong first-half investment print and the restart of the TRIGA 2000 research reactor.",
+      "intro_zh": "本期简报涵盖 7 月中旬印尼在内政司法、外交经济、科研技术三大领域的最新动态——从引发关注的贪腐大案，到上半年强劲的投资数据，再到 TRIGA 2000 研究反应堆的重启。",
+      "items": [
+        {
+          "t_en": "Former education minister Nadiem sentenced to 10 years, raising investor concerns",
+          "t_zh": "前教育部长纳迪姆被判 10 年，外资信心受扰",
+          "b_en": "Nadiem Makarim, Gojek co-founder and former Minister of Education, was formally sentenced in early July to 10 years in prison over a corruption case involving school laptop procurement. Given his tech-startup pedigree, international media and some economists note the controversial verdict has stirred foreign-investor doubts about Indonesia's business and judicial environment.",
+          "b_zh": "Gojek 共同创办人、前印尼教育部长纳迪姆（Nadiem Makarim）因涉及学校笔记本电脑采购贪腐案，于 7 月初被正式判处 10 年有期徒刑。由于其科技新创背景，国际媒体与部分经济学者指出，这一争议性判决已引发外资对印尼经商与司法环境的信心疑虑。"
+        },
+        {
+          "t_en": "Anti-graft deputy attorney general named suspect in money-laundering case",
+          "t_zh": "肃贪副总检察长涉洗钱案落马",
+          "b_en": "Febrie Adriansyah, the deputy attorney general for special crimes who led several major corruption investigations, was named a suspect in a money-laundering and coal-procurement case and announced his resignation. Police seized 74 kilograms of gold bars and roughly USD 20 million in foreign currency from his residence, sending shockwaves through the political establishment.",
+          "b_zh": "负责主导多起重大贪腐调查的特种犯罪副总检察长费布里（Febrie Adriansyah）因涉嫌洗钱及煤炭采购弊案被列为嫌疑人，并宣布辞职。警方在其住宅查获多达 74 公斤金条及价值约 2,000 万美元的各国现钞，此案在政坛引发强烈震荡。"
+        },
+        {
+          "t_en": "Visa-free entry restored for Belarus, Brazil and others from July 7",
+          "t_zh": "7 月 7 日起恢复白俄罗斯、巴西等多国免签待遇",
+          "b_en": "Indonesia's Directorate General of Immigration announced that visa-free entry, suspended for years since the pandemic, resumes from July 7. The first batch covers Belarus, Brazil, Peru, Kazakhstan, Türkiye and Macau SAR, with stays of up to 30 days, in a bid to revive international tourism.",
+          "b_zh": "印尼移民总局宣布自 7 月 7 日起，恢复因疫情中断多年的免签证入境政策。首批适用国家和地区包括白俄罗斯、巴西、秘鲁、哈萨克斯坦、土耳其以及中国澳门特别行政区，停留期限最长 30 天，旨在振兴国际旅游业。"
+        },
+        {
+          "t_en": "First-half investment hits IDR 1,010.6 trillion, up 7.2% year-on-year",
+          "t_zh": "上半年投资达 1,010.6 万亿印尼盾，同比增长 7.2%",
+          "b_en": "Indonesia's Ministry of Investment and Downstream Industry (BKPM) reported that the country attracted IDR 1,010.6 trillion (about USD 56.1 billion) in investment in the first half of 2026, up 7.2% year-on-year and already near half of the full-year target. Mining downstreaming and construction projects outside Java were the biggest drivers.",
+          "b_zh": "投资与下游产业部（BKPM）公布数据，2026 年上半年印尼成功吸引高达 1,010.6 万亿印尼盾（约合 561 亿美元）的投资，较去年同期增长 7.2%，已完成全年目标的近一半，其中矿业下游化与爪哇岛以外的建设项目是最大推手。"
+        },
+        {
+          "t_en": "IMF and OECD trim Indonesia's 2026 growth outlook to 4.7–5.0%",
+          "t_zh": "IMF 与 OECD 下调印尼 2026 年增长预期至 4.7%–5.0%",
+          "b_en": "In July reports, the IMF, OECD and other institutions pointed to a second-quarter manufacturing contraction, weakening consumer confidence and Bank Indonesia's persistently high policy rates, projecting full-year 2026 GDP growth of 4.7% to 5.0% — signalling mounting deceleration pressure.",
+          "b_zh": "国际货币基金组织（IMF）及经济合作与发展组织（OECD）等机构在 7 月报告中指出，受第二季度制造业收缩、消费信心转弱及印尼央行维持高利率影响，预测印尼 2026 年全年 GDP 增长率将落在 4.7% 至 5.0% 区间，增长放缓压力渐显。"
+        },
+        {
+          "t_en": "BRIN restarts the TRIGA 2000 research reactor in Bandung",
+          "t_zh": "BRIN 重启万隆 TRIGA 2000 核研究反应堆",
+          "b_en": "Indonesia's National Research and Innovation Agency (BRIN) announced in mid-July that the TRIGA 2000 nuclear research reactor in Bandung, West Java, has officially resumed operation. The restart significantly strengthens Indonesia's nuclear research capacity, radioisotope production, and the domestic development of nuclear-medicine pharmaceuticals.",
+          "b_zh": "印尼国家研究创新署（BRIN）于 7 月中旬宣布，位于西爪哇万隆的 TRIGA 2000 核研究反应堆正式恢复运作。此举将大幅加强印尼的核能研究、放射性同位素生产，并加速核医学制药的自主研发。"
+        },
+        {
+          "t_en": "Takeda commits USD 30 million to plasma collection and fractionation",
+          "t_zh": "武田制药投资 3,000 万美元布局血浆采集与分馏",
+          "b_en": "Global biopharma leader Takeda announced a USD 30 million investment in Indonesia for a two-year plasma collection and fractionation partnership, aiming to build a more resilient domestic supply chain of plasma-derived medicinal products (PDMPs) for Indonesian patients.",
+          "b_zh": "全球生物制药龙头武田制药（Takeda）宣布将在印尼投资 3,000 万美元，推动为期两年的「血浆采集与分馏」合作计划，旨在为印尼患者建立更健全的血浆衍生药物（PDMPs）本土供应链。"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-global-steel",
+      "src_id": "1FNoTN_HrWYY7ooEbcZLKbkafVmWnvKvm",
+      "sort_date": "2026-07-17",
+      "date_en": "July 2026",
+      "date_zh": "2026 年 7 月",
+      "tags_en": "Global Steel · Trade · Green Steel",
+      "tags_zh": "全球钢铁 · 贸易 · 绿色钢铁",
+      "title_en": "Global steel in July 2026 — EU quota cuts, surging U.S. output, and the refining transition",
+      "title_zh": "2026 年 7 月全球钢铁——欧盟配额腰斩、美国产量攀升与精炼技术转型",
+      "intro_en": "The global steel landscape in July 2026 is navigating intense trade protectionism, surging domestic production in the West, and a critical transition toward cleaner, secondary refining technologies.",
+      "intro_zh": "2026 年 7 月的全球钢铁业正经历激烈的贸易保护主义、西方本土产量的强劲攀升，以及向更清洁的二次精炼技术的关键转型。",
+      "items": [
+        {
+          "t_en": "EU slashes tariff-free steel import quotas by nearly half; out-of-quota tariff doubles to 50%",
+          "t_zh": "欧盟钢铁免税进口配额近乎腰斩，配额外关税翻倍至 50%",
+          "b_en": "A major trade barrier took effect this month: the European Commission cut its tariff-free steel import quotas to 18.3 million tonnes per year — nearly halving previous allowances — while the tax on out-of-quota imports doubled from 25% to 50% to shield struggling European steelmakers from cheap imports and global overcapacity. Italian and Southern European producers immediately raised flat steel prices in anticipation of tighter regional availability, even as broader industrial demand remains seasonally quiet.",
+          "b_zh": "一项重大贸易壁垒于本月正式生效：欧盟委员会将免税钢铁进口配额大幅削减至每年 1,830 万吨——较此前额度近乎腰斩——同时将配额外进口关税从 25% 翻倍至 50%，以保护困境中的欧洲钢铁企业免受廉价进口与全球产能过剩的冲击。意大利及南欧钢厂随即上调扁钢价格，以应对区域供应趋紧，尽管整体工业需求仍处季节性淡季。"
+        },
+        {
+          "t_en": "U.S. year-to-date raw steel output hits 49.95 million net tons, up 5.9%",
+          "t_zh": "美国年内粗钢产量达 4,995 万净吨，同比增长 5.9%",
+          "b_en": "While weekly raw steel production dipped 0.9% to 1.84 million net tons for the week ending July 11, 2026, the U.S. domestic sector remains highly robust: cumulative 2026 output has reached 49.95 million net tons, up a significant 5.9% year-on-year. Sourcing protections, strong domestic energy demand and sustained heavy investment are keeping U.S. mills running hot.",
+          "b_zh": "尽管截至 2026 年 7 月 11 日当周的粗钢周产量微降 0.9% 至 184 万净吨，美国本土钢铁业依然十分强劲：2026 年累计产量已达 4,995 万净吨，同比大增 5.9%。采购保护政策、强劲的本土能源需求与持续的大规模投资，使美国钢厂保持高负荷运转。"
+        },
+        {
+          "t_en": "Record hot-rolled coil premium: HRC now 151% above prime scrap",
+          "t_zh": "热轧卷板对优质废钢价差创纪录，溢价达 151%",
+          "b_en": "The spread between U.S. domestic hot-rolled coil prices and prime busheling scrap widened further in July, with HRC holding a staggering 151% premium over prime scrap — driven by steadily climbing HRC spot values against stagnant scrap prices. The widening gap translates into exceptional margins for domestic mills running electric arc furnaces (EAFs).",
+          "b_zh": "美国本土热轧卷板（HRC）与优质冲压废钢（prime busheling）之间的价差在 7 月进一步扩大，HRC 对优质废钢的溢价高达 151%——主要由 HRC 现货价格稳步攀升而废钢价格停滞所推动。价差扩大意味着运营电弧炉（EAF）的本土钢厂获得极为可观的利润空间。"
+        },
+        {
+          "t_en": "Two production pathways define the market: BF-BOF integrated mills vs. EAF mini-mills",
+          "t_zh": "两大生产路线主导市场格局：BF-BOF 一体化钢厂与 EAF 小型钢厂",
+          "b_en": "Integrated mills (BF-BOF) rely on iron ore and coking coal through blast furnaces and basic oxygen furnaces, with extremely high, coal-reliant energy intensity — now roughly 30% of the U.S. market and declining rapidly. Mini-mills (EAF) melt recycled steel scrap in electric arc furnaces at moderate, electricity-based energy intensity and command about 70% of the U.S. market and rising. True 'green steel' is moving beyond scrap recycling toward hydrogen-based direct reduction (H2-DRI), which strips oxygen from iron ore using green hydrogen and emits only water vapor; Sweden's Stegra project is slated for its first full-scale commercial commissioning in late 2026 — the ultimate proving ground for zero-emission steel.",
+          "b_zh": "一体化钢厂（BF-BOF）依赖铁矿石与焦煤，经高炉与转炉冶炼，能耗极高且依赖煤炭——目前约占美国市场 30% 且快速萎缩；小型钢厂（EAF）则以电弧炉熔炼回收废钢，能耗适中并以电力为主，约占美国市场 70% 且持续上升。真正的「绿色钢铁」正从废钢回收迈向氢基直接还原（H2-DRI）——以绿氢从铁矿石中脱氧、仅排放水蒸气；瑞典 Stegra 项目预计于 2026 年底进行首次全规模商业投产，将成为零排放钢铁的终极试验场。"
+        },
+        {
+          "t_en": "Secondary metallurgy investment accelerates: vacuum degassing and twin ladle furnaces",
+          "t_zh": "二次冶金投资提速：真空脱气与双工位钢包精炼炉",
+          "b_en": "Because melting scrap in an EAF introduces impurities, steelmakers are investing heavily in secondary metallurgy — refining after the melt. Vacuum degassing pulls a deep vacuum over liquid steel to extract dissolved hydrogen and nitrogen; removing hydrogen is critical to preventing hydrogen embrittlement in high-stress pipeline and automotive steels. Twin ladle furnaces let a single power supply serve two ladles alternately — one refining while the other is prepared. Outokumpu Stainless USA recently ordered a state-of-the-art 180-metric-ton twin ladle furnace for its Calvert, Alabama facility to boost processing capacity.",
+          "b_zh": "由于电弧炉熔炼废钢会引入杂质，钢铁企业正大力投资二次冶金——即熔炼之后的精炼工序。真空脱气（VD）通过对钢液抽取深度真空，去除溶解的氢和氮；脱氢对于防止高应力管线钢与汽车用钢发生氢脆（内部微裂纹）至关重要。双工位钢包精炼炉则让单一电源交替服务两个钢包——一个精炼加热的同时另一个进行准备。Outokumpu 不锈钢美国公司近期为其阿拉巴马州 Calvert 工厂订购了一台先进的 180 公吨双工位钢包精炼炉，以大幅提升加工能力。"
         }
       ]
     }
