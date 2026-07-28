@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-21",
+  "updated": "2026-07-28",
   "issues": [
     {
       "id": "2026-06-indonesia-ai",
@@ -434,6 +434,84 @@
           "t_zh": "二次冶金投资提速：真空脱气与双工位钢包精炼炉",
           "b_en": "Because melting scrap in an EAF introduces impurities, steelmakers are investing heavily in secondary metallurgy — refining after the melt. Vacuum degassing pulls a deep vacuum over liquid steel to extract dissolved hydrogen and nitrogen; removing hydrogen is critical to preventing hydrogen embrittlement in high-stress pipeline and automotive steels. Twin ladle furnaces let a single power supply serve two ladles alternately — one refining while the other is prepared. Outokumpu Stainless USA recently ordered a state-of-the-art 180-metric-ton twin ladle furnace for its Calvert, Alabama facility to boost processing capacity.",
           "b_zh": "由于电弧炉熔炼废钢会引入杂质，钢铁企业正大力投资二次冶金——即熔炼之后的精炼工序。真空脱气（VD）通过对钢液抽取深度真空，去除溶解的氢和氮；脱氢对于防止高应力管线钢与汽车用钢发生氢脆（内部微裂纹）至关重要。双工位钢包精炼炉则让单一电源交替服务两个钢包——一个精炼加热的同时另一个进行准备。Outokumpu 不锈钢美国公司近期为其阿拉巴马州 Calvert 工厂订购了一台先进的 180 公吨双工位钢包精炼炉，以大幅提升加工能力。"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-indonesia-finance-energy",
+      "src_id": "1YQCtmi-RBTTEwzC_noiaeBt2uRpEtsg4",
+      "sort_date": "2026-07-22",
+      "date_en": "July 2026",
+      "date_zh": "2026 年 7 月",
+      "tags_en": "Indonesia · Finance · Energy · Defense",
+      "tags_zh": "印尼 · 金融 · 能源 · 国防",
+      "title_en": "Indonesia briefing, late July 2026 — debut Panda Bond, B50 ends diesel imports, and multinational exercises",
+      "title_zh": "2026 年 7 月下旬印尼要闻——首发熊猫债券、B50 终结柴油进口与多国联合演习",
+      "intro_en": "Indonesia's latest headlines span four fronts: financial diplomacy through its first renminbi-denominated bond, a milestone in energy self-sufficiency, personnel changes in flagship domestic programs, and deepening international military cooperation.",
+      "intro_zh": "印尼最新动态横跨四大领域：通过首笔人民币计价债券开展金融外交、实现能源自主的里程碑、旗舰国内政策的人事变动，以及不断深化的国际军事合作。",
+      "items": [
+        {
+          "t_en": "Finance: Indonesia issues its first US$1 billion Panda Bond in China's onshore market",
+          "t_zh": "金融与财政：印尼发行 10 亿美元首笔\"熊猫债券\"",
+          "b_en": "Indonesia's Ministry of Finance announced its debut renminbi-denominated Panda Bond, formally issued on July 23 with an initial ceiling of US$1 billion, marking the country's entry into China's onshore bond market. China Lianhe Credit Rating assigned the issue its highest AAA rating with a stable outlook, reflecting Indonesia's economic growth momentum of above 5% and its strong external debt servicing capacity.",
+          "b_zh": "印尼财政部宣布于 7 月 23 日正式发行首笔以人民币计价的\"熊猫债券\"，初始发行规模上限为 10 亿美元，标志着印尼正式进入中国陆上债券市场。中国联合资信评估公司赋予该债券最高等级 AAA 的稳定评级，反映了印尼保持在 5% 以上的经济增长动能及优良的外债偿付能力。"
+        },
+        {
+          "t_en": "Energy: B50 biodiesel mandate succeeds — Indonesia fully halts diesel imports",
+          "t_zh": "能源自主：成功推行 B50 生物柴油，完全停止柴油进口",
+          "b_en": "President Prabowo Subianto announced that with the successful development and mandatory rollout of 50% palm-oil-blended biodiesel (B50), Indonesia has completely stopped importing diesel from abroad as of July 2026. The Ministry of Energy estimates the B50 policy will save 170–177 trillion rupiah (nearly US$10 billion) in foreign exchange this year, with the funds flowing directly back to domestic palm oil farmers. The government has also begun planning for E10 bio-gasoline and associated refining facilities.",
+          "b_zh": "普拉博沃总统（Prabowo Subianto）宣布，随着印尼成功开发并强制推行 50% 棕榈油混合生物柴油（B50），印尼自 2026 年 7 月起已完全停止从国外进口柴油。能源部评估 B50 政策今年将为印尼省下高达 170 万亿至 177 万亿印尼盾（近 100 亿美元）的外汇，资金将直接回流给本土棕榈油农民，政府同时已开始布局 E10 生物汽油与精炼设施。"
+        },
+        {
+          "t_en": "Domestic affairs: free-meals agency chief resigns; new \"Universitas RI\" founded to train senior officials",
+          "t_zh": "政务与内政：免费餐食机构负责人辞职，成立培育国政人才的\"印尼大学\"",
+          "b_en": "A personnel shift hit President Prabowo's flagship National Nutrition Agency (BGN): the official in charge of executing the free student meals program resigned on July 22, citing health and stress. The same day at the presidential palace in Jakarta, Prabowo presided over appointments for a newly established institution — Universitas RI (URI) — naming the Deputy Minister of Defense as its first rector. The new government academy is designed to cultivate future senior officials and state-owned enterprise managers.",
+          "b_zh": "普拉博沃总统推动的旗舰政策——国家营养局（BGN）出现人事变动，负责执行\"免费学生餐点计划\"的机构负责人因健康与压力因素于 7 月 22 日宣布辞职。同日，普拉博沃在雅加达总统府主持新机构任命，指派国防部副部长兼任\"印尼大学\"（Universitas RI / URI）首任校长。该校为政府新设的专门学府，旨在培养未来的政府高级官员与国营企业管理人才。"
+        },
+        {
+          "t_en": "Defense: multinational \"Pacific Partnership 2026\" exercise kicks off in North Sumatra",
+          "t_zh": "国防与防灾：多国\"太平洋伙伴关系 2026\"演习开跑",
+          "b_en": "The Australian Navy amphibious landing ship HMAS Choules arrived at the port of Sibolga, North Sumatra on July 20, carrying exercise personnel from the U.S., Australia, Canada, Germany, and Singapore. This is the seventh time the U.S.-led Pacific Partnership exercise has been held in Indonesia; running through August 1, it focuses on joint field training in medical relief, disaster management, and public works.",
+          "b_zh": "澳大利亚海军\"周思号\"（HMAS Choules）两栖登陆舰载着美、澳、加、德、新等国演习人员，于 7 月 20 日抵达印尼北苏门答腊的实武牙（Sibolga）港口。这是美军主导的\"太平洋伙伴关系 2026\"（Pacific Partnership 2026）第 7 次在印尼举行，演习将持续至 8 月 1 日，重点进行医疗救援、灾害管理及公共工程等实地协同演练。"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-steel-metallurgy",
+      "src_id": "1NWVuvZ4jtTuCmPk8Z_JKo99a1X_aEVKI",
+      "sort_date": "2026-07-23",
+      "date_en": "July 2026",
+      "date_zh": "2026 年 7 月",
+      "tags_en": "Global Steel · U.S. Market · Metallurgy",
+      "tags_zh": "全球钢铁 · 美国市场 · 冶金技术",
+      "title_en": "Frontline steel, late July 2026 — record U.S. financials, overcapacity warnings, and the metallurgy behind high-grade steel",
+      "title_zh": "2026 年 7 月下旬钢铁前线——美国创纪录财报、产能过剩警告与高等级钢材背后的冶金技术",
+      "intro_en": "Late-July signals show U.S. mills posting record volumes and margins while the OECD warns of surging global excess capacity — and the technical race shifts toward secondary metallurgy, hydrogen-based reduction, and AI-driven quality control.",
+      "intro_zh": "7 月下旬的信号显示：美国钢厂产量与利润率双双创纪录，OECD 则警告全球过剩产能激增——技术竞赛正转向二次冶金、氢基还原与 AI 驱动的质量控制。",
+      "items": [
+        {
+          "t_en": "U.S. output and financial surge: Steel Dynamics posts record Q2 as prices climb",
+          "t_zh": "美国产量与财务双升：钢动力公司第二季度创纪录，钢价攀升",
+          "b_en": "American Iron and Steel Institute (AISI) data puts weekly U.S. raw steel output at 1.83 million short tons; while easing slightly from May peaks, cumulative year-to-date output stands at 51.78 million tons — up 5.8% versus the same period in 2025. Steel Dynamics (STLD) reported record Q2 shipments of 3.7 million tons and net sales of US$6.1 billion, with CEO Mark Millett crediting trade policy enforcement, manufacturing reshoring, and localized North American supply chains. Hot-rolled coil spot prices hovered at US$1,130–1,135 per ton, and STLD's average selling prices rose US$183/ton over 2025 levels, sharply expanding operating margins.",
+          "b_zh": "美国钢铁协会（AISI）数据显示，美国粗钢周产量约 183 万短吨；虽较 5 月峰值略有回落，但年初至今累计产量达 5,178 万吨，同比 2025 年同期增长 5.8%。钢动力公司（Steel Dynamics）第二季度创下 370 万吨出货量与 61 亿美元净销售额的纪录，首席执行官 Mark Millett 将业绩归功于本土贸易政策执行、制造业回流及北美本地化供应链的增长。热轧卷板现货价格维持在每吨 1,130 至 1,135 美元区间，公司平均售价较 2025 年上涨 183 美元/吨，大幅扩张了营业利润率。"
+        },
+        {
+          "t_en": "Global supply restructuring: U.K. nationalizes British Steel as OECD warns of 745 Mt excess capacity",
+          "t_zh": "全球供应重构：英国将英国钢铁公司国有化，OECD 警告 7.45 亿吨过剩产能",
+          "b_en": "The U.K. government officially nationalized integrated producer British Steel to protect sovereign structural manufacturing capacity. Meanwhile, an OECD report warns that global excess steelmaking capacity is surging toward 745 million metric tonnes through 2028, driven by expansions in China (+38.6 Mt) and India (+31.8 Mt), putting heavy pressure on global trade borders. Germany's steel association WV Stahl reported an 8.9% year-over-year increase in H1 2026 crude steel output (18.63 million tonnes), though domestic demand remains subdued.",
+          "b_zh": "英国政府正式将一体化钢铁生产商英国钢铁公司（British Steel）国有化，以保护国家主权性的结构性制造产能。与此同时，OECD 报告警告，在中国（+3,860 万吨）与印度（+3,180 万吨）产能扩张的推动下，到 2028 年全球过剩炼钢产能将激增至 7.45 亿吨，对全球贸易边界构成沉重压力。德国钢铁工业协会（WV Stahl）报告 2026 年上半年粗钢产量同比增长 8.9%（1,863 万吨），但国内需求依然疲弱。"
+        },
+        {
+          "t_en": "Three production pathways: integrated BF-BOF, scrap-based EAF, and hydrogen direct reduction",
+          "t_zh": "三大生产路径：一体化高炉转炉、废钢电弧炉与氢基直接还原",
+          "b_en": "Modern steelmaking runs on two established routes plus one breakthrough low-emission pathway. Integrated mills (BF-BOF) convert iron ore and coking coal through blast furnaces and basic oxygen furnaces — high emissions, with CO2 and slag as byproducts. Mini-mills (EAF) melt recycled ferrous scrap with high-voltage electricity for a low-to-moderate emissions profile. Hydrogen direct reduction (H2-DRI) processes high-grade iron ore pellets in hydrogen shaft furnaces paired with EAFs, powered by green hydrogen and electricity — an ultra-low emissions route whose primary byproduct is water vapor rather than carbon dioxide.",
+          "b_zh": "现代钢铁生产依托两条成熟路径与一条突破性低排放路径。一体化钢厂（BF-BOF）以铁矿石和焦煤为原料，通过高炉与碱性氧气转炉冶炼——排放高，副产品为二氧化碳与炉渣。小型钢厂（EAF）以高压电力熔炼回收废钢，排放属于中低水平。氢基直接还原（H2-DRI）则以高品位铁矿球团为原料，在氢气竖炉搭配电弧炉中冶炼，能源来自绿氢与电力——属于超低排放路径，主要副产品是水蒸气而非二氧化碳。"
+        },
+        {
+          "t_en": "Secondary metallurgy and digital automation: the new technical differentiator for high-grade steel",
+          "t_zh": "二次冶金与数字化自动化：高等级钢材的新技术分水岭",
+          "b_en": "Because EAFs rely heavily on recycled scrap with variable trace impurities, secondary metallurgy has become the key differentiator for high-grade steel. Vacuum degassing (VD) places molten steel in a sealed vacuum chamber, forcing trapped hydrogen and nitrogen to bubble out — hydrogen removal is mandatory to prevent hydrogen embrittlement in pipeline, defense, and automotive steels. Twin ladle furnace (LF) stations with alternating power supply — such as the 180-ton unit Primetals recently supplied to Outokumpu Stainless in Alabama — eliminate dead time between heats by alloying one ladle while the next is prepared. Computer vision and robotic systems, like Hyundai Steel's newly online TrimRob, now handle dangerous finishing work, sample gathering, and real-time surface defect detection.",
+          "b_zh": "由于电弧炉高度依赖含有不稳定微量杂质的回收废钢，二次冶金已成为生产高等级钢材的关键技术分水岭。真空脱气（VD）将钢水置于密封真空室中，迫使溶解的氢气与氮气逸出——脱氢是防止管线钢、国防用钢与汽车用钢发生氢脆（内部微裂纹）的必要工序。采用交替供电的双工位钢包精炼炉（LF）——例如普锐特冶金技术（Primetals）近期向美国阿拉巴马州奥托昆普不锈钢厂交付的 180 吨机组——在一个钢包进行精确合金化的同时准备下一个钢包，消除了炉次之间的空档时间。计算机视觉与机器人系统（如现代制铁近期上线的 TrimRob 系统）则承担危险的精整作业、取样与实时表面缺陷检测，显著降低了废品率。"
         }
       ]
     }
