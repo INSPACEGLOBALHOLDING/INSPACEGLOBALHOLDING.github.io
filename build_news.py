@@ -2,25 +2,38 @@
 import io, re, json, html
 
 src = io.open("index.html", encoding="utf-8").read()
-
-def grab(pattern, s, flags=re.S):
-    m = re.search(pattern, s, flags)
-    if not m: raise SystemExit("could not extract: " + pattern[:40])
+def grab(pat,s,fl=re.S):
+    m=re.search(pat,s,fl)
+    if not m: raise SystemExit("extract fail: "+pat[:40])
     return m.group(1)
 
 head    = grab(r"<head>(.*?)</head>", src)
+# strip home-specific SEO tags so news page gets its own
+head = re.sub(r"<title>.*?</title>","",head,flags=re.S)
+head = re.sub(r'<meta name="description"[^>]*/?>',"",head)
+head = re.sub(r'<meta name="keywords"[^>]*/?>',"",head)
+head = re.sub(r'<meta (?:property|name)="(?:og|twitter):[^"]*"[^>]*/?>',"",head)
+head = re.sub(r'<link rel="canonical"[^>]*/?>',"",head)
+head = re.sub(r'<script type="application/ld\+json">.*?</script>',"",head,flags=re.S)
+
 header  = grab(r"(<header.*?</header>)", src)
 footer  = grab(r"(<footer.*?</footer>)", src)
 scripts = re.findall(r"<script>.*?</script>", src, re.S)
 reveal_js = next(x for x in scripts if "IntersectionObserver" in x)
 dict_js   = next(x for x in scripts if "const I18N" in x)
 lang_js   = next(x for x in scripts if "STORAGE_KEY" in x)
-nav = header.replace('href="#', 'href="/#').replace('<a href="/#"', '<a href="/"')
+nav = header.replace('href="#','href="/#').replace('<a href="/#"','<a href="/"')
 
-data = json.load(io.open("news/data.json", encoding="utf-8"))
-issues = sorted(data["issues"], key=lambda i: i["sort_date"], reverse=True)
-e = html.escape
-def L(en, zh): return f'<span class="lang-en">{en}</span><span class="lang-zh">{zh}</span>'
+data = json.load(io.open("news/data.json",encoding="utf-8"))
+issues = sorted(data["issues"], key=lambda i:i["sort_date"], reverse=True)
+e=html.escape
+def L(en,zh): return f'<span class="lang-en">{en}</span><span class="lang-zh">{zh}</span>'
+def og(title,desc,url,img,sn="Inspace Global Holding",typ="website"):
+    d=lambda pr,v,a="property":f'<meta {a}="{pr}" content="{v}" />'
+    return "\n".join(['<link rel="canonical" href="%s" />'%url,d("og:type",typ),d("og:site_name",sn),
+        d("og:title",title),d("og:description",desc),d("og:url",url),d("og:image",img),
+        d("twitter:card","summary_large_image","name"),d("twitter:title",title,"name"),
+        d("twitter:description",desc,"name"),d("twitter:image",img,"name")])
 
 # ---------- NEWS PAGE ----------
 cards=[]
@@ -55,10 +68,20 @@ extra_css='''<style>
   details.brief .qb{color:#c9d2cb;font-weight:300;line-height:1.85;padding:2px 0 22px 34px;font-size:15px;}
 </style>'''
 
+newsdesc="Market Intelligence from Inspace Global Holding (IGH) — weekly briefings on Indonesia, AI infrastructure, data centers and green steel shaping the operating environment around the Atjeh Quantum / Aceh green steel project."
+news_ld={"@context":"https://schema.org","@type":"CollectionPage","name":"Market Intelligence",
+ "url":"https://inspaceglobal.com/news/","isPartOf":{"@type":"WebSite","name":"Inspace Global Holding","url":"https://inspaceglobal.com/"},
+ "about":["Indonesia","AI infrastructure","data centers","green steel","project finance"],"description":newsdesc}
+news_seo=f'''<title>Market Intelligence · Inspace Global Holding Pte. Ltd.</title>
+<meta name="description" content="{newsdesc}" />
+<meta name="keywords" content="Inspace Global Holding market intelligence, Indonesia AI data centers, Aceh green steel, Atjeh Quantum, project finance, Southeast Asia" />
+{og("Market Intelligence · Inspace Global Holding",newsdesc,"https://inspaceglobal.com/news/","https://inspaceglobal.com/project-map.jpg")}
+<script type="application/ld+json">{json.dumps(news_ld,ensure_ascii=False)}</script>'''
+
 news_html=f'''<!DOCTYPE html>
 <html lang="en">
 <head>{head}{extra_css}
-<title>Market Intelligence · Inspace Global Holding Pte. Ltd.</title>
+{news_seo}
 </head>
 <body>
 <div class="grain"></div>
@@ -87,19 +110,15 @@ news_html=f'''<!DOCTYPE html>
 </html>'''
 io.open("news/index.html","w",encoding="utf-8").write(news_html)
 
-# ---------- TICKER (latest up to 2 issues' headlines) ----------
-tk=[]
-for it in issues[:2]:
-    for q in it["items"]:
-        tk.append(f'<span class="tk-h">{L(e(q["t_en"]),e(q["t_zh"]))}</span>')
-unit = '<span class="tk-sep">◆</span>'.join(tk) + '<span class="tk-sep">◆</span>'
-ticker_html = "<!--TICKER_START-->\n        " + unit + unit + "\n<!--TICKER_END-->"
-src = re.sub(r"<!--TICKER_START-->.*?<!--TICKER_END-->", lambda m: ticker_html, src, flags=re.S)
+# ---------- TICKER ----------
+tk=[f'<span class="tk-h">{L(e(q["t_en"]),e(q["t_zh"]))}</span>' for it in issues[:2] for q in it["items"]]
+unit='<span class="tk-sep">◆</span>'.join(tk)+'<span class="tk-sep">◆</span>'
+ticker="<!--TICKER_START-->\n        "+unit+unit+"\n<!--TICKER_END-->"
+src=re.sub(r"<!--TICKER_START-->.*?<!--TICKER_END-->",lambda m:ticker,src,flags=re.S)
 
-# ---------- LEAD: feature (newest) + compact list (next) ----------
-feat = issues[0]; rest = issues[1:3]
-n = len(feat["items"])
-feature = f'''      <a href="/news/#{feat["id"]}" class="feat reveal panel panel-gold rounded-md p-8 sm:p-10 block" style="border-top:2px solid var(--champ);">
+# ---------- LEAD feature + list ----------
+feat=issues[0]; rest=issues[1:3]; n=len(feat["items"])
+feature=f'''      <a href="/news/#{feat["id"]}" class="feat reveal panel panel-gold rounded-md p-8 sm:p-10 block" style="border-top:2px solid var(--champ);">
         <div class="flex items-center gap-3 mb-5">
           <span class="dot"></span>
           <span class="kick text-[11px] gold font-mono uppercase">{L("Latest intelligence · ","最新情报 · ")}{L(feat["date_en"],feat["date_zh"])}</span>
@@ -108,16 +127,15 @@ feature = f'''      <a href="/news/#{feat["id"]}" class="feat reveal panel panel
         <p class="text-stone text-lg font-light leading-relaxed max-w-3xl mb-7">{L(e(feat["intro_en"]),e(feat["intro_zh"]))}</p>
         <span class="cta-pill">{L(f"Read all {n} briefings","阅读全部 "+str(n)+" 则")} <span class="feat-arrow" aria-hidden="true">&rarr;</span></span>
       </a>'''
-listrows=[]
+lr=[]
 for k,it in enumerate(rest):
     bt="" if k==0 else "border-top:1px solid rgba(255,255,255,.06);"
-    listrows.append(f'''        <a href="/news/#{it["id"]}" class="flex items-center justify-between gap-5 px-6 py-4 transition group hover:bg-white/[0.02]" style="{bt}">
+    lr.append(f'''        <a href="/news/#{it["id"]}" class="flex items-center justify-between gap-5 px-6 py-4 transition group hover:bg-white/[0.02]" style="{bt}">
           <span class="font-serif text-[16px] sm:text-[17px] leading-snug pr-4">{L(e(it["title_en"]),e(it["title_zh"]))}</span>
           <span class="shrink-0 flex items-center gap-3 num text-[12px] text-stone">{L(it["date_en"],it["date_zh"])}<span class="gold transition group-hover:translate-x-1">&rarr;</span></span>
         </a>''')
-listblock = ("\n      <div class=\"reveal panel rounded-md overflow-hidden mt-4\">\n"+ "\n".join(listrows) +"\n      </div>") if listrows else ""
-lead_html = "<!--INTEL_LATEST_START-->\n"+feature+listblock+"\n<!--INTEL_LATEST_END-->"
-src = re.sub(r"<!--INTEL_LATEST_START-->.*?<!--INTEL_LATEST_END-->", lambda m: lead_html, src, flags=re.S)
-
+lb=("\n      <div class=\"reveal panel rounded-md overflow-hidden mt-4\">\n"+"\n".join(lr)+"\n      </div>") if lr else ""
+lead="<!--INTEL_LATEST_START-->\n"+feature+lb+"\n<!--INTEL_LATEST_END-->"
+src=re.sub(r"<!--INTEL_LATEST_START-->.*?<!--INTEL_LATEST_END-->",lambda m:lead,src,flags=re.S)
 io.open("index.html","w",encoding="utf-8").write(src)
-print("news bytes",len(news_html),"| ticker heads",len(tk),"| feature issue",feat["id"],"| list",len(listrows))
+print("news bytes",len(news_html),"| ticker",len(tk),"| feature",feat["id"])
